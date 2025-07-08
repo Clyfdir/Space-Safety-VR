@@ -1,10 +1,19 @@
 # ninja log v5
 33	6346	7712716184437147	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	86f79be4e0948a6e
 59	6480	7712716186769506	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	205c60b8d22a9d47
-10	6552	7712716187842078	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	4fcfea68b6240e5e
-75	6570	7712716188008462	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e266ffbd56ccd679
-1	6817	7712716190632785	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e75a5d7d736c1c31
-45	7483	7712716197503472	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c09361df9a431325
-93	7919	7712716201844664	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b9252602687da36f
-21	7976	7712716202295916	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a1540207d1639260
 7977	8422	7712716206897968	C:/Users/marle/OneDrive/Documents/GitHub/Space-Safety-VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/ok556l27/obj/arm64-v8a/libgame.so	80633b379b53feff
+93	7919	7712716201844664	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b9252602687da36f
+10	6552	7712716187842078	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	4fcfea68b6240e5e
+1	6817	7712716190632785	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e75a5d7d736c1c31
+75	6570	7712716188008462	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e266ffbd56ccd679
+45	7483	7712716197503472	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c09361df9a431325
+21	7976	7712716202295916	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a1540207d1639260
+37	2708	7736661777477240	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	205c60b8d22a9d47
+56	2775	7736661778001831	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	86f79be4e0948a6e
+19	2819	7736661778399474	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	4fcfea68b6240e5e
+64	2823	7736661778425088	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e266ffbd56ccd679
+28	2909	7736661779421241	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e75a5d7d736c1c31
+46	3300	7736661783432054	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c09361df9a431325
+75	3341	7736661783912152	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b9252602687da36f
+11	3434	7736661784782779	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a1540207d1639260
+3435	3687	7736661787438305	C:/Users/marle/OneDrive/Documents/GitHub/Space-Safety-VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/ok556l27/obj/arm64-v8a/libgame.so	80633b379b53feff
