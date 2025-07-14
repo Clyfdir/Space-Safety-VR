@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 44.68333333333332
+    m_Start: 146.95
     m_ClipIn: 0
     m_Asset: {fileID: 3981714047117042083}
     m_Duration: 2.15
@@ -258,7 +258,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 44.68333333333332
+    m_PreExtrapolationTime: 146.95
     m_DisplayName: BackShutterUp
   m_Markers:
     m_Objects: []
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Activate Asteroid
   m_EditorClassIdentifier: 
-  m_Time: 55
+  m_Time: 157.26666666666674
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: dd3c3805093c34d47852198bea8858b1, type: 2}
@@ -941,6 +941,7 @@ MonoBehaviour:
     - {fileID: 4603548596329185006}
     - {fileID: 4230457276829618290}
     - {fileID: -2385716027600352617}
+    - {fileID: 5607678482215650192}
 --- !u!114 &2427555005007364547
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -999,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: ActivateDart
   m_EditorClassIdentifier: 
-  m_Time: 62.75
+  m_Time: 165.01666666666668
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: fc6b9a3700987e14d8a827a9e8f2cee8, type: 2}
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: DART Collision
   m_EditorClassIdentifier: 
-  m_Time: 67.75
+  m_Time: 170.01666666666668
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 316b76ef312fc6648a3ac240b1bbe107, type: 2}
@@ -1035,6 +1036,22 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 0}
+--- !u!114 &5607678482215650192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 33.6
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 5133df4da4244be4aa11c6ba27366ecf, type: 2}
 --- !u!74 &6333984367373255467
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -1287,7 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Turn Off Debris
   m_EditorClassIdentifier: 
-  m_Time: 38.51666666666666
+  m_Time: 38.575
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 27309999da4427b4aa346dad9e63f294, type: 2}

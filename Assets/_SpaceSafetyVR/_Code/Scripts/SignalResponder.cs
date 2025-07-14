@@ -25,6 +25,12 @@ public class SignalResponder : MonoBehaviour
 
         debris[0].GetComponent<SplineAnimate>().Play();
     }
+    public void ActivateSecondBigDebris()
+    {
+        debris[1].SetActive(true);
+
+        debris[1].GetComponent<SplineAnimate>().Play();
+    }
 
     public void ActivateAsteroid()
     {
