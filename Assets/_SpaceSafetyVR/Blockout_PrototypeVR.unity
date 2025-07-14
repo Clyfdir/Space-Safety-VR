@@ -10943,6 +10943,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &886449303
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117360, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173195131945117363, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: m_Name
+      value: XR Origin Hands Basic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4313906087532838889, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe2117ddc2fc9b744a67e9fcd296064b, type: 3}
 --- !u!1 &935015152
 GameObject:
   m_ObjectHideFlags: 0
@@ -22314,7 +22375,7 @@ MonoBehaviour:
   m_LoopMode: 0
   m_Method: 0
   m_Duration: 6
-  m_MaxSpeed: 35.657436
+  m_MaxSpeed: 37.098225
   m_EasingMode: 0
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
@@ -22480,3 +22541,4 @@ SceneRoots:
   - {fileID: 1566180834}
   - {fileID: 185061836}
   - {fileID: 1007426404}
+  - {fileID: 886449303}
