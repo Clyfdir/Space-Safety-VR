@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Interactable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerLocation
   - Water
   - UI
-  - 
+  - Interactable
   - 
   - 
   - 
