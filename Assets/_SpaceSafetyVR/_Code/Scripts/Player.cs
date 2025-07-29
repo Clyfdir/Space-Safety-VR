@@ -3,20 +3,18 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameEvent playerSpawn;
     [SerializeField] private PlayerLocation playerPos;
     void Awake()
     {
         if (playerPos == null) return;
         transform.parent = playerPos.transform;
         transform.localPosition = Vector3.zero;
+
+        playerSpawn.Occured();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-    
     public void ChangePlayerLocation(PlayerLocation newLocation)
     {
         if (newLocation == null) return;

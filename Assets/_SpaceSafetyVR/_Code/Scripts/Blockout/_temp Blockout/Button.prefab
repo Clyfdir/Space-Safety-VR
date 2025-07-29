@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9136743930392077117}
   - component: {fileID: 3784819435728757157}
+  - component: {fileID: 4055133791776553602}
   - component: {fileID: 3019100002935632367}
   - component: {fileID: 8028069281401985185}
   - component: {fileID: 1164351255465935919}
@@ -47,7 +48,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56e612a80c19e34eb1fd70c23fdcbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerEvent: {fileID: 0}
   baseMaterial: {fileID: 2100000, guid: 04356c3c9f923e64180aa1364acbfafb, type: 2}
+--- !u!114 &4055133791776553602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8380461992435070155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4475ed1a63a9f6841bf7e7513852b876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 0}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3784819435728757157}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!33 &3019100002935632367
 MeshFilter:
   m_ObjectHideFlags: 0

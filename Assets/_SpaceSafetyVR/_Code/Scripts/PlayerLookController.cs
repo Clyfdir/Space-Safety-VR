@@ -41,11 +41,10 @@ public class PlayerLookController : MonoBehaviour
         float mouseX = lookDelta.x;
         float mouseY = lookDelta.y;
 
-        // Example: apply rotation to camera
         transform.Rotate(Vector3.up * mouseX * horSensitivity);
 
-        verticalRotation += -mouseY * verSensitivity; // Invert to behave like typical FPS
-        verticalRotation = Mathf.Clamp(verticalRotation, -80f, 80f); // Clamp up/down angle
+        verticalRotation += -mouseY * verSensitivity;
+        verticalRotation = Mathf.Clamp(verticalRotation, -80f, 80f);
 
         playerCamera.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
