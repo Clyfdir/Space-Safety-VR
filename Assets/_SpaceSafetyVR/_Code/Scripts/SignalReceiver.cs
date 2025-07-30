@@ -4,11 +4,16 @@ public class SignalReceiver : MonoBehaviour
 {
     [SerializeField] private GameEvent shuttleApproachFinish;
     [SerializeField] private GameEvent shuttleDockFinish;
+    [SerializeField] private GameEvent shuttleDebrisCollision;
     [SerializeField] private GameEvent shuttleUndockFinish;
 
     public void ShuttleApproachFinish()
     {
         shuttleApproachFinish.Occured();
+    }
+    public void ShuttleDebrisCollision()
+    {
+        shuttleDebrisCollision.Occured();
     }
     public void ShuttleDockFinish()
     {

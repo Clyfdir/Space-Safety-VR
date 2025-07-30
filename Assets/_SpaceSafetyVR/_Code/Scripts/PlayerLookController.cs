@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 
@@ -14,12 +15,20 @@ public class PlayerLookController : MonoBehaviour
     [SerializeField] private Transform playerCamera;
     [SerializeField] private float horSensitivity = 2f;
     [SerializeField] private float verSensitivity = 2f;
+    [Header("")]
+
+    [SerializeField] private float startingRotation;
 
     private float verticalRotation = 0;
 
     void Awake()
     {
         playerControls = new PlayerInputActions();
+
+        transform.Rotate(Vector3.up * startingRotation);
+
+        verticalRotation = 0f;
+        playerCamera.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
 
     void OnEnable()
@@ -58,5 +67,11 @@ public class PlayerLookController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(playerCamera.transform.position, playerCamera.transform.position +  Quaternion.Euler(0, startingRotation, 0) * new Vector3(0, 0, 1));
     }
 }
