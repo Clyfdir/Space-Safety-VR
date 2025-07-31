@@ -48,7 +48,7 @@ public class Interactable : MonoBehaviour
 
     public void Trigger()
     {
-        triggerEvent.Occured();
+        triggerEvent?.Occured();
     }
 
     public void Activate()

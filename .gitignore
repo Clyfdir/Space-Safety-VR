@@ -52,3 +52,14 @@ crashlytics-build.properties
 
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Wwise
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+IncrementalSoundBankData.xml
+/[Aa]ssets/[Ww]wise/API/Runtime/Plugins/iOS/
+*.zip

@@ -1,3 +1,10 @@
+
+# Auto detect text files and perform LF normalization
+* text=auto
+*.bnk filter=lfs diff=lfs merge=lfs -text
+*.wem filter=lfs diff=lfs merge=lfs -text
+*.akd filter=lfs diff=lfs merge=lfs -text
+
 # Unity asset files
 *.unity filter=lfs diff=lfs merge=lfs -text
 *.prefab filter=lfs diff=lfs merge=lfs -text

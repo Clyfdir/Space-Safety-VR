@@ -40,15 +40,15 @@ public class PlayerInteraction : MonoBehaviour
                 // If interact button clicked
                 if (interact.triggered)
                 {
-                    // 
+                    // Player Location Logic
                     if (((1 << hit.collider.gameObject.layer) & LayerMask.GetMask("PlayerLocation")) != 0)
                     {
-                        Debug.Log("Interacting with: " + hit.collider.gameObject.name);
-                        // Here you can add interaction logic, e.g., calling a method on the interactable object
                         hit.collider.gameObject.GetComponent<Interactable>().Highlight();
                         player.ChangePlayerLocation(hit.collider.gameObject.GetComponent<Interactable>());
-                    }
 
+                        hit.collider.gameObject.GetComponent<Interactable>().Trigger();
+                    }
+                    // Button Logic
                     if (((1 << hit.collider.gameObject.layer) & LayerMask.GetMask("Button")) != 0)
                     {
                         hit.collider.gameObject.GetComponent<Interactable>().Trigger();
