@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	281597619	Play_locked_door			\Default Work Unit\SFX\Play_locked_door	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	600307686	locked-door	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\EE\{EEF727A5-FD3C-0D50-FDBE-F00893DE2A30}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\locked-door		40488
+
