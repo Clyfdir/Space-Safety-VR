@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2228651116",
+    "Type": "User",
+    "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
+    "Language": "SFX",
+    "Hash": "{8BB9BF5D-3369-B291-AB26-B4DCACF99B0C}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
+    "ShortName": "Main_Soundbank",
+    "Path": "Main_Soundbank.bnk",
+    "Media": [
+     {
+      "Id": "600307686",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "locked-door.wav",
+      "CachePath": "EE/{EEF727A5-FD3C-0D50-FDBE-F00893DE2A30}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "281597619",
+      "Name": "Play_locked_door",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_locked_door",
+      "GUID": "{FC0CEF35-E93F-4D66-B389-62DF1745F879}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22897959",
+      "DurationMax": "0.22897959",
+      "MediaRefs": [
+       {
+        "Id": "600307686"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{006DC78A-6C20-ACCF-5CC3-C0DD4E55FD2E}"
+ }
+}

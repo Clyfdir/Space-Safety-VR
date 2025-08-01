@@ -1,0 +1,50 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Space-Safety-VR_WwiseProject",
+   "GUID": "{1D778316-BFFE-42F1-A9DF-B0CEF4EA7C36}",
+   "Generator": "2024.1.5.8803"
+  },
+  "CacheRoot": "../../../../Space-Safety-VR_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Android",
+    "GUID": "{2B0ABA9C-A487-4E30-B9E1-CAC009C018F7}",
+    "BasePlatform": "Android",
+    "BasePlatformGUID": "{A2D401DE-B8B6-4FEB-8142-137C34D507CA}",
+    "Path": "../../../../Space-Safety-VR_WwiseProject/GeneratedSoundBanks/Android"
+   },
+   {
+    "Name": "iOS",
+    "GUID": "{DCA04F88-D6BA-484D-9F67-EC13781A0747}",
+    "BasePlatform": "iOS",
+    "BasePlatformGUID": "{ECE03DB4-F948-462D-B2BB-A9173012B1F8}",
+    "Path": "../../../../Space-Safety-VR_WwiseProject/GeneratedSoundBanks/iOS"
+   },
+   {
+    "Name": "Mac",
+    "GUID": "{5E6E68FC-CCF8-475D-AAE1-6048AEC02F66}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../Space-Safety-VR_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{C03E0B49-24D6-448C-B8B1-6045F8F2FB42}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../Space-Safety-VR_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{7CC3111A-4158-4132-B32F-F2C40B44AFD7}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{A0913BB4-096D-BCA9-716F-B17116A74DA6}"
+ }
+}

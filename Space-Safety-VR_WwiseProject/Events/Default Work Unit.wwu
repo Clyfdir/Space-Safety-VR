@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SFX" ID="{B28D194B-A1F0-420D-9F9C-C1B1F021CB56}" ShortID="903105955">
+					<ChildrenList>
+						<Event Name="Play_locked_door" ID="{FC0CEF35-E93F-4D66-B389-62DF1745F879}">
+							<ChildrenList>
+								<Action Name="" ID="{2AB09F36-E373-4A01-8E3B-1C6C0F1E6E90}" ShortID="1044305233">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="locked-door" ID="{77E7A546-F84B-42C2-BB92-0CE39F589CE9}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

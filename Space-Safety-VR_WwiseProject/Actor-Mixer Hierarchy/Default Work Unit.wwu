@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="AudioTest" ID="{F4855379-69D1-49F5-B443-A1DD0B6B70E0}" ShortID="233149743">
+					<ChildrenList>
+						<Sound Name="locked-door" ID="{77E7A546-F84B-42C2-BB92-0CE39F589CE9}" ShortID="319428063">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="locked-door" ID="{836B096F-4725-4D3C-9C8C-9BE489692118}">
+									<Language>SFX</Language>
+									<AudioFile>locked-door.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="600307686"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="locked-door" ID="{836B096F-4725-4D3C-9C8C-9BE489692118}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
