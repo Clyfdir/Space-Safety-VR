@@ -30,8 +30,6 @@ public class SpawnDebrisFromPool : MonoBehaviour
     //DebrisMediumSolarPanel
     //DebrisMediumYellow
 
-    [SerializeField] private GameObject DebrisDeactivatorCollider;
-
     [Header("Mode Settings:")]
     public Mode currentMode = Mode.CleanSpace1;
     private Mode previousMode = Mode.Custom;  // initialize to an impossible/default sentinel
@@ -165,11 +163,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
                 //DeactivateObj(DebrisToCatchByNet);
                 //DeactivateObj(Net);
                 //DeactivateObj(EndTextPanel);
-                ActivateObj(DebrisDeactivatorCollider);
                 break;
             case Mode.WhenRocketBody2:
-                //DeactivateObj(DebrisToCatchByNet);
-                //DeactivateObj(Net);
+                DeactivateObj(DebrisToCatchByNet);
+                DeactivateObj(Net);
                 //DeactivateObj(EndTextPanel);
                 //
                 break;
@@ -183,7 +180,6 @@ public class SpawnDebrisFromPool : MonoBehaviour
                 //DeactivateObj(EndTextPanel);
                 ActivateObj(DebrisToCatchByNet);
                 DeactivateObj(Net);
-                DeactivateObj(DebrisDeactivatorCollider);
                 //ActivateObj(Net);//no need here, it will be done when debris is closer to spaceship (when passed colliderToTriggerUserWarning)
                 //
                 break;

@@ -45,7 +45,7 @@ public class DebrisTriggersImproved : MonoBehaviour
         //If user doesn't press button, Net will move automatically
         if (other.CompareTag(colliderTagToAutoActivateNet) && NetLauncher.Instance.hasLaunched == false && other.transform.root != other.transform)
         {
-            //DebrisModeController.Instance.SetModeCleanSpace1();
+            DebrisModeController.Instance.SetModeCleanSpace1();
             netMovedAutomatically = true;
             NetLauncher.Instance.LaunchNet();
 
@@ -59,8 +59,7 @@ public class DebrisTriggersImproved : MonoBehaviour
             //PWEventsManager.Instance?.OnNeAutoWorked();
             Debug.Log($"Debris was automatically caught.");
             debrisCaughtAutomatically = true;
-            //DebrisNetManager.Instance.AttachNetAndMove();
-            DebrisModeController.Instance.SetModeCleanSpace1();
+            DebrisNetManager.Instance.AttachNetAndMove();
         }
 
         //Here user catches debris by Net
@@ -69,7 +68,7 @@ public class DebrisTriggersImproved : MonoBehaviour
             //PWEventsManager.Instance?.OnNetWorked();
             Debug.Log($"Well Done!.");
             netMovedByUser = true;
-            //DebrisNetManager.Instance.AttachNetAndMove();
+            DebrisNetManager.Instance.AttachNetAndMove();
         }
     }
 
