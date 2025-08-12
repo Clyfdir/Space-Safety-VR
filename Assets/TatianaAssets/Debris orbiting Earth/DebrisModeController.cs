@@ -20,8 +20,10 @@ public class DebrisModeController : MonoBehaviour
     }
 
         //Mariia's comments added 12-07-2025
-        private void Start()
+    private void Start()
     {
+        SetMode2();// debris start orbiting from start, but it will take time to be visible, because it appears from behindEarth
+
         // PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
         /*
         PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
@@ -31,7 +33,6 @@ public class DebrisModeController : MonoBehaviour
         PWEventsManager.Instance?.DebrisBeforeCatastropheActivated.AddListener(SetModeBeforeCatastrophe5);
         PWEventsManager.Instance?.UpdateScene.AddListener(SetModeEndText6);
         */
-
     }
 
     private void OnDisable()
@@ -48,13 +49,14 @@ public class DebrisModeController : MonoBehaviour
 
     }
     //
+
     public void SetModeCleanSpace1()
     {
         SetMode(SpawnDebrisFromPool.Mode.CleanSpace1);
         Debug.Log("CleanSpacemode activated");
     }
 
-    public void SetModeWhenRocketBody2()
+    public void SetMode2()
     {
         SetMode(SpawnDebrisFromPool.Mode.WhenRocketBody2);
         Debug.Log("WhenRocketBody activated");
