@@ -4,15 +4,23 @@
 ///   Created: 11.06.2025
 ///   Last Change: 22.06.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 11.08.2025
+///   Last Change: 12.08.2025
+
+///   to start debris/net secuence, call "DebrisModeController.Instance.SetModeWhenNet3();"
 
 using UnityEngine;
 
 public class DebrisModeController : MonoBehaviour
 {
+    public static DebrisModeController Instance;
 
-    //Mariia's comments added 12-07-2025
-    private void Start()
+    void Awake()
+    {
+        Instance = this;
+    }
+
+        //Mariia's comments added 12-07-2025
+        private void Start()
     {
         // PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
         /*

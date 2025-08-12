@@ -4,7 +4,7 @@
 ///   Created: 15.06.2025
 ///   Last Change: 11.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 11.08.2025
+///   Last Change: 12.08.2025
 
 ///   Manages differen stages of the 2nd event (net catches debris)
 
@@ -45,6 +45,7 @@ public class DebrisTriggersImproved : MonoBehaviour
         //If user doesn't press button, Net will move automatically
         if (other.CompareTag(colliderTagToAutoActivateNet) && NetLauncher.Instance.hasLaunched == false && other.transform.root != other.transform)
         {
+            DebrisModeController.Instance.SetModeCleanSpace1();
             netMovedAutomatically = true;
             NetLauncher.Instance.LaunchNet();
 

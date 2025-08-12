@@ -4,7 +4,7 @@
 ///   Created: 08.06.2025
 ///   Last Change: 12.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 11.08.2025
+///   Last Change: 12.08.2025
 
 ///   Spawning debris which is orbiting around Earth (orbiting - it's another script, attached to each prefab)
 
@@ -160,8 +160,8 @@ public class SpawnDebrisFromPool : MonoBehaviour
         switch (currentMode)
         {
             case Mode.CleanSpace1:
-                DeactivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
+                //DeactivateObj(DebrisToCatchByNet);
+                //DeactivateObj(Net);
                 //DeactivateObj(EndTextPanel);
                 break;
             case Mode.WhenRocketBody2:
