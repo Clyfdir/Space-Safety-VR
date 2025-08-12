@@ -183,6 +183,7 @@ public class SpawnDebrisFromPool : MonoBehaviour
                 //DeactivateObj(EndTextPanel);
                 ActivateObj(DebrisToCatchByNet);
                 DeactivateObj(Net);
+                DeactivateObj(DebrisDeactivatorCollider);
                 //ActivateObj(Net);//no need here, it will be done when debris is closer to spaceship (when passed colliderToTriggerUserWarning)
                 //
                 break;

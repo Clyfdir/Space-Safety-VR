@@ -22,7 +22,7 @@ public class DebrisModeController : MonoBehaviour
         //Mariia's comments added 12-07-2025
     private void Start()
     {
-        SetMode2();// debris start orbiting from start, but it will take time to be visible, because it appears from behindEarth
+        SetModeWhenNet3();// debris start orbiting from start, but it will take time to be visible, because it appears from behindEarth
 
         // PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
         /*
