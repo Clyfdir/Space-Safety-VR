@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 112.899994, y: -104.23999, z: -41.899994}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -45,7 +45,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 1.9000092, y: 1.180006, z: 3.8799858}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -82,7 +82,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 8
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -112,7 +112,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 8
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -124,6 +124,36 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: RightPanelConnection
+    classID: 1
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 8
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Galileo-Satellite_Right_Wing
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -171,6 +201,15 @@ AnimationClip:
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1423675391
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -208,7 +247,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 8
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -238,7 +277,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 8
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -259,7 +298,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: 0
+        value: 1.9000092
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -289,7 +328,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: 0
+        value: 1.180006
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -319,7 +358,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: 0
+        value: 3.8799858
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -349,7 +388,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: 0
+        value: 112.899994
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -379,7 +418,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: 0
+        value: -104.23999
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -409,7 +448,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 8
-        value: 0
+        value: -41.899994
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -433,6 +472,36 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
     flags: 16
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 8
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Galileo-Satellite_Right_Wing
+    classID: 1
+    script: {fileID: 0}
+    flags: 0
   m_EulerEditorCurves:
   - serializedVersion: 2
     curve:
@@ -612,7 +681,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -642,7 +711,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -663,6 +732,36 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: RightPanel
+    classID: 1
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 8
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Galileo-Satellite_Right_Wing
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -694,6 +793,15 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4179748381
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1423675391
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -846,7 +954,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -876,7 +984,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -897,6 +1005,36 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: RightPanel
+    classID: 1
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 8
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Galileo-Satellite_Right_Wing
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -1047,9 +1185,9 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 8
-        value: {x: -21.439999, y: 34.53, z: 6.74}
-        inSlope: {x: -11.130002, y: 11.034999, z: 0}
-        outSlope: {x: -11.130002, y: 11.034999, z: 0}
+        value: {x: -18.34, y: 35.3, z: 11.130001}
+        inSlope: {x: -12.680002, y: 10.650002, z: -0.48499966}
+        outSlope: {x: -12.680002, y: 10.650002, z: -0.48499966}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -1157,9 +1295,9 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 8
-        value: -21.439999
-        inSlope: -11.130002
-        outSlope: -11.130002
+        value: -18.34
+        inSlope: -12.680002
+        outSlope: -12.680002
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -1205,9 +1343,9 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 8
-        value: 34.53
-        inSlope: 11.034999
-        outSlope: 11.034999
+        value: 35.3
+        inSlope: 10.650002
+        outSlope: 10.650002
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -1253,9 +1391,9 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 8
-        value: 6.74
-        inSlope: 0
-        outSlope: 0
+        value: 11.130001
+        inSlope: -0.48499966
+        outSlope: -0.48499966
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
