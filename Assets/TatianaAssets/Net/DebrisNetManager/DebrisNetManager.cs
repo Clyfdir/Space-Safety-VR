@@ -4,7 +4,7 @@
 ///   Created: 06.07.2025
 ///   Last Change: 12.07.2025
 ///   ESA project stage: 
-///   Last Change: 11.08.2025
+///   Last Change: 12.08.2025
 
 ///   Manages all in the 2nd event (net catches debris) after debris was caught
 
@@ -14,6 +14,8 @@ using UnityEngine;
 public class DebrisNetManager : MonoBehaviour
 {
     public static DebrisNetManager Instance { get; private set; }
+
+    [SerializeField] private GameObject debrisParent;
 
     [Header("Timing & Speed")]
     [SerializeField] private float speed = 4f;
@@ -48,7 +50,7 @@ public class DebrisNetManager : MonoBehaviour
         yield return new WaitForSeconds(delayMoveBack);
 
         // parent the net under the debris (preserves world pos)
-        net.transform.SetParent(debris.transform, worldPositionStays: true);
+        net.transform.SetParent(debrisParent.transform, worldPositionStays: true);
 
         // wait one frame
         yield return null;
@@ -57,12 +59,12 @@ public class DebrisNetManager : MonoBehaviour
         Vector3 target = debrisEndPos.position;
 
         // keep going until we're basically there
-        while (Vector3.Distance(debris.transform.position, target) > 0.01f)
+        while (Vector3.Distance(debrisParent.transform.position, target) > 0.01f)
         {
             // move by small step, clamped
             float step = speed * Time.deltaTime;
-            debris.transform.position = Vector3.MoveTowards(
-                debris.transform.position,
+            debrisParent.transform.position = Vector3.MoveTowards(
+                debrisParent.transform.position,
                 target,
                 step
             );

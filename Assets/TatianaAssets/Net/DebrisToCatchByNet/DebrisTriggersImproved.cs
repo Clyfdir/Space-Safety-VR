@@ -59,7 +59,7 @@ public class DebrisTriggersImproved : MonoBehaviour
             //PWEventsManager.Instance?.OnNeAutoWorked();
             Debug.Log($"Debris was automatically caught.");
             debrisCaughtAutomatically = true;
-            //DebrisNetManager.Instance.AttachNetAndMove();
+            DebrisNetManager.Instance.AttachNetAndMove();
             DebrisModeController.Instance.SetModeCleanSpace1();
         }
 
@@ -69,7 +69,7 @@ public class DebrisTriggersImproved : MonoBehaviour
             //PWEventsManager.Instance?.OnNetWorked();
             Debug.Log($"Well Done!.");
             netMovedByUser = true;
-            //DebrisNetManager.Instance.AttachNetAndMove();
+            DebrisNetManager.Instance.AttachNetAndMove();
         }
     }
 
