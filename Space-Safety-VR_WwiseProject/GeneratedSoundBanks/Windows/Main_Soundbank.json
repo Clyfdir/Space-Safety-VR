@@ -10,11 +10,35 @@
     "Type": "User",
     "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
     "Language": "SFX",
-    "Hash": "{8BB9BF5D-3369-B291-AB26-B4DCACF99B0C}",
+    "Hash": "{FDFF6EE2-6C6A-9A8A-3729-35246914282A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
     "Media": [
+     {
+      "Id": "72172385",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceDebrisEnd.wav",
+      "CachePath": "76/{76C8088D-B260-0311-D558-7AC865D9E453}.wem"
+     },
+     {
+      "Id": "160712797",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceDebrisEnd2.wav",
+      "CachePath": "38/{38563597-97A8-BB39-63A0-8605EC323202}.wem"
+     },
+     {
+      "Id": "217830941",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "670700__lilmati__space-atmosphere-02-remastered.wav",
+      "CachePath": "D5/{D5C5EE85-8DF3-81A8-7A0C-64F929EC1D84}.wem"
+     },
      {
       "Id": "600307686",
       "Language": "SFX",
@@ -22,9 +46,67 @@
       "Location": "Memory",
       "ShortName": "locked-door.wav",
       "CachePath": "EE/{EEF727A5-FD3C-0D50-FDBE-F00893DE2A30}.wem"
+     },
+     {
+      "Id": "808900958",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceDebris1.wav",
+      "CachePath": "EF/{EF7FAD64-46E9-58D4-1C39-1A914328624A}.wem"
+     },
+     {
+      "Id": "896996565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Introduction_1.wav",
+      "CachePath": "E6/{E6F72E5E-4C19-27FD-66DC-A600887E0055}.wem"
+     },
+     {
+      "Id": "931036442",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceDebrisEnd1.wav",
+      "CachePath": "8F/{8FC91C51-93E3-5B83-0672-3A504AB4C16A}.wem"
+     },
+     {
+      "Id": "988370423",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceDebris2.wav",
+      "CachePath": "FA/{FA6B7A9E-182A-ED48-5B8F-39EABB88F03C}.wem"
      }
     ],
     "Events": [
+     {
+      "Id": "3133186549",
+      "Name": "Play_atmo",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_atmo",
+      "GUID": "{E4A80A09-06B6-4E4F-A42F-BCC086C4F749}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "217830941"
+       }
+      ]
+     },
+     {
+      "Id": "2632830566",
+      "Name": "Play_Introduction_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Introduction_1",
+      "GUID": "{8BBC275F-0731-41DF-AEFF-6CB696BC9C8D}",
+      "DurationType": "OneShot",
+      "DurationMin": "7.732245",
+      "DurationMax": "7.732245",
+      "MediaRefs": [
+       {
+        "Id": "896996565"
+       }
+      ]
+     },
      {
       "Id": "281597619",
       "Name": "Play_locked_door",
@@ -38,10 +120,94 @@
         "Id": "600307686"
        }
       ]
+     },
+     {
+      "Id": "2328865502",
+      "Name": "Play_SpaceDebris1",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SpaceDebris1",
+      "GUID": "{113EEB6D-F400-4058-89BA-1742CC9A5E0C}",
+      "DurationType": "OneShot",
+      "DurationMin": "12.144898",
+      "DurationMax": "12.144898",
+      "MediaRefs": [
+       {
+        "Id": "808900958"
+       }
+      ]
+     },
+     {
+      "Id": "2328865501",
+      "Name": "Play_SpaceDebris2",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SpaceDebris2",
+      "GUID": "{BB628C26-9E40-4C42-8E18-3B138AED927B}",
+      "DurationType": "OneShot",
+      "DurationMin": "15.3707485",
+      "DurationMax": "15.3707485",
+      "MediaRefs": [
+       {
+        "Id": "988370423"
+       }
+      ]
+     },
+     {
+      "Id": "3381056148",
+      "Name": "Play_SpaceDebrisEnd",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SpaceDebrisEnd",
+      "GUID": "{B169EAB6-1E8C-4E70-B346-22480AA0666D}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.481043",
+      "DurationMax": "11.481043",
+      "MediaRefs": [
+       {
+        "Id": "72172385"
+       }
+      ]
+     },
+     {
+      "Id": "3544022733",
+      "Name": "Play_SpaceDebrisEnd1",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SpaceDebrisEnd1",
+      "GUID": "{A87CC46F-D69E-4FB0-A76C-A2C597F57CE8}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.3243766",
+      "DurationMax": "5.3243766",
+      "MediaRefs": [
+       {
+        "Id": "931036442"
+       }
+      ]
+     },
+     {
+      "Id": "88024092",
+      "Name": "Play_SpaceDebrisEnd2_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SpaceDebrisEnd2_01",
+      "GUID": "{B555B9DD-4AC8-4803-9D9B-D0741E0BEFBA}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.1566668",
+      "DurationMax": "6.1566668",
+      "MediaRefs": [
+       {
+        "Id": "160712797"
+       }
+      ]
+     },
+     {
+      "Id": "88024095",
+      "Name": "Play_SpaceDebrisEnd2_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SpaceDebrisEnd2_02",
+      "GUID": "{F69818B4-57C4-4E88-BE70-E119AC2C423E}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.1566668",
+      "DurationMax": "6.1566668",
+      "MediaRefs": [
+       {
+        "Id": "160712797"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{006DC78A-6C20-ACCF-5CC3-C0DD4E55FD2E}"
+  "FileHash": "{DD1CE116-9371-FF20-18D7-B89A965DACF8}"
  }
 }

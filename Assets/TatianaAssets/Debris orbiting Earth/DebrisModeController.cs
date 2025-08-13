@@ -22,6 +22,8 @@ public class DebrisModeController : MonoBehaviour
         //Mariia's comments added 12-07-2025
         private void Start()
     {
+        SetModeWhenNet3();
+        
         // PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
         /*
         PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);

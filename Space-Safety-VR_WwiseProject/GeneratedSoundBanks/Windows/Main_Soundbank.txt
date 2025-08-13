@@ -1,6 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
+	88024092	Play_SpaceDebrisEnd2_01			\Default Work Unit\SFX\Play_SpaceDebrisEnd2_01	
+	88024095	Play_SpaceDebrisEnd2_02			\Default Work Unit\SFX\Play_SpaceDebrisEnd2_02	
 	281597619	Play_locked_door			\Default Work Unit\SFX\Play_locked_door	
+	2328865501	Play_SpaceDebris2			\Default Work Unit\SFX\Play_SpaceDebris2	
+	2328865502	Play_SpaceDebris1			\Default Work Unit\SFX\Play_SpaceDebris1	
+	2632830566	Play_Introduction_1			\Default Work Unit\SFX\Play_Introduction_1	
+	3133186549	Play_atmo			\Default Work Unit\SFX\Play_atmo	
+	3381056148	Play_SpaceDebrisEnd			\Default Work Unit\SFX\Play_SpaceDebrisEnd	
+	3544022733	Play_SpaceDebrisEnd1			\Default Work Unit\SFX\Play_SpaceDebrisEnd1	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	72172385	SpaceDebrisEnd	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\76\{76C8088D-B260-0311-D558-7AC865D9E453}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\Voicelines\SpaceDebrisEnd		1012724
+	160712797	SpaceDebrisEnd2_01	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\38\{38563597-97A8-BB39-63A0-8605EC323202}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\Voicelines\SpaceDebrisEnd2_01		543114
+	217830941	670700__lilmati__space-atmosphere-02-remastered	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\D5\{D5C5EE85-8DF3-81A8-7A0C-64F929EC1D84}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\670700__lilmati__space-atmosphere-02-remastered		29763504
 	600307686	locked-door	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\EE\{EEF727A5-FD3C-0D50-FDBE-F00893DE2A30}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\locked-door		40488
+	808900958	SpaceDebris1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\EF\{EF7FAD64-46E9-58D4-1C39-1A914328624A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\Voicelines\SpaceDebris1		1071276
+	896996565	Introduction_1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\E6\{E6F72E5E-4C19-27FD-66DC-A600887E0055}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\Voicelines\Introduction_1		682080
+	931036442	SpaceDebrisEnd1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\8F\{8FC91C51-93E3-5B83-0672-3A504AB4C16A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\Voicelines\SpaceDebrisEnd1		469706
+	988370423	SpaceDebris2	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\FA\{FA6B7A9E-182A-ED48-5B8F-39EABB88F03C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\Voicelines\SpaceDebris2		1355796
 
