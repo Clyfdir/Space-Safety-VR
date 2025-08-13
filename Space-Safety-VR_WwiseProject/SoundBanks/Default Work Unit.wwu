@@ -6,6 +6,13 @@
 				<SoundBank Name="Main_Soundbank" ID="{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}">
 					<ObjectInclusionList>
 						<ObjectRef Name="SFX" ID="{B28D194B-A1F0-420D-9F9C-C1B1F021CB56}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpaceDebrisEnd2_01" ID="{F4ED09E7-4B7E-4523-9601-7F39BC11AE18}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpaceDebris1" ID="{DB9DEDC1-9384-4765-B1C3-883FFFBA6FB4}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpaceDebrisEnd1" ID="{02264AC8-16A4-47D7-B69D-E72FF96F6711}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpaceDebrisEnd2" ID="{98475A2D-245F-4A06-BB03-B0E964ACEA25}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_atmo" ID="{E4A80A09-06B6-4E4F-A42F-BCC086C4F749}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpaceDebrisEnd" ID="{9E921986-A7A0-4EB4-A48D-30902EBDF59A}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SpaceDebris2" ID="{E431E6AA-AFF6-4F32-96FF-87CBCC3506D5}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

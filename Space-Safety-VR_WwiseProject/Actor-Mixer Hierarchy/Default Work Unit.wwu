@@ -27,6 +27,194 @@
 								<ActiveSource Name="locked-door" ID="{836B096F-4725-4D3C-9C8C-9BE489692118}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="670700__lilmati__space-atmosphere-02-remastered" ID="{DE503FE7-0801-408E-B9C3-829AB5E81D4C}" ShortID="916764837">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="670700__lilmati__space-atmosphere-02-remastered" ID="{A3C9D985-8C6E-4F5B-A430-A1F380EE9601}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="LoopEnd" Type="Real64" Value="155.01775"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>670700__lilmati__space-atmosphere-02-remastered.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="217830941"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="670700__lilmati__space-atmosphere-02-remastered" ID="{A3C9D985-8C6E-4F5B-A430-A1F380EE9601}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Folder Name="Voicelines" ID="{5A4E889F-843D-41C7-8C10-1BEA4D34075A}" ShortID="1019367243">
+							<ChildrenList>
+								<Sound Name="Introduction_1" ID="{20A70D31-BD12-4A87-AA06-96CBF7BD3894}" ShortID="371210784">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Introduction_1" ID="{22BEE6B3-120E-4CAC-9ABF-7D360CC1870B}">
+											<Language>SFX</Language>
+											<AudioFile>Introduction_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="896996565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Introduction_1" ID="{22BEE6B3-120E-4CAC-9ABF-7D360CC1870B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceDebris1" ID="{DB9DEDC1-9384-4765-B1C3-883FFFBA6FB4}" ShortID="996320536">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceDebris1" ID="{CCBB4A04-7657-46A3-B2B1-1A6A940A1DE0}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceDebris1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="808900958"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceDebris1" ID="{CCBB4A04-7657-46A3-B2B1-1A6A940A1DE0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceDebris2" ID="{E431E6AA-AFF6-4F32-96FF-87CBCC3506D5}" ShortID="306302874">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceDebris2" ID="{05273BC9-F4B0-4A50-9374-9DBCCDEF5D5A}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceDebris2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="988370423"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceDebris2" ID="{05273BC9-F4B0-4A50-9374-9DBCCDEF5D5A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceDebrisEnd" ID="{9E921986-A7A0-4EB4-A48D-30902EBDF59A}" ShortID="508145538">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceDebrisEnd" ID="{9A354714-CEF1-44FA-B7D3-D8213F322D29}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceDebrisEnd.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="72172385"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceDebrisEnd" ID="{9A354714-CEF1-44FA-B7D3-D8213F322D29}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceDebrisEnd1" ID="{02264AC8-16A4-47D7-B69D-E72FF96F6711}" ShortID="319055346">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceDebrisEnd1" ID="{4B552A9C-57AF-4E34-8CC7-3D209F43EEB3}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceDebrisEnd1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="931036442"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceDebrisEnd1" ID="{4B552A9C-57AF-4E34-8CC7-3D209F43EEB3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceDebrisEnd2" ID="{98475A2D-245F-4A06-BB03-B0E964ACEA25}" ShortID="872759207">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceDebrisEnd2" ID="{F2846AF1-9139-498F-BEA4-C01240B37CEB}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceDebrisEnd2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="160712797"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceDebrisEnd2" ID="{F2846AF1-9139-498F-BEA4-C01240B37CEB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceDebrisEnd2_01" ID="{F4ED09E7-4B7E-4523-9601-7F39BC11AE18}" ShortID="1035983207">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceDebrisEnd2" ID="{7348CF10-3C14-4207-A26C-2AABA940B0DF}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceDebrisEnd2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="160712797"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceDebrisEnd2" ID="{7348CF10-3C14-4207-A26C-2AABA940B0DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

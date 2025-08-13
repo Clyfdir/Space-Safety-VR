@@ -16,6 +16,94 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_atmo" ID="{E4A80A09-06B6-4E4F-A42F-BCC086C4F749}">
+							<ChildrenList>
+								<Action Name="" ID="{0396DDCA-9B37-4CB1-88D6-D2E78BC3E599}" ShortID="848227098">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="670700__lilmati__space-atmosphere-02-remastered" ID="{DE503FE7-0801-408E-B9C3-829AB5E81D4C}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Introduction_1" ID="{8BBC275F-0731-41DF-AEFF-6CB696BC9C8D}">
+							<ChildrenList>
+								<Action Name="" ID="{3CBB6991-4E9D-4CE3-AD1A-DAA87282D494}" ShortID="338306685">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Introduction_1" ID="{20A70D31-BD12-4A87-AA06-96CBF7BD3894}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceDebrisEnd" ID="{B169EAB6-1E8C-4E70-B346-22480AA0666D}">
+							<ChildrenList>
+								<Action Name="" ID="{D53A22C4-1014-4BB6-98F3-2FE0B4E30210}" ShortID="442104600">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceDebrisEnd" ID="{9E921986-A7A0-4EB4-A48D-30902EBDF59A}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceDebris1" ID="{113EEB6D-F400-4058-89BA-1742CC9A5E0C}">
+							<ChildrenList>
+								<Action Name="" ID="{6C4022DC-BB30-44F2-9B1C-F4D3C8AF21E4}" ShortID="575159819">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceDebris1" ID="{DB9DEDC1-9384-4765-B1C3-883FFFBA6FB4}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceDebris2" ID="{BB628C26-9E40-4C42-8E18-3B138AED927B}">
+							<ChildrenList>
+								<Action Name="" ID="{B1A1EAC7-F02F-45F6-97A0-9384A2C3CFE0}" ShortID="962980045">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceDebris2" ID="{E431E6AA-AFF6-4F32-96FF-87CBCC3506D5}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceDebrisEnd1" ID="{A87CC46F-D69E-4FB0-A76C-A2C597F57CE8}">
+							<ChildrenList>
+								<Action Name="" ID="{87D2FC14-BC96-49ED-A5B9-289DDECE70D3}" ShortID="656890085">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceDebrisEnd1" ID="{02264AC8-16A4-47D7-B69D-E72FF96F6711}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceDebrisEnd2_01" ID="{B555B9DD-4AC8-4803-9D9B-D0741E0BEFBA}">
+							<ChildrenList>
+								<Action Name="" ID="{ECE1F1FD-00DA-4619-89D1-3C5D4F6F0F52}" ShortID="335043343">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceDebrisEnd2" ID="{98475A2D-245F-4A06-BB03-B0E964ACEA25}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceDebrisEnd2_02" ID="{F69818B4-57C4-4E88-BE70-E119AC2C423E}">
+							<ChildrenList>
+								<Action Name="" ID="{AA86209E-154E-4E91-B59D-37B88758B7BF}" ShortID="503049296">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceDebrisEnd2_01" ID="{F4ED09E7-4B7E-4523-9601-7F39BC11AE18}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

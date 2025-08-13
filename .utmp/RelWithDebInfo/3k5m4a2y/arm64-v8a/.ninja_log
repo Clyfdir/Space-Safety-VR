@@ -1,0 +1,10 @@
+# ninja log v5
+14	3846	7767279147460649	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	6c114a21a343ae2d
+1	3863	7767279147615649	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	5883799d486030b4
+11	3866	7767279147650649	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	bdb6783be6bf2903
+21	3871	7767279147710647	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	499c58dc3f98f731
+25	3880	7767279147810649	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f4bcb1bedb582e6b
+5	3881	7767279147830650	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a1ec022f6cbfdf84
+18	3938	7767279148405650	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f4ef6e016fe232
+8	3942	7767279148445646	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7ed85f32b991c195
+3943	13719	7767279246245568	E:/Git/Projects/Space-Safety-VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3k5m4a2y/obj/arm64-v8a/libgame.so	1ea3b16a43465f38
