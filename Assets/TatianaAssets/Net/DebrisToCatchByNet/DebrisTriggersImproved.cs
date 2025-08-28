@@ -4,7 +4,7 @@
 ///   Created: 15.06.2025
 ///   Last Change: 11.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 12.08.2025
+///   Last Change: 28.08.2025
 
 ///   Manages differen stages of the 2nd event (net catches debris)
 
@@ -60,7 +60,7 @@ public class DebrisTriggersImproved : MonoBehaviour
             Debug.Log($"Debris was automatically caught.");
             debrisCaughtAutomatically = true;
             DebrisNetManager.Instance.AttachNetAndMove();
-            DebrisModeController.Instance.SetModeCleanSpace1();
+            DebrisModeController.Instance.SetMode01CleanSpace();
         }
 
         //Here user catches debris by Net

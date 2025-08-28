@@ -4,7 +4,7 @@
 ///   Created: 11.06.2025
 ///   Last Change: 22.06.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 12.08.2025
+///   Last Change: 28.08.2025
 
 ///   to start debris/net secuence, call "DebrisModeController.Instance.SetModeWhenNet3();"
 
@@ -19,75 +19,37 @@ public class DebrisModeController : MonoBehaviour
         Instance = this;
     }
 
-        //Mariia's comments added 12-07-2025
-        private void Start()
+    private void Start()
     {
-        SetModeWhenNet3();
-        
-        // PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
-        /*
-        PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
-        PWEventsManager.Instance?.RocketActivation.AddListener(SetModeWhenRocketBody2);
-        PWEventsManager.Instance?.NetDebrisActivated.AddListener(SetModeWhenNet3);
-        PWEventsManager.Instance?.DebrisAfterNetActivated.AddListener(SetModeAfterNet4);
-        PWEventsManager.Instance?.DebrisBeforeCatastropheActivated.AddListener(SetModeBeforeCatastrophe5);
-        PWEventsManager.Instance?.UpdateScene.AddListener(SetModeEndText6);
-        */
-
+        SetMode01CleanSpace();
+        //SetMode02();
+        //SetMode03();
+        Invoke("SetMode02", 2);
+        Invoke("SetMode03", 5);
     }
 
-    private void OnDisable()
+    public void SetMode01CleanSpace()
     {
-        // PWEventsManager.Instance?.StartSpawnDebris.AddListener(SetModeCleanSpace1);
-        /*
-        PWEventsManager.Instance?.StartSpawnDebris.RemoveListener(SetModeCleanSpace1);
-        PWEventsManager.Instance?.RocketActivation.RemoveListener(SetModeWhenRocketBody2);
-        PWEventsManager.Instance?.NetDebrisActivated.RemoveListener(SetModeWhenNet3);
-        PWEventsManager.Instance?.DebrisAfterNetActivated.RemoveListener(SetModeAfterNet4);
-        PWEventsManager.Instance?.DebrisBeforeCatastropheActivated.AddListener(SetModeBeforeCatastrophe5);
-        PWEventsManager.Instance?.UpdateScene.RemoveListener(SetModeEndText6);
-        */
-
-    }
-    //
-    public void SetModeCleanSpace1()
-    {
-        SetMode(SpawnDebrisFromPool.Mode.CleanSpace1);
-        Debug.Log("CleanSpacemode activated");
+        SetMode(SpawnDebrisFromPool.Mode.Mode01CleanSpace);
+        //Debug.Log("CleanSpacemode activated");
     }
 
-    public void SetModeWhenRocketBody2()
+    public void SetMode02()
     {
-        SetMode(SpawnDebrisFromPool.Mode.WhenRocketBody2);
-        Debug.Log("WhenRocketBody activated");
+        SetMode(SpawnDebrisFromPool.Mode.Mode02);
+        //Debug.Log("WhenRocketBody activated");
     }
 
-    public void SetModeAfterRocketBody()// new mode, slightly more debris after rocket body and before net
+    public void SetMode03()
     {
-        SetMode(SpawnDebrisFromPool.Mode.AfterRocketBody);
+        SetMode(SpawnDebrisFromPool.Mode.Mode03);
+        //Debug.Log("WhenNet activated");
     }
-
-    public void SetModeWhenNet3()
+    //Mode04CleanAllAtOnce
+    public void SetMode04CleanAllAtOnce()
     {
-        SetMode(SpawnDebrisFromPool.Mode.WhenNet3);
-        Debug.Log("WhenNet activated");
-    }
-
-    public void SetModeAfterNet4()
-    {
-        SetMode(SpawnDebrisFromPool.Mode.AfterNet4);
-        Debug.Log("WhenAfterNet activated");
-    }
-
-    public void SetModeBeforeCatastrophe5()
-    {
-        SetMode(SpawnDebrisFromPool.Mode.BeforeCatastrophe5);
-        Debug.Log("WhenBeforecatastrophe activated");
-    }
-
-    public void SetModeEndText6()
-    {
-        SetMode(SpawnDebrisFromPool.Mode.EndText6);
+        SetMode(SpawnDebrisFromPool.Mode.Mode04CleanAllAtOnce);
+        //Debug.Log("WhenNet activated");
     }
 
     public void SetModeCustom()
@@ -104,6 +66,6 @@ public class DebrisModeController : MonoBehaviour
         }
 
         SpawnDebrisFromPool.Instance.currentMode = mode;
-        Debug.Log("Mode set to: " + mode);
+        //Debug.Log("Mode set to: " + mode);
     }
 }
