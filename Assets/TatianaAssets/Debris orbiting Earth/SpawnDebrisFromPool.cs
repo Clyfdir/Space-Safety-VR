@@ -4,7 +4,7 @@
 ///   Created: 08.06.2025
 ///   Last Change: 12.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 28.08.2025
+///   Last Change: 31.08.2025
 
 ///   Spawning debris which is orbiting around Earth (orbiting - it's another script, attached to each prefab)
 
@@ -38,20 +38,33 @@ public class SpawnDebrisFromPool : MonoBehaviour
     [SerializeField] private float debrisIntervalMediumYellow;
     [SerializeField] private float debrisIntervalSmall;
 
+    /*
     // Spawn intervals in seconds
     [Header("Mode02 intervals:")]
-    [SerializeField] private float debrisIntervalLarge2 = 1f;
-    [SerializeField] private float debrisIntervalMedium2 = 1f;
-    [SerializeField] private float debrisIntervalMediumPanel2 = 1f;
-    [SerializeField] private float debrisIntervalMediumYellow2 = 1f;
-    [SerializeField] private float debrisIntervalSmall2 = 1f;
-
+    [SerializeField] private float debrisIntervalLarge2 = 3f;
+    [SerializeField] private float debrisIntervalMedium2 = 3f;
+    [SerializeField] private float debrisIntervalMediumPanel2 = 3f;
+    [SerializeField] private float debrisIntervalMediumYellow2 = 3f;
+    [SerializeField] private float debrisIntervalSmall2 = 3f;
+     */
+    private float debrisIntervalLarge2 = 3f;
+    private float debrisIntervalMedium2 = 3f;
+    private float debrisIntervalMediumPanel2 = 3f;
+    private float debrisIntervalMediumYellow2 = 3f;
+    private float debrisIntervalSmall2 = 3f;
+    /*
     [Header("Mode03 intervals:")]
-    [SerializeField] private float debrisIntervalLarge3 = 0.2f;
-    [SerializeField] private float debrisIntervalMedium3 = 0.2f;
-    [SerializeField] private float debrisIntervalMediumPanel3 = 0.2f;
-    [SerializeField] private float debrisIntervalMediumYellow3 = 0.2f;
-    [SerializeField] private float debrisIntervalSmall3 = 0.2f;
+    [SerializeField] private float debrisIntervalLarge3 = 0.15f;
+    [SerializeField] private float debrisIntervalMedium3 = 0.15f;
+    [SerializeField] private float debrisIntervalMediumPanel3 = 0.15f;
+    [SerializeField] private float debrisIntervalMediumYellow3 = 0.15f;
+    [SerializeField] private float debrisIntervalSmall3 = 0.1f;
+     */
+    private float debrisIntervalLarge3 = 0.15f;
+    private float debrisIntervalMedium3 = 0.15f;
+    private float debrisIntervalMediumPanel3 = 0.15f;
+    private float debrisIntervalMediumYellow3 = 0.15f;
+    private float debrisIntervalSmall3 = 0.1f;
 
     // Internal timers
     [Header("Timers:")]
@@ -74,7 +87,9 @@ public class SpawnDebrisFromPool : MonoBehaviour
     [SerializeField] private float zRotMax = 15f;
 
     // Array to hold the spawn point transforms
-    private Transform[] spawnPoints;
+    [SerializeField] private Transform[] spawnPoints;
+    private Vector3 leftSpawnPos = new Vector3(-310.9f, 6f, 21.2f);
+    private Vector3 rightSpawnPos = new Vector3(366.6f, 5.9f, 242.4f);
 
     void Awake()
     {
@@ -99,6 +114,9 @@ public class SpawnDebrisFromPool : MonoBehaviour
         // make sure the very first mode gets set up
         previousMode = currentMode;
         SetupModeObjects();
+
+        spawnPoints[0].localPosition = leftSpawnPos;
+        spawnPoints[1].localPosition = rightSpawnPos;
     }
 
     void Update()

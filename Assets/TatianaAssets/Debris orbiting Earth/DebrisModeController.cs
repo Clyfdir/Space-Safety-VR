@@ -4,7 +4,7 @@
 ///   Created: 11.06.2025
 ///   Last Change: 22.06.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 28.08.2025
+///   Last Change: 31.08.2025
 
 ///   to start debris/net secuence, call "DebrisModeController.Instance.SetModeWhenNet3();"
 
@@ -24,8 +24,8 @@ public class DebrisModeController : MonoBehaviour
         SetMode01CleanSpace();
         //SetMode02();
         //SetMode03();
-        Invoke("SetMode02", 2);
-        Invoke("SetMode03", 5);
+        Invoke("SetMode02", 1);
+        //Invoke("SetMode03", 5);
     }
 
     public void SetMode01CleanSpace()
