@@ -4,7 +4,7 @@
 ///   Created: 08.06.2025
 ///   Last Change: 12.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 12.08.2025
+///   Last Change: 31.08.2025
 
 ///   Spawning debris which is orbiting around Earth (orbiting - it's another script, attached to each prefab)
 
@@ -17,13 +17,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
 
     public enum Mode
     {
-        CleanSpace1,
-        WhenRocketBody2,
-        AfterRocketBody,
-        WhenNet3,
-        AfterNet4,
-        BeforeCatastrophe5,
-        EndText6,
+        Mode01CleanSpace,
+        Mode02,
+        Mode03,
+        Mode04CleanAllAtOnce,
         Custom
     }
 
@@ -31,7 +28,7 @@ public class SpawnDebrisFromPool : MonoBehaviour
     //DebrisMediumYellow
 
     [Header("Mode Settings:")]
-    public Mode currentMode = Mode.CleanSpace1;
+    public Mode currentMode = Mode.Mode01CleanSpace;
     private Mode previousMode = Mode.Custom;  // initialize to an impossible/default sentinel
 
     [Header("Current intervals:")]
@@ -40,58 +37,42 @@ public class SpawnDebrisFromPool : MonoBehaviour
     [SerializeField] private float debrisIntervalMediumPanel;
     [SerializeField] private float debrisIntervalMediumYellow;
     [SerializeField] private float debrisIntervalSmall;
-    [SerializeField] private float debrisIntervalCloud;
 
+    /*
     // Spawn intervals in seconds
-    [Header("WhenRocketBody2 intervals:")]
-    [SerializeField] private float debrisIntervalLarge2 = 6f;
-    [SerializeField] private float debrisIntervalMedium2 = 5f;
-    [SerializeField] private float debrisIntervalSmall2 = 4f;
-    public float debrisIntervalCloud2 = 5f;
-
-    [Header("AfterRocketBody intervals:")]
-    [SerializeField] private float debrisIntervalLarge2_1 = 5f;
-    [SerializeField] private float debrisIntervalMedium2_1 = 5f;
-    [SerializeField] private float debrisIntervalMediumPanel2_1 = 5f;
-    [SerializeField] private float debrisIntervalSmall2_1 = 3f;
-    [SerializeField] private float debrisIntervalCloud2_1 = 6f;
-
-    [Header("WhenNet3 intervals:")]
-    [SerializeField] private float debrisIntervalLarge3 = 4f;
-    [SerializeField] private float debrisIntervalMedium3 = 4f;
-    [SerializeField] private float debrisIntervalMediumPanel3 = 4f;
-    [SerializeField] private float debrisIntervalSmall3 = 2f;
-    [SerializeField] private float debrisIntervalCloud3 = 5f;
-
-    [Header("AfterNet4 intervals:")]
-    [SerializeField] private float debrisIntervalLarge4 = 2f;
-    [SerializeField] private float debrisIntervalMedium4 = 1.5f;
-    [SerializeField] private float debrisIntervalMediumPanel4 = 1.5f;
-    [SerializeField] private float debrisIntervalMediumYellow4 = 1.5f;
-    [SerializeField] private float debrisIntervalSmall4 = 0.5f;
-    [SerializeField] private float debrisIntervalCloud4 = 2.5f;
-
-    [Header("BeforeCatastrophe5 intervals:")]
-    [SerializeField] private float debrisIntervalLarge5 = 1f;
-    [SerializeField] private float debrisIntervalMedium5 = 0.3f;
-    [SerializeField] private float debrisIntervalMediumPanel5 = 0.3f;
-    [SerializeField] private float debrisIntervalMediumYellow5 = 0.3f;
-    [SerializeField] private float debrisIntervalSmall5 = 0.1f;
-    [SerializeField] private float debrisIntervalCloud5 = 0.5f;
-
-    [Header("Bool conditions to spawn:")]
-    [SerializeField] private bool spawningDebrisLarge = true;
-    [SerializeField] private bool spawningDebrisMedium = true;
-    [SerializeField] private bool spawningDebrisSmall = true;
-    [SerializeField] private bool spawningDebrisCloud = true;
+    [Header("Mode02 intervals:")]
+    [SerializeField] private float debrisIntervalLarge2 = 3f;
+    [SerializeField] private float debrisIntervalMedium2 = 3f;
+    [SerializeField] private float debrisIntervalMediumPanel2 = 3f;
+    [SerializeField] private float debrisIntervalMediumYellow2 = 3f;
+    [SerializeField] private float debrisIntervalSmall2 = 3f;
+     */
+    private float debrisIntervalLarge2 = 3f;
+    private float debrisIntervalMedium2 = 3f;
+    private float debrisIntervalMediumPanel2 = 3f;
+    private float debrisIntervalMediumYellow2 = 3f;
+    private float debrisIntervalSmall2 = 3f;
+    /*
+    [Header("Mode03 intervals:")]
+    [SerializeField] private float debrisIntervalLarge3 = 0.15f;
+    [SerializeField] private float debrisIntervalMedium3 = 0.15f;
+    [SerializeField] private float debrisIntervalMediumPanel3 = 0.15f;
+    [SerializeField] private float debrisIntervalMediumYellow3 = 0.15f;
+    [SerializeField] private float debrisIntervalSmall3 = 0.1f;
+     */
+    private float debrisIntervalLarge3 = 0.15f;
+    private float debrisIntervalMedium3 = 0.15f;
+    private float debrisIntervalMediumPanel3 = 0.15f;
+    private float debrisIntervalMediumYellow3 = 0.15f;
+    private float debrisIntervalSmall3 = 0.1f;
 
     // Internal timers
+    [Header("Timers:")]
     [SerializeField] private float debrisTimerLarge = 0f;
     [SerializeField] private float debrisTimerMedium = 0f;
     [SerializeField] private float debrisTimerMediumPanel = 0f;
     [SerializeField] private float debrisTimerMediumYellow = 0f;
     [SerializeField] private float debrisTimerSmall = 0f;
-    [SerializeField] private float debrisTimerCloud = 0f;
 
     [Header("Spawn position ranges:")]
     [SerializeField] private float xPosMin = -5f;
@@ -105,17 +86,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
     [SerializeField] private float zRotMin = -15f;
     [SerializeField] private float zRotMax = 15f;
 
-    [Header("Objects (will be auto assigned):")]
-    [SerializeField] private GameObject Net;
-    [SerializeField] private GameObject DebrisToCatchByNet;
-    //[SerializeField] private GameObject EndTextPanel;
-
-    // Movement speed for spawned objects
-    //[Header("Movement Settings:")]
-    //public float moveSpeed = 5f;
-
     // Array to hold the spawn point transforms
-    private Transform[] spawnPoints;
+    [SerializeField] private Transform[] spawnPoints;
+    private Vector3 leftSpawnPos = new Vector3(-310.9f, 6f, 21.2f);
+    private Vector3 rightSpawnPos = new Vector3(366.6f, 5.9f, 242.4f);
 
     void Awake()
     {
@@ -133,8 +107,6 @@ public class SpawnDebrisFromPool : MonoBehaviour
         {
             Debug.LogWarning("SpawnDebrisFromPool needs at least 2 child GameObjects as spawn points!");
         }
-
-        AutoAssignObjects();
     }
 
     void Start()
@@ -142,6 +114,9 @@ public class SpawnDebrisFromPool : MonoBehaviour
         // make sure the very first mode gets set up
         previousMode = currentMode;
         SetupModeObjects();
+
+        spawnPoints[0].localPosition = leftSpawnPos;
+        spawnPoints[1].localPosition = rightSpawnPos;
     }
 
     void Update()
@@ -159,99 +134,41 @@ public class SpawnDebrisFromPool : MonoBehaviour
     {
         switch (currentMode)
         {
-            case Mode.CleanSpace1:
-                //DeactivateObj(DebrisToCatchByNet);
-                //DeactivateObj(Net);
-                //DeactivateObj(EndTextPanel);
+            case Mode.Mode01CleanSpace:
                 break;
-            case Mode.WhenRocketBody2:
-                DeactivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
-                //DeactivateObj(EndTextPanel);
-                //
+            case Mode.Mode02:
                 break;
-            case Mode.AfterRocketBody:
-                DeactivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
-                //DeactivateObj(EndTextPanel);
-                //
+            case Mode.Mode03:
                 break;
-            case Mode.WhenNet3:
-                //DeactivateObj(EndTextPanel);
-                ActivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
-                //ActivateObj(Net);//no need here, it will be done when debris is closer to spaceship (when passed colliderToTriggerUserWarning)
-                //
-                break;
-            case Mode.AfterNet4:
-                DeactivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
-                //DeactivateObj(EndTextPanel);
-                //
-                break;
-            case Mode.BeforeCatastrophe5:
-                DeactivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
-                //DeactivateObj(EndTextPanel);
-                //
-                break;
-            case Mode.EndText6:
-                DeactivateObj(DebrisToCatchByNet);
-                DeactivateObj(Net);
+            case Mode.Mode04CleanAllAtOnce:
                 DeactivateAllDebris();
-                //ActivateObj(EndTextPanel);
-                //
                 break;
             case Mode.Custom:
-                //
                 break;
         }
-
     }
 
     public void SetupModeIntervals()
     {
         switch (currentMode)
         {
-            case Mode.CleanSpace1:
+            case Mode.Mode01CleanSpace:
                 break;
-            case Mode.WhenRocketBody2:
+            case Mode.Mode02:
                 debrisIntervalLarge = debrisIntervalLarge2;
                 debrisIntervalMedium = debrisIntervalMedium2;
                 debrisIntervalSmall = debrisIntervalSmall2;
-                //debrisIntervalCloud = debrisIntervalCloud2;
+                debrisIntervalMediumPanel = debrisIntervalMediumPanel2;
+                debrisIntervalMediumYellow = debrisIntervalMediumYellow2;
                 break;
-            case Mode.AfterRocketBody:
-                debrisIntervalLarge = debrisIntervalLarge2_1;
-                debrisIntervalMedium = debrisIntervalMedium2_1;
-                debrisIntervalMediumPanel = debrisIntervalMediumPanel2_1;
-                debrisIntervalSmall = debrisIntervalSmall2_1;
-                debrisIntervalCloud = debrisIntervalCloud2_1;
-                break;
-            case Mode.WhenNet3:
+            case Mode.Mode03:
                 debrisIntervalLarge = debrisIntervalLarge3;
                 debrisIntervalMedium = debrisIntervalMedium3;
                 debrisIntervalMediumPanel = debrisIntervalMediumPanel3;
                 debrisIntervalSmall = debrisIntervalSmall3;
-                debrisIntervalCloud = debrisIntervalCloud3;
+                debrisIntervalMediumYellow = debrisIntervalMediumYellow3;
                 break;
-            case Mode.AfterNet4:
-                debrisIntervalLarge = debrisIntervalLarge4;
-                debrisIntervalMedium = debrisIntervalMedium4;
-                debrisIntervalMediumPanel = debrisIntervalMediumPanel4;
-                debrisIntervalMediumYellow = debrisIntervalMediumYellow4;
-                debrisIntervalSmall = debrisIntervalSmall4;
-                debrisIntervalCloud = debrisIntervalCloud4;
-                break;
-            case Mode.BeforeCatastrophe5:
-                debrisIntervalLarge = debrisIntervalLarge5;
-                debrisIntervalMedium = debrisIntervalMedium5;
-                debrisIntervalMediumPanel = debrisIntervalMediumPanel5;
-                debrisIntervalMediumYellow = debrisIntervalMediumYellow5;
-                debrisIntervalSmall = debrisIntervalSmall5;
-                debrisIntervalCloud = debrisIntervalCloud5;
-                break;
-            case Mode.EndText6:
+            case Mode.Mode04CleanAllAtOnce:
                 break;
             case Mode.Custom:
                 //
@@ -266,112 +183,21 @@ public class SpawnDebrisFromPool : MonoBehaviour
         debrisTimerSmall += deltaTime;
         debrisTimerMedium += deltaTime;
         debrisTimerLarge += deltaTime;
-        debrisTimerCloud += deltaTime;
         debrisTimerMediumPanel += deltaTime; 
         debrisTimerMediumYellow += deltaTime;
 
         switch (currentMode)
         {
-            case Mode.CleanSpace1:
+            case Mode.Mode01CleanSpace:
                 break;
-            case Mode.WhenRocketBody2:
+            case Mode.Mode02:
                 if (debrisTimerLarge >= debrisIntervalLarge)
                 {
-                    //debrisIntervalLarge = debrisIntervalLarge2;
                     DebrisSpawnFromPool("DebrisLarge");
                     debrisTimerLarge = 0f;
                 }
                 if (debrisTimerMedium >= debrisIntervalMedium)
                 {
-                    //debrisIntervalMedium = debrisIntervalMedium2;
-                    DebrisSpawnFromPool("DebrisMedium");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    //debrisIntervalSmall = debrisIntervalSmall2;
-                    DebrisSpawnFromPool("DebrisSmall");
-                    debrisTimerSmall = 0f;
-                }
-                break;
-            case Mode.AfterRocketBody:
-                if (debrisTimerLarge >= debrisIntervalLarge)
-                {
-                    //debrisIntervalLarge = debrisIntervalLarge2_1;
-                    DebrisSpawnFromPool("DebrisLarge");
-                    debrisTimerLarge = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    //debrisIntervalMedium = debrisIntervalMedium2_1;
-                    DebrisSpawnFromPool("DebrisMedium");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerMediumPanel >= debrisIntervalMediumPanel)
-                {
-                    DebrisSpawnFromPool("DebrisMediumSolarPanel");
-                    debrisTimerMediumPanel = 0f;
-                }
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    //debrisIntervalSmall = debrisIntervalSmall2_1;
-                    DebrisSpawnFromPool("DebrisSmall");
-                    debrisTimerSmall = 0f;
-                }
-                /*
-                if (debrisTimerCloud >= debrisIntervalCloud)
-                {
-                    //debrisIntervalCloud = debrisIntervalCloud2_1;
-                    DebrisSpawnFromPool("DebrisCloud");
-                    debrisTimerCloud = 0f;
-                }
-                */
-                
-                break;
-            case Mode.WhenNet3:
-                if (debrisTimerLarge >= debrisIntervalLarge)
-                {
-                    //debrisIntervalLarge = debrisIntervalLarge3;
-                    DebrisSpawnFromPool("DebrisLarge");
-                    debrisTimerLarge = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    //debrisIntervalMedium = debrisIntervalMedium3;
-                    DebrisSpawnFromPool("DebrisMedium");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerMediumPanel >= debrisIntervalMediumPanel)
-                {
-                    DebrisSpawnFromPool("DebrisMediumSolarPanel");
-                    debrisTimerMediumPanel = 0f;
-                }
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    //debrisIntervalSmall = debrisIntervalSmall3;
-                    DebrisSpawnFromPool("DebrisSmall");
-                    debrisTimerSmall = 0f;
-                }
-                /*
-                if (debrisTimerCloud >= debrisIntervalCloud)
-                {
-                    //debrisIntervalCloud = debrisIntervalCloud3;
-                    DebrisSpawnFromPool("DebrisCloud");
-                    debrisTimerCloud = 0f;
-                }
-                */
-                
-                break;
-            case Mode.AfterNet4:
-                if (debrisTimerLarge >= debrisIntervalLarge)
-                {
-                    //debrisIntervalLarge = debrisIntervalLarge4;
-                    DebrisSpawnFromPool("DebrisLarge");
-                    debrisTimerLarge = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    //debrisIntervalMedium = debrisIntervalMedium4;
                     DebrisSpawnFromPool("DebrisMedium");
                     debrisTimerMedium = 0f;
                 }
@@ -387,36 +213,18 @@ public class SpawnDebrisFromPool : MonoBehaviour
                 }
                 if (debrisTimerSmall >= debrisIntervalSmall)
                 {
-                    //debrisIntervalSmall = debrisIntervalSmall4;
                     DebrisSpawnFromPool("DebrisSmall");
                     debrisTimerSmall = 0f;
                 }
-                /*
-                if (debrisTimerCloud >= debrisIntervalCloud)
-                {
-                    //debrisIntervalCloud = debrisIntervalCloud4;
-                    DebrisSpawnFromPool("DebrisCloud");
-                    debrisTimerCloud = 0f;
-                }
-                */
-                
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    //debrisIntervalSmall = debrisIntervalSmall4;
-                    DebrisSpawnFromPool("DebrisSmall2");
-                    debrisTimerSmall = 0f;
-                }
                 break;
-            case Mode.BeforeCatastrophe5:
+            case Mode.Mode03:
                 if (debrisTimerLarge >= debrisIntervalLarge)
                 {
-                    //debrisIntervalLarge = debrisIntervalLarge5;
                     DebrisSpawnFromPool("DebrisLarge");
                     debrisTimerLarge = 0f;
                 }
                 if (debrisTimerMedium >= debrisIntervalMedium)
                 {
-                    //debrisIntervalMedium = debrisIntervalMedium5;
                     DebrisSpawnFromPool("DebrisMedium");
                     debrisTimerMedium = 0f;
                 }
@@ -432,27 +240,11 @@ public class SpawnDebrisFromPool : MonoBehaviour
                 }
                 if (debrisTimerSmall >= debrisIntervalSmall)
                 {
-                    //debrisIntervalSmall = debrisIntervalSmall5;
                     DebrisSpawnFromPool("DebrisSmall");
                     debrisTimerSmall = 0f;
                 }
-                /*
-                if (debrisTimerCloud >= debrisIntervalCloud)
-                {
-                    //debrisIntervalCloud = debrisIntervalCloud5;
-                    DebrisSpawnFromPool("DebrisCloud");
-                    debrisTimerCloud = 0f;
-                }
-                */
-                
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    //debrisIntervalSmall = debrisIntervalSmall5;
-                    DebrisSpawnFromPool("DebrisSmall2");
-                    debrisTimerSmall = 0f;
-                }
                 break;
-            case Mode.EndText6:
+            case Mode.Mode04CleanAllAtOnce:
                 break;
             case Mode.Custom:
                 // Fall back to original behavior
@@ -481,14 +273,8 @@ public class SpawnDebrisFromPool : MonoBehaviour
                     DebrisSpawnFromPool("DebrisLarge");
                     debrisTimerLarge = 0f;
                 }
-                if (debrisTimerCloud >= debrisIntervalCloud)
-                {
-                    DebrisSpawnFromPool("DebrisCloud");
-                    debrisTimerCloud = 0f;
-                }
                 break;
         }
-
     }
 
     public void DebrisSpawnFromPool(string tag)
@@ -524,27 +310,6 @@ public class SpawnDebrisFromPool : MonoBehaviour
         }
     }
 
-    /*
-    private void ConfigureDebrisMovement(GameObject debris, Vector3 spawnPosition)
-    {
-        // Get or add the RandomSpeedMover component
-        RandomSpeedMover mover = debris.GetComponent<RandomSpeedMover>();
-        if (mover == null)
-        {
-            mover = debris.AddComponent<RandomSpeedMover>();
-        }
-
-        // Determine if the debris is to the left or right of the spawner
-        bool isLeftOfSpawner = spawnPosition.x < transform.position.x;
-
-        // Set movement direction (negative speed for left, positive for right)
-        float speedSign = isLeftOfSpawner ? 1f : -1f;
-        mover.moveSpeed = Mathf.Abs(mover.moveSpeed) * speedSign;
-    }
-    */
-
-
-
     private void ConfigureDebrisMovementWhenOrbiting(GameObject debris, Vector3 spawnPosition)
     {
         var orb = debris.GetComponent<OrbitAroundSphere>();
@@ -570,82 +335,9 @@ public class SpawnDebrisFromPool : MonoBehaviour
     public void DeactivateAllDebris()
     {
         DeactivateObjectsWithTag("DebrisSmall");
-        DeactivateObjectsWithTag("DebrisSmall2");
         DeactivateObjectsWithTag("DebrisMedium");
         DeactivateObjectsWithTag("DebrisMediumSolarPanel");
         DeactivateObjectsWithTag("DebrisMediumYellow");
         DeactivateObjectsWithTag("DebrisLarge");
-        DeactivateObjectsWithTag("DebrisCloud");
-    }
-
-    public void DeactivateWithDelay(GameObject obj, float delay)
-    {
-        StartCoroutine(DeactivateCoroutine(obj, delay));
-    }
-
-    private IEnumerator DeactivateCoroutine(GameObject obj, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        if (obj != null && obj.activeInHierarchy)
-        {
-            obj.SetActive(false);
-            //Debug.Log($"{obj} is deactivated.", obj);
-        }
-        else
-        {
-            //Debug.LogWarning($"{obj} is not assigned, nothing to deactivate.", obj);
-        }
-    }
-
-    private void DeactivateObj(GameObject obj)
-    {
-        if (obj != null && obj.activeInHierarchy)
-        {
-            obj.SetActive(false);
-            //Debug.Log($"{obj} is deactivated.", obj);
-        }
-            
-        else
-        {
-            //Debug.LogWarning($"{obj} is not assigned, nothing to deactivate.", obj);
-        }
-            
-    }
-    private void ActivateObj(GameObject obj) 
-    {
-        if (obj != null && !obj.activeInHierarchy)
-        {
-            obj.SetActive(true);
-            //Debug.Log($"{obj} is activated.", obj);
-        }
-        //else
-        //Debug.LogWarning($"{obj} is not assigned, nothing to activate.", obj);
-    }
-
-    private void AutoAssignObjects()
-    {
-        // Auto-assign Net
-        if (Net == null)
-        {
-            Net = SceneUtils.FindDeep("NetLauncher");
-            if (Net == null)
-                Debug.LogError("Couldn't find and assign 'NetLauncher'.");
-        }
-        // Auto-assign DebrisToCatchByNet
-        if (DebrisToCatchByNet == null)
-        {
-            DebrisToCatchByNet = SceneUtils.FindDeep("DebrisToCatchByNet");
-            if (DebrisToCatchByNet == null)
-                Debug.LogError("Couldn't find and assign 'DebrisToCatchByNet'.");
-        }
-        /*
-        // Auto-assign EndTextPanel
-        if (EndTextPanel == null)
-        {
-            EndTextPanel = SceneUtils.FindDeep("EndTextPanel");
-            if (EndTextPanel == null)
-                Debug.LogError("Couldn't find and assign 'EndTextPanel'.");
-        }
-        */
     }
 }
