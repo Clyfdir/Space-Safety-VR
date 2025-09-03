@@ -1,108 +1,89 @@
 ///   this script added by Tatiana Gvozdenko, Hochschule Darmstadt, SoSe25
 ///   P6, Group project: Safe Space
+///   AI was used: GPT
 ///   Created: 08.07.2025
 ///   Last Change: 08.07.2025
+///   ESA PROJECT STAGE:
+///   Last Change: 03.09.2025
 
 using UnityEngine;
 
 [RequireComponent(typeof(Transform))]
 public class OrbitAroundSphere : MonoBehaviour
 {
-    [Tooltip("The sphere (or any Transform) to orbit around; will auto-find a GameObject named 'EarthSize' if left empty")]
     public Transform sphereCenter;
+    private Vector2 speedRange = new Vector2(4f, 7f);
+    private float speedDeg;
+    private int directionDebrisOrbiting = 1;
 
-    [Tooltip("Extra distance above the sphere’s surface")]
-    private float offset;
+    // --- cached per-instance ---
+    private Vector3 _C;             // center
+    private Vector3 _U, _V;         // orbit plane basis (unit)
+    private float _r;               // radius
+    private float _theta;           // current angle (radians)
+    private float _omegaRad;        // angular speed (radians/sec)
 
-    [Tooltip("Degrees per second to orbit; random between min and max")]
-    public Vector2 speedRange = new Vector2(20f, 60f);
-
-    public float orbitingAngle = 5;
-
-    private float _orbitRadius;
-    public float angularSpeedDebris;      // degrees per second
-    private Vector3 _orbitAxis;      // random axis for orbit
-    public int directionDebrisOrbiting = 1;
+    // If your planet never moves:
+    private bool centerIsStatic = true;
 
     void Awake()
     {
-        offset = Random.Range(2, 5);
-
-        // Auto-assign EarthSize if no center set
         if (sphereCenter == null)
         {
             var go = GameObject.Find("EarthSize");
-            if (go != null)
-                sphereCenter = go.transform;
-            else
-            {
-                Debug.LogError("OrbitAroundSphere: couldn't find 'EarthSize'. Disabling.");
-                enabled = false;
-                return;
-            }
+            if (go != null) sphereCenter = go.transform;
+            else { enabled = false; Debug.LogError("OrbitAroundSphere: EarthSize not found."); }
         }
-
-        // Determine sphere base radius
-        float baseRadius = 0f;
-        var sph = sphereCenter.GetComponent<SphereCollider>();
-        if (sph != null)
-        {
-            float maxScale = Mathf.Max(
-                sphereCenter.lossyScale.x,
-                sphereCenter.lossyScale.y,
-                sphereCenter.lossyScale.z
-            );
-            baseRadius = sph.radius * maxScale;
-        }
-        else
-        {
-            // fallback: approximate using renderer bounds
-            var rend = sphereCenter.GetComponent<Renderer>();
-            if (rend != null)
-                baseRadius = rend.bounds.extents.magnitude;
-        }
-        _orbitRadius = baseRadius + offset;
     }
 
     void OnEnable()
     {
+        // 1) Gather geometry
+        Vector3 C = sphereCenter.position;
+        Vector3 P = transform.position;
+        Vector3 R = P - C;
+        if (R.sqrMagnitude < 1e-6f) { R = Vector3.right; P = C + R; transform.position = P; }
 
-
-        // Pick a random starting position on the sphere at given radius
-        //Vector3 startDir = Random.onUnitSphere;
-        //transform.position = sphereCenter.position + startDir * _orbitRadius;
-
-        // Randomize orbit axis (any arbitrary tilt)
-        //_orbitAxis = Random.onUnitSphere;//!!! random direction on 360 degree range
-
-        // pick a random axis within ±45° of Vector3.up
-        float maxTilt = orbitingAngle * Mathf.Deg2Rad;           // convert to radians
-        float cosMax = Mathf.Cos(maxTilt);
-
-        // keep sampling until we're within the cone
-        Vector3 axis;
-        do
+        // 2) Desired tangent = local Y projected to tangent plane at P
+        Vector3 T = transform.up - Vector3.Project(transform.up, R);
+        if (T.sqrMagnitude < 1e-8f)
         {
-            axis = Random.onUnitSphere;
-        } while (Vector3.Dot(axis, Vector3.up) < cosMax);
+            T = Vector3.Cross(R, Vector3.right);
+            if (T.sqrMagnitude < 1e-8f) T = Vector3.Cross(R, Vector3.forward);
+        }
+        T.Normalize();
 
-        _orbitAxis = axis;
+        // 3) Orbit axis N so that (N x R) points along T
+        Vector3 N = Vector3.Cross(R, T).normalized;
 
-        // pick positive speed 
-        float speed = Random.Range(speedRange.x, speedRange.y);
-        // then flip it if direction is -1:
-        angularSpeedDebris = speed * directionDebrisOrbiting;
+        // 4) Build plane basis: U along R, V = N x U
+        _r = R.magnitude;
+        _U = R / _r;             // unit from center to spawn point
+        _V = Vector3.Cross(N, _U); // guaranteed unit & perp
+
+        // 5) Cache center & angular speed
+        _C = C;
+        speedDeg = Random.Range(speedRange.x, speedRange.y);
+        float sign = Mathf.Sign(directionDebrisOrbiting);
+        _omegaRad = speedDeg * Mathf.Deg2Rad * sign;
+
+        // 6) Start angle so current position = C + r * U
+        _theta = 0f;
     }
 
     void Update()
     {
-        // Rotate around center by speed * deltaTime
-        transform.RotateAround(
-            sphereCenter.position,
-            _orbitAxis,
-            angularSpeedDebris * Time.deltaTime
-        );
+        // If the planet moves, refresh _C
+        if (!centerIsStatic) _C = sphereCenter.position;
+
+        _theta += _omegaRad * Time.deltaTime;
+        float c = Mathf.Cos(_theta);
+        float s = Mathf.Sin(_theta);
+
+        // Single write to Transform.position (cheap)
+        transform.position = _C + _r * (c * _U + s * _V);
     }
 }
+
 
 

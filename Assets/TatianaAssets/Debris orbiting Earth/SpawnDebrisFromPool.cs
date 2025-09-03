@@ -4,12 +4,13 @@
 ///   Created: 08.06.2025
 ///   Last Change: 12.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 31.08.2025
+///   Last Change: 03.09.2025
 
 ///   Spawning debris which is orbiting around Earth (orbiting - it's another script, attached to each prefab)
 
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class SpawnDebrisFromPool : MonoBehaviour
 {
@@ -20,16 +21,12 @@ public class SpawnDebrisFromPool : MonoBehaviour
         Mode01CleanSpace,
         Mode02,
         Mode03,
-        Mode04CleanAllAtOnce,
-        Custom
+        Mode04CleanAllAtOnce
     }
-
-    //DebrisMediumSolarPanel
-    //DebrisMediumYellow
 
     [Header("Mode Settings:")]
     public Mode currentMode = Mode.Mode01CleanSpace;
-    private Mode previousMode = Mode.Custom;  // initialize to an impossible/default sentinel
+    private Mode previousMode = Mode.Mode03;  // initialize to an impossible/default sentinel
 
     [Header("Current intervals:")]
     [SerializeField] private float debrisIntervalLarge;
@@ -38,41 +35,26 @@ public class SpawnDebrisFromPool : MonoBehaviour
     [SerializeField] private float debrisIntervalMediumYellow;
     [SerializeField] private float debrisIntervalSmall;
 
-    /*
-    // Spawn intervals in seconds
-    [Header("Mode02 intervals:")]
-    [SerializeField] private float debrisIntervalLarge2 = 3f;
-    [SerializeField] private float debrisIntervalMedium2 = 3f;
-    [SerializeField] private float debrisIntervalMediumPanel2 = 3f;
-    [SerializeField] private float debrisIntervalMediumYellow2 = 3f;
-    [SerializeField] private float debrisIntervalSmall2 = 3f;
-     */
-    private float debrisIntervalLarge2 = 3f;
+    //Mode02 spawn intervals in seconds:
+    private float debrisIntervalLarge2 = 4f;
     private float debrisIntervalMedium2 = 3f;
     private float debrisIntervalMediumPanel2 = 3f;
     private float debrisIntervalMediumYellow2 = 3f;
-    private float debrisIntervalSmall2 = 3f;
-    /*
-    [Header("Mode03 intervals:")]
-    [SerializeField] private float debrisIntervalLarge3 = 0.15f;
-    [SerializeField] private float debrisIntervalMedium3 = 0.15f;
-    [SerializeField] private float debrisIntervalMediumPanel3 = 0.15f;
-    [SerializeField] private float debrisIntervalMediumYellow3 = 0.15f;
-    [SerializeField] private float debrisIntervalSmall3 = 0.1f;
-     */
-    private float debrisIntervalLarge3 = 0.15f;
-    private float debrisIntervalMedium3 = 0.15f;
-    private float debrisIntervalMediumPanel3 = 0.15f;
-    private float debrisIntervalMediumYellow3 = 0.15f;
-    private float debrisIntervalSmall3 = 0.1f;
+    private float debrisIntervalSmall2 = 2f;
+
+    //Mode03 spawn intervals in seconds:
+    private float debrisIntervalLarge3 = 0.5f;
+    private float debrisIntervalMedium3 = 0.5f;
+    private float debrisIntervalMediumPanel3 = 0.5f;
+    private float debrisIntervalMediumYellow3 = 0.5f;
+    private float debrisIntervalSmall3 = 0.05f;
 
     // Internal timers
-    [Header("Timers:")]
-    [SerializeField] private float debrisTimerLarge = 0f;
-    [SerializeField] private float debrisTimerMedium = 0f;
-    [SerializeField] private float debrisTimerMediumPanel = 0f;
-    [SerializeField] private float debrisTimerMediumYellow = 0f;
-    [SerializeField] private float debrisTimerSmall = 0f;
+    private float debrisTimerLarge = 0f;
+    private float debrisTimerMedium = 0f;
+    private float debrisTimerMediumPanel = 0f;
+    private float debrisTimerMediumYellow = 0f;
+    private float debrisTimerSmall = 0f;
 
     [Header("Spawn position ranges:")]
     [SerializeField] private float xPosMin = -5f;
@@ -88,8 +70,6 @@ public class SpawnDebrisFromPool : MonoBehaviour
 
     // Array to hold the spawn point transforms
     [SerializeField] private Transform[] spawnPoints;
-    private Vector3 leftSpawnPos = new Vector3(-310.9f, 6f, 21.2f);
-    private Vector3 rightSpawnPos = new Vector3(366.6f, 5.9f, 242.4f);
 
     void Awake()
     {
@@ -97,10 +77,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
 
         // Get all child transforms (your spawn points)
         spawnPoints = new Transform[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            spawnPoints[i] = transform.GetChild(i);
-        }
+        spawnPoints = transform
+            .Cast<Transform>()                            // direct children only
+            .Where(t => t.gameObject.activeInHierarchy)   // or .activeSelf if you prefer
+            .ToArray();
 
         // Check if we have at least 2 spawn points
         if (spawnPoints.Length < 2)
@@ -113,10 +93,8 @@ public class SpawnDebrisFromPool : MonoBehaviour
     {
         // make sure the very first mode gets set up
         previousMode = currentMode;
+        SetupModeIntervals();
         SetupModeObjects();
-
-        spawnPoints[0].localPosition = leftSpawnPos;
-        spawnPoints[1].localPosition = rightSpawnPos;
     }
 
     void Update()
@@ -127,10 +105,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
             SetupModeIntervals();
             previousMode = currentMode;
         }
-        HandleSpawnDebpis();
+        HandleSpawnDebis();
     }
 
-    public void SetupModeObjects()
+    private void SetupModeObjects()
     {
         switch (currentMode)
         {
@@ -143,12 +121,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
             case Mode.Mode04CleanAllAtOnce:
                 DeactivateAllDebris();
                 break;
-            case Mode.Custom:
-                break;
         }
     }
 
-    public void SetupModeIntervals()
+    private void SetupModeIntervals()
     {
         switch (currentMode)
         {
@@ -170,13 +146,10 @@ public class SpawnDebrisFromPool : MonoBehaviour
                 break;
             case Mode.Mode04CleanAllAtOnce:
                 break;
-            case Mode.Custom:
-                //
-                break;
         }
     }
 
-    public void HandleSpawnDebpis()
+    private void HandleSpawnDebis()
     {
         float deltaTime = Time.deltaTime;
 
@@ -191,103 +164,22 @@ public class SpawnDebrisFromPool : MonoBehaviour
             case Mode.Mode01CleanSpace:
                 break;
             case Mode.Mode02:
-                if (debrisTimerLarge >= debrisIntervalLarge)
-                {
-                    DebrisSpawnFromPool("DebrisLarge");
-                    debrisTimerLarge = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    DebrisSpawnFromPool("DebrisMedium");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerMediumPanel >= debrisIntervalMediumPanel)
-                {
-                    DebrisSpawnFromPool("DebrisMediumSolarPanel");
-                    debrisTimerMediumPanel = 0f;
-                }
-                if (debrisTimerMediumYellow >= debrisIntervalMediumYellow)
-                {
-                    DebrisSpawnFromPool("DebrisMediumYellow");
-                    debrisTimerMediumYellow = 0f;
-                }
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    DebrisSpawnFromPool("DebrisSmall");
-                    debrisTimerSmall = 0f;
-                }
+                SpawnDebris();
                 break;
             case Mode.Mode03:
-                if (debrisTimerLarge >= debrisIntervalLarge)
-                {
-                    DebrisSpawnFromPool("DebrisLarge");
-                    debrisTimerLarge = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    DebrisSpawnFromPool("DebrisMedium");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerMediumPanel >= debrisIntervalMediumPanel)
-                {
-                    DebrisSpawnFromPool("DebrisMediumSolarPanel");
-                    debrisTimerMediumPanel = 0f;
-                }
-                if (debrisTimerMediumYellow >= debrisIntervalMediumYellow)
-                {
-                    DebrisSpawnFromPool("DebrisMediumYellow");
-                    debrisTimerMediumYellow = 0f;
-                }
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    DebrisSpawnFromPool("DebrisSmall");
-                    debrisTimerSmall = 0f;
-                }
+                SpawnDebris();
                 break;
             case Mode.Mode04CleanAllAtOnce:
                 break;
-            case Mode.Custom:
-                // Fall back to original behavior
-                if (debrisTimerSmall >= debrisIntervalSmall)
-                {
-                    DebrisSpawnFromPool("DebrisSmall");
-                    debrisTimerSmall = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    DebrisSpawnFromPool("DebrisMedium");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    DebrisSpawnFromPool("DebrisMediumSolarPanel");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerMedium >= debrisIntervalMedium)
-                {
-                    DebrisSpawnFromPool("DebrisMediumYellow");
-                    debrisTimerMedium = 0f;
-                }
-                if (debrisTimerLarge >= debrisIntervalLarge)
-                {
-                    DebrisSpawnFromPool("DebrisLarge");
-                    debrisTimerLarge = 0f;
-                }
-                break;
         }
     }
-
-    public void DebrisSpawnFromPool(string tag)
+    private void DebrisSpawnFromPool(string tag)
     {
         GameObject a = Pool.Instance.Get(tag);
         if (a != null)
         {
             // Select a random spawn point if available
-            Transform selectedSpawnPoint = transform; // default to parent if no children
-            if (spawnPoints.Length > 0)
-            {
-                selectedSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            }
+            Transform selectedSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
             // Calculate spawn position with random offset
             Vector3 spawnPosition = selectedSpawnPoint.position +
@@ -302,25 +194,11 @@ public class SpawnDebrisFromPool : MonoBehaviour
                                       Quaternion.Euler(0, 0, Random.Range(zRotMin, zRotMax));
             a.transform.rotation = randomRotation;
 
-            // Configure movement direction based on spawn position
-            //ConfigureDebrisMovement(a, spawnPosition);
-            ConfigureDebrisMovementWhenOrbiting(a, spawnPosition);
-
             a.SetActive(true);
         }
     }
 
-    private void ConfigureDebrisMovementWhenOrbiting(GameObject debris, Vector3 spawnPosition)
-    {
-        var orb = debris.GetComponent<OrbitAroundSphere>();
-        if (orb == null) orb = debris.AddComponent<OrbitAroundSphere>();
-
-        // left of spawner  CCW (-1), right  CW (1)
-        bool isLeft = spawnPosition.x < transform.position.x;
-        orb.directionDebrisOrbiting = isLeft ? -1 : 1;
-    }
-
-    public void DeactivateObjectsWithTag(string tag)
+    private void DeactivateObjectsWithTag(string tag)
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
         foreach (GameObject obj in objects)
@@ -331,8 +209,36 @@ public class SpawnDebrisFromPool : MonoBehaviour
             }
         }
     }
+    private void SpawnDebris()
+    {
+        if (debrisTimerLarge >= debrisIntervalLarge)
+        {
+            DebrisSpawnFromPool("DebrisLarge");
+            debrisTimerLarge = 0f;
+        }
+        if (debrisTimerMedium >= debrisIntervalMedium)
+        {
+            DebrisSpawnFromPool("DebrisMedium");
+            debrisTimerMedium = 0f;
+        }
+        if (debrisTimerMediumPanel >= debrisIntervalMediumPanel)
+        {
+            DebrisSpawnFromPool("DebrisMediumSolarPanel");
+            debrisTimerMediumPanel = 0f;
+        }
+        if (debrisTimerMediumYellow >= debrisIntervalMediumYellow)
+        {
+            DebrisSpawnFromPool("DebrisMediumYellow");
+            debrisTimerMediumYellow = 0f;
+        }
+        if (debrisTimerSmall >= debrisIntervalSmall)
+        {
+            DebrisSpawnFromPool("DebrisSmall");
+            debrisTimerSmall = 0f;
+        }
+    }
 
-    public void DeactivateAllDebris()
+    private void DeactivateAllDebris()
     {
         DeactivateObjectsWithTag("DebrisSmall");
         DeactivateObjectsWithTag("DebrisMedium");
