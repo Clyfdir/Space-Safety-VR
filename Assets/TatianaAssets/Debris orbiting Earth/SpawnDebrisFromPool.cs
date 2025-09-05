@@ -43,11 +43,11 @@ public class SpawnDebrisFromPool : MonoBehaviour
     private float debrisIntervalSmall2 = 2f;
 
     //Mode03 spawn intervals in seconds:
-    private float debrisIntervalLarge3 = 0.5f;
+    private float debrisIntervalLarge3 = 0.6f;
     private float debrisIntervalMedium3 = 0.5f;
     private float debrisIntervalMediumPanel3 = 0.5f;
     private float debrisIntervalMediumYellow3 = 0.5f;
-    private float debrisIntervalSmall3 = 0.05f;
+    private float debrisIntervalSmall3 = 0.03f;
 
     // Internal timers
     private float debrisTimerLarge = 0f;
