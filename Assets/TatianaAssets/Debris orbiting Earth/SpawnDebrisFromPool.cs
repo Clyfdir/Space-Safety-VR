@@ -4,7 +4,7 @@
 ///   Created: 08.06.2025
 ///   Last Change: 12.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 03.09.2025
+///   Last Change: 08.09.2025
 
 ///   Spawning debris which is orbiting around Earth (orbiting - it's another script, attached to each prefab)
 
@@ -75,18 +75,7 @@ public class SpawnDebrisFromPool : MonoBehaviour
     {
         Instance = this;
 
-        // Get all child transforms (your spawn points)
-        spawnPoints = new Transform[transform.childCount];
-        spawnPoints = transform
-            .Cast<Transform>()                            // direct children only
-            .Where(t => t.gameObject.activeInHierarchy)   // or .activeSelf if you prefer
-            .ToArray();
-
-        // Check if we have at least 2 spawn points
-        if (spawnPoints.Length < 2)
-        {
-            Debug.LogWarning("SpawnDebrisFromPool needs at least 2 child GameObjects as spawn points!");
-        }
+        UpdateSpawnPoints();
     }
 
     void Start()
@@ -245,5 +234,21 @@ public class SpawnDebrisFromPool : MonoBehaviour
         DeactivateObjectsWithTag("DebrisMediumSolarPanel");
         DeactivateObjectsWithTag("DebrisMediumYellow");
         DeactivateObjectsWithTag("DebrisLarge");
+    }
+
+    public void UpdateSpawnPoints()
+    {
+        // Get all child transforms (your spawn points)
+        spawnPoints = new Transform[transform.childCount];
+        spawnPoints = transform
+            .Cast<Transform>()                            // direct children only
+            .Where(t => t.gameObject.activeInHierarchy)   // or .activeSelf if you prefer
+            .ToArray();
+
+        // Check if we have at least 2 spawn points
+        if (spawnPoints.Length < 2)
+        {
+            Debug.LogWarning("SpawnDebrisFromPool needs at least 2 child GameObjects as spawn points!");
+        }
     }
 }
