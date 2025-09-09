@@ -1,29 +1,27 @@
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+# ===============================
+# UNITY + ANDROID + WWISE GITIGNORE
+# ===============================
 
-/[Mm]emoryCaptures/
-
-/[Rr]ecordings/
-
-
-/[Aa]ssets/Plugins/Editor/JetBrains*
-
-.vs/
-
-.gradle/
-
+# --- Unity project artifacts ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
 ExportedObj/
-.consulo/
+sysinfo.txt
+
+# --- IDE & editor files ---
+.vs/
+.idea/
 *.csproj
 *.unityproj
 *.sln
 *.suo
-*.tmp
 *.user
 *.userprefs
 *.pidb
@@ -33,27 +31,36 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
 
-sysinfo.txt
-
+# --- Unity packaging and deploy files ---
 *.apk
 *.aab
 *.unitypackage
 *.unitypackage.meta
 *.app
+*.zip
 
+# --- Crashlytics ---
 crashlytics-build.properties
 
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+# --- Android NDK / CMake output ---
+.utmp/
+**/game-activityConfig.cmake
+**/compile_commands.json
 
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
+# --- Native Android binaries ---
+*.so
+*.so.meta
 
-# Wwise
+# --- Addressables (optional, adjust if needed) ---
+/Assets/AddressableAssetsData/*/*.bin*
+/Assets/StreamingAssets/aa.meta
+/Assets/StreamingAssets/aa/*
+
+# --- Wwise / Audiokinetic files ---
 .backup*
 .cache*
 *.akd
@@ -61,5 +68,26 @@ crashlytics-build.properties
 *.validationcache
 *.wsettings
 IncrementalSoundBankData.xml
-/[Aa]ssets/[Ww]wise/API/Runtime/Plugins/iOS/
-*.zip
+/Assets/Wwise/API/Runtime/Plugins/iOS/
+/Assets/Wwise/API/Runtime/Plugins/**/*.so
+/Assets/Wwise/API/Runtime/Plugins/**/*.so.meta
+/Assets/Wwise/Editor/ProjectData/
+
+# --- JetBrains Rider ---
+/Assets/Plugins/Editor/JetBrains*
+
+# --- Unity Test Runner files ---
+Assets/Resources/PerformanceTestRunInfo.json
+Assets/Resources/PerformanceTestRunInfo.json.meta
+Assets/Resources/PerformanceTestRunSettings.json
+Assets/Resources/PerformanceTestRunSettings.json.meta
+Assets/Settings/SampleSceneProfile.asset
+
+# --- OS-generated ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Git conflict leftovers ---
+*.orig
+*.rej

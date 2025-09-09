@@ -16,32 +16,41 @@ public class LightShutdown : MonoBehaviour
 
     [Header("Timing (Shutdown sequence)")]
     public float blackoutDuration = 2f;
-    [Tooltip("Minimum stagger between restore steps (seconds)")]
-    [SerializeField] private float minStartupDelay = 0.0f;
-    [Tooltip("Maximum stagger between restore steps (seconds)")]
-    [Range(0f, 5f)] public float maxStartupDelay = 0.35f;
+
+    // Fixed internally as requested
+    [HideInInspector][SerializeField] private float minStartupDelay = 0f;
+    [HideInInspector][SerializeField] private float maxStartupDelay = 1.5f;
 
     [Header("Flicker (single control)")]
     [Tooltip("0 = brief + slow blips, 1 = long + rapid stutter")]
     [Range(0f, 1f)] public float flickerIntensity = 0.5f;
-    [Tooltip("Lowest brightness during flicker (as a fraction of original)")]
-    [Range(0f, 1f)] public float minBrightness = 0.25f;
+
+    // Fixed internally to 0.2 as requested
+    const float kMinBrightness = 0.2f;
 
     [Header("Flicker Only (no shutdown)")]
     [Tooltip("How long the flicker-only lasts (seconds)")]
     [Min(0f)] public float flickerOnlyDuration = 1.0f;
     [Tooltip("0 = sparse/slow, 1 = dense/rapid")]
     [Range(0f, 1f)] public float flickerOnlyIntensity = 0.7f;
-    [Tooltip("Stagger between items while flicker-only runs")]
-    [Range(0f, 5f)] public float flickerOnlyStaggerMax = 0.15f;
-    [Tooltip("Affect Light components during flicker-only")]
-    public bool flickerOnlyAffectsLights = true;
-    [Tooltip("Affect listed Renderers during flicker-only")]
-    public bool flickerOnlyAffectsRenderers = true;
 
-    [Header("Behavior")]
-    public bool randomOrder = true;
-    public bool autoRunOnStart = true;
+    // Fixed internally as requested
+    [HideInInspector][SerializeField] private float flickerOnlyStaggerMax = 0.5f;
+    [HideInInspector] public bool flickerOnlyAffectsLights = true;
+    [HideInInspector] public bool flickerOnlyAffectsRenderers = true;
+
+    [Header("Power-Up Target")]
+    [Tooltip("Final factor over original intensity/brightness (0..10). 1 = no change.")]
+    [Range(0f, 10f)] public float lightRampUp = 1.5f; // factor over original
+    [Tooltip("Seconds for the ramp (0..10)")]
+    [Range(0f, 10f)] public float rampDuration = 1.2f;
+
+    // Always on as requested
+    [HideInInspector] public bool addSubtleHumJitter = true;
+
+    // Always-on behavior flags as requested
+    [HideInInspector] public bool randomOrder = true;
+    [HideInInspector] public bool autoRunOnStart = false;
 
     // --- Optional Wwise SFX (safe if Wwise is absent) ----------------------
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
@@ -88,6 +97,11 @@ public class LightShutdown : MonoBehaviour
     readonly List<Light> _lights = new List<Light>();
     readonly Dictionary<Light, LightState> _originalLights = new Dictionary<Light, LightState>();
     readonly List<RenderState> _renderStates = new List<RenderState>();
+
+    // New baselines used for later flickers/restores
+    readonly Dictionary<Light, float> _baselineLightIntensity = new Dictionary<Light, float>();
+    readonly Dictionary<Renderer, float> _baselineRendererMul = new Dictionary<Renderer, float>();
+
     Coroutine _sequence;
     Coroutine _flickerOnlySeq;
 
@@ -96,19 +110,40 @@ public class LightShutdown : MonoBehaviour
     static readonly int ID_Emission = Shader.PropertyToID("_EmissionColor");
     const string KW_EMISSION = "_EMISSION";
 
+    //rightclick inspector to trigger functions in editor
+
+    //trigger power-up sequence
+    [ContextMenu("Trigger Power-Up (Hum On)")]
+    void TriggerPowerUpFromInspector() => TriggerPowerUpHumOn();
+
+
     void Awake()
     {
         GrabLights();
         SaveOriginals();
         CacheRenderers();
+        InitializeBaselines(); // baseline = originals at load
         ClampValues();
     }
 
-    void OnValidate() { ClampValues(); }
+    void OnValidate()
+    {
+        // keep fixed values enforced
+        minStartupDelay = 0f;
+        maxStartupDelay = 1.5f;
+        flickerOnlyStaggerMax = 0.5f;
+        flickerOnlyAffectsLights = true;
+        flickerOnlyAffectsRenderers = true;
+        addSubtleHumJitter = true;
+        randomOrder = true;
+        autoRunOnStart = false;
+
+        ClampValues();
+    }
 
     void Start()
     {
-        if (autoRunOnStart) TriggerFromTimeline();
+        // never autorun; kept for safety
     }
 
     // --- Public API ---------------------------------------------------------
@@ -119,10 +154,7 @@ public class LightShutdown : MonoBehaviour
     }
 
     [ContextMenu("Trigger Light Shutdown")]
-    public void TriggerNow()
-    {
-        TriggerFromTimeline();
-    }
+    public void TriggerNow() => TriggerFromTimeline();
 
     [ContextMenu("Restore Originals Now")]
     public void RestoreOriginalsNow()
@@ -138,6 +170,9 @@ public class LightShutdown : MonoBehaviour
             l.color = s.color;
             l.shadows = s.shadows;
             l.range = s.range;
+
+            // reset baseline back to true original
+            _baselineLightIntensity[l] = s.intensity;
         }
 
         foreach (var rs in _renderStates)
@@ -149,6 +184,9 @@ public class LightShutdown : MonoBehaviour
             if (rs.hasColor) mpb.SetColor(rs.colorId, rs.baseColor);
             if (rs.hasEmission && affectEmissionIfPresent) mpb.SetColor(rs.emissionId, rs.emissionColor);
             rs.r.SetPropertyBlock(mpb);
+
+            // reset baseline back to 1
+            _baselineRendererMul[rs.r] = 1f;
 
             RestoreEmissionKeywords(rs.r, rs);
         }
@@ -234,6 +272,23 @@ public class LightShutdown : MonoBehaviour
         }
     }
 
+    void InitializeBaselines()
+    {
+        _baselineLightIntensity.Clear();
+        foreach (var l in _lights)
+        {
+            if (!l) continue;
+            if (_originalLights.TryGetValue(l, out var s)) _baselineLightIntensity[l] = s.intensity;
+            else _baselineLightIntensity[l] = l ? l.intensity : 1f;
+        }
+
+        _baselineRendererMul.Clear();
+        foreach (var rs in _renderStates)
+        {
+            if (rs?.r) _baselineRendererMul[rs.r] = 1f; // brightness multiplier baseline
+        }
+    }
+
     static bool HasProperty(Renderer r, int id)
     {
         var mats = r.sharedMaterials;
@@ -260,23 +315,24 @@ public class LightShutdown : MonoBehaviour
 
     void ClampValues()
     {
-        if (maxStartupDelay < minStartupDelay) (minStartupDelay, maxStartupDelay) = (maxStartupDelay, minStartupDelay);
-        minBrightness = Mathf.Clamp01(minBrightness);
+        // Ensure ranges make sense even if tweaked via code
+        flickerOnlyDuration = Mathf.Max(0f, flickerOnlyDuration);
         flickerIntensity = Mathf.Clamp01(flickerIntensity);
         flickerOnlyIntensity = Mathf.Clamp01(flickerOnlyIntensity);
+        lightRampUp = Mathf.Clamp(lightRampUp, 0f, 10f);
+        rampDuration = Mathf.Clamp(rampDuration, 0f, 10f);
     }
 
     // Map intensity -> duration and min/max tick intervals (shared feel)
     void GetFlickerParams(out float duration, out float minInterval, out float maxInterval)
     {
-        // fixed ranges (change here if you want different feel)
-        const float minDuration = 0.20f; // at intensity 0
-        const float maxDuration = 1.20f; // at intensity 1
+        const float minDurationV = 0.20f; // at intensity 0
+        const float maxDurationV = 1.20f; // at intensity 1
         const float slowInterval = 0.20f; // at intensity 0
         const float fastInterval = 0.02f; // at intensity 1
         const float jitterFraction = 0.50f; // ±50% around base interval
 
-        duration = Mathf.Lerp(minDuration, maxDuration, flickerIntensity);
+        duration = Mathf.Lerp(minDurationV, maxDurationV, flickerIntensity);
         float baseInterval = Mathf.Lerp(slowInterval, fastInterval, flickerIntensity);
 
         float j = jitterFraction;
@@ -290,15 +346,15 @@ public class LightShutdown : MonoBehaviour
     {
         intensity = Mathf.Clamp01(intensity);
 
-        const float minDuration = 0.20f;
-        const float maxDuration = 1.20f;
+        const float minDurationV = 0.20f;
+        const float maxDurationV = 1.20f;
         const float slowInterval = 0.20f;
         const float fastInterval = 0.02f;
         const float jitterFraction = 0.50f;
 
         duration = (durationOverride > 0f)
             ? durationOverride
-            : Mathf.Lerp(minDuration, maxDuration, intensity);
+            : Mathf.Lerp(minDurationV, maxDurationV, intensity);
 
         float baseInterval = Mathf.Lerp(slowInterval, fastInterval, intensity);
         float j = jitterFraction;
@@ -361,24 +417,14 @@ public class LightShutdown : MonoBehaviour
     {
         if (!l) yield break;
 
-        if (!_originalLights.TryGetValue(l, out var state))
-        {
-            state = new LightState
-            {
-                intensity = l.intensity <= 0f ? 1f : l.intensity,
-                wasEnabled = true,
-                color = l.color,
-                shadows = l.shadows,
-                range = l.range
-            };
-            _originalLights[l] = state;
-        }
+        // Use baseline (possibly updated by power-up), not the original
+        float baseline = GetLightBaseline(l);
 
         GetFlickerParams(out float duration, out float minInt, out float maxInt);
 
         float t = 0f;
         l.enabled = true;
-        l.intensity = state.intensity * Random.Range(0.5f, 1.2f);
+        l.intensity = baseline * Random.Range(0.5f, 1.2f);
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
         if (playSoundsDuringFlicker) PostRandomFlickAt(l.transform.position, 0.9f);
@@ -396,8 +442,8 @@ public class LightShutdown : MonoBehaviour
             else
             {
                 l.enabled = true;
-                float mul = Random.Range(minBrightness, 1f);
-                l.intensity = state.intensity * mul;
+                float mul = Random.Range(kMinBrightness, 1f);
+                l.intensity = baseline * mul;
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
                 if (playSoundsDuringFlicker && Random.value < 0.4f) PostRandomFlickAt(l.transform.position, 0.6f);
 #endif
@@ -408,11 +454,15 @@ public class LightShutdown : MonoBehaviour
             t += wait;
         }
 
+        // settle to baseline (new current)
         l.enabled = true;
-        l.intensity = state.intensity;
-        l.color = state.color;
-        l.shadows = state.shadows;
-        l.range = state.range;
+        l.intensity = baseline;
+        if (_originalLights.TryGetValue(l, out var s))
+        {
+            l.color = s.color;
+            l.shadows = s.shadows;
+            l.range = s.range;
+        }
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
         if (playSoundOnSettle) PostSettleAt(l.transform.position);
@@ -425,17 +475,19 @@ public class LightShutdown : MonoBehaviour
 
         GetFlickerParams(out float duration, out float minInt, out float maxInt);
 
+        float baseMul = GetRendererBaselineMul(rs.r);
+
         float t = 0f;
 
-        SetRendererBrightness(rs, Random.Range(0.5f, 1.0f));
+        SetRendererBrightness(rs, Random.Range(0.5f, 1.0f) * baseMul);
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
         if (playSoundsDuringFlicker) PostRandomFlickAt(rs.r.bounds.center, 0.9f);
 #endif
 
         while (t < duration)
         {
-            float mul = (Random.value < 0.35f) ? 0f : Random.Range(minBrightness, 1f);
-            SetRendererBrightness(rs, mul);
+            float mul = (Random.value < 0.35f) ? 0f : Random.Range(kMinBrightness, 1f);
+            SetRendererBrightness(rs, mul * baseMul);
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
             if (playSoundsDuringFlicker && Random.value < 0.4f) PostRandomFlickAt(rs.r.bounds.center, 0.6f);
@@ -446,7 +498,7 @@ public class LightShutdown : MonoBehaviour
             t += wait;
         }
 
-        SetRendererBrightness(rs, 1f);
+        SetRendererBrightness(rs, 1f * baseMul);
         RestoreEmissionKeywords(rs.r, rs);
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
@@ -491,17 +543,12 @@ public class LightShutdown : MonoBehaviour
     {
         if (!l) yield break;
 
-        if (!_originalLights.TryGetValue(l, out var state))
-        {
-            state = new LightState { intensity = (l.intensity <= 0f ? 1f : l.intensity), wasEnabled = l.enabled, color = l.color, shadows = l.shadows, range = l.range };
-            _originalLights[l] = state;
-        }
-
+        float baseline = GetLightBaseline(l);
         float t = 0f;
         bool prevEnabled = l.enabled;
 
         l.enabled = true;
-        l.intensity = state.intensity * Random.Range(0.5f, 1.2f);
+        l.intensity = baseline * Random.Range(0.5f, 1.2f);
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
         if (playSoundsDuringFlicker) PostRandomFlickAt(l.transform.position, 0.9f);
@@ -519,8 +566,8 @@ public class LightShutdown : MonoBehaviour
             else
             {
                 l.enabled = true;
-                float mul = Random.Range(minBrightness, 1f);
-                l.intensity = state.intensity * mul;
+                float mul = Random.Range(kMinBrightness, 1f);
+                l.intensity = baseline * mul;
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
                 if (playSoundsDuringFlicker && Random.value < 0.4f) PostRandomFlickAt(l.transform.position, 0.6f);
 #endif
@@ -532,10 +579,13 @@ public class LightShutdown : MonoBehaviour
         }
 
         l.enabled = prevEnabled;
-        l.intensity = state.intensity;
-        l.color = state.color;
-        l.shadows = state.shadows;
-        l.range = state.range;
+        l.intensity = baseline;
+        if (_originalLights.TryGetValue(l, out var s))
+        {
+            l.color = s.color;
+            l.shadows = s.shadows;
+            l.range = s.range;
+        }
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
         if (playSoundOnSettle) PostSettleAt(l.transform.position);
@@ -546,17 +596,18 @@ public class LightShutdown : MonoBehaviour
     {
         if (rs == null || rs.r == null) yield break;
 
+        float baseMul = GetRendererBaselineMul(rs.r);
         float t = 0f;
 
-        SetRendererBrightness(rs, Random.Range(0.5f, 1.0f));
+        SetRendererBrightness(rs, Random.Range(0.5f, 1.0f) * baseMul);
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
         if (playSoundsDuringFlicker) PostRandomFlickAt(rs.r.bounds.center, 0.9f);
 #endif
 
         while (t < duration)
         {
-            float mul = (Random.value < 0.35f) ? 0f : Random.Range(minBrightness, 1f);
-            SetRendererBrightness(rs, mul);
+            float mul = (Random.value < 0.35f) ? 0f : Random.Range(kMinBrightness, 1f);
+            SetRendererBrightness(rs, mul * baseMul);
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
             if (playSoundsDuringFlicker && Random.value < 0.4f) PostRandomFlickAt(rs.r.bounds.center, 0.6f);
@@ -567,7 +618,7 @@ public class LightShutdown : MonoBehaviour
             t += wait;
         }
 
-        SetRendererBrightness(rs, 1f);
+        SetRendererBrightness(rs, 1f * baseMul);
         if (restoreEmissionKeyword) RestoreEmissionKeywords(rs.r, rs);
 
 #if AK_WWISE_ADDRESSABLES || AK_WWISE || WWISE || AK_WWISE_UNITY
@@ -666,6 +717,121 @@ public class LightShutdown : MonoBehaviour
     }
     // -----------------------------------------------------------------------
 #endif
+
+    // --- Power-Up (Hum On) path ---------------------------------------------
+
+    [ContextMenu("Trigger Power-Up (Hum On)")]
+    public void TriggerPowerUpHumOn()
+    {
+        StopAllCoroutines();
+        _sequence = StartCoroutine(RunPowerUpSequence());
+    }
+
+    IEnumerator RunPowerUpSequence()
+    {
+        // choose order for lights and renderers
+        var lightOrder = new List<Light>(_lights);
+        lightOrder.RemoveAll(l => !l);
+
+        var rendererOrder = new List<RenderState>(_renderStates);
+        rendererOrder.RemoveAll(rs => rs == null || rs.r == null);
+
+        if (randomOrder)
+        {
+            Shuffle(lightOrder);
+            Shuffle(rendererOrder);
+        }
+
+        int steps = Mathf.Max(lightOrder.Count, rendererOrder.Count);
+        for (int i = 0; i < steps; i++)
+        {
+            if (i < lightOrder.Count) StartCoroutine(HumOnLight(lightOrder[i]));
+            if (i < rendererOrder.Count) StartCoroutine(HumOnRenderer(rendererOrder[i]));
+
+            yield return new WaitForSeconds(Random.Range(minStartupDelay, maxStartupDelay));
+        }
+    }
+
+    IEnumerator HumOnLight(Light l)
+    {
+        if (!l) yield break;
+        if (!_originalLights.TryGetValue(l, out var state)) yield break;
+
+        l.enabled = true;
+
+        // start at original, then ramp to final and stay there
+        float original = state.intensity;
+        float target = Mathf.Max(1f, lightRampUp) * original;
+
+        // snap to original to start
+        l.intensity = original;
+
+        float t = 0f;
+        while (t < rampDuration)
+        {
+            float a = (rampDuration <= 0f) ? 1f : (t / rampDuration);
+            float jitter = addSubtleHumJitter ? (1f + Mathf.Sin(Time.time * 40f) * 0.03f) : 1f;
+            l.intensity = Mathf.Lerp(original, target, a) * jitter;
+
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        // lock at final and update baseline used by later flickers
+        l.intensity = target;
+        _baselineLightIntensity[l] = target;
+
+        // keep saved props
+        l.color = state.color;
+        l.shadows = state.shadows;
+        l.range = state.range;
+    }
+
+    IEnumerator HumOnRenderer(RenderState rs)
+    {
+        if (rs == null || rs.r == null) yield break;
+
+        // multiplier baseline starts at 1, ramp to target and stay
+        float originalMul = 1f;
+        float targetMul = Mathf.Max(1f, lightRampUp);
+
+        // snap to original first
+        SetRendererBrightness(rs, originalMul);
+
+        float t = 0f;
+        while (t < rampDuration)
+        {
+            float a = (rampDuration <= 0f) ? 1f : (t / rampDuration);
+            float jitter = addSubtleHumJitter ? (1f + Mathf.Sin(Time.time * 40f) * 0.03f) : 1f;
+            float mul = Mathf.Lerp(originalMul, targetMul, a) * jitter;
+
+            SetRendererBrightness(rs, mul);
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        // lock at final and update baseline used by later flickers
+        SetRendererBrightness(rs, targetMul);
+        _baselineRendererMul[rs.r] = targetMul;
+
+        // restore emission keywords to whatever they originally were
+        RestoreEmissionKeywords(rs.r, rs);
+    }
+
+    // -----------------------------------------------------------------------
+
+    float GetLightBaseline(Light l)
+    {
+        if (l && _baselineLightIntensity.TryGetValue(l, out var v)) return v;
+        if (_originalLights.TryGetValue(l, out var s)) return s.intensity;
+        return l ? l.intensity : 1f;
+    }
+
+    float GetRendererBaselineMul(Renderer r)
+    {
+        if (r && _baselineRendererMul.TryGetValue(r, out var v)) return v;
+        return 1f;
+    }
 
     void StopCoroutineSafe(ref Coroutine c) { if (c != null) { StopCoroutine(c); c = null; } }
 }
