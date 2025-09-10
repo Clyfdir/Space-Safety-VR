@@ -11,7 +11,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
-public class TempTheEnsVersions : MonoBehaviour
+public class TempTheEndVersions : MonoBehaviour
 {
     [Header("Spawn Point Objects")]
     [SerializeField] private GameObject monitorMissionComplete;

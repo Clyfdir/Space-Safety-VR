@@ -2,7 +2,7 @@
 ///   AI was used: GPT
 ///   ESA PROJECT STAGE:
 ///   Last Change: 08.09.2025
-///   Created: 08.09.2025
+///   Created: 10.09.2025
 
 /// Temporal script just to test different ends of the experience, how they look like.
 /// This script makes appear the sphere around camera, with text which informs about the end of experience.
