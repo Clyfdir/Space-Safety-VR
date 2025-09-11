@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
     "Language": "SFX",
-    "Hash": "{FDFF6EE2-6C6A-9A8A-3729-35246914282A}",
+    "Hash": "{0D4566ED-94ED-0BD7-13F9-77A538788E09}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
     "Media": [
+     {
+      "Id": "66472356",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceSafety_NarratorVL_9.wav",
+      "CachePath": "D0/{D07DF666-C896-C845-1D5E-AE1B74276E93}.wem"
+     },
      {
       "Id": "72172385",
       "Language": "SFX",
@@ -32,12 +40,52 @@
       "CachePath": "38/{38563597-97A8-BB39-63A0-8605EC323202}.wem"
      },
      {
+      "Id": "182985285",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceSafety_NarratorVL_11.wav",
+      "CachePath": "52/{529FEC22-9321-6FC9-1D26-988394A2340C}.wem"
+     },
+     {
       "Id": "217830941",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "670700__lilmati__space-atmosphere-02-remastered.wav",
       "CachePath": "D5/{D5C5EE85-8DF3-81A8-7A0C-64F929EC1D84}.wem"
+     },
+     {
+      "Id": "335749660",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceSafety_NarratorVL_1.1.wav",
+      "CachePath": "5E/{5E656740-400D-B286-A58D-4B992AE47353}.wem"
+     },
+     {
+      "Id": "344213007",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceSafety_NarratorVL_10.wav",
+      "CachePath": "46/{46989A47-8ADA-7B2F-46B0-6DB7C61F92AF}.wem"
+     },
+     {
+      "Id": "398615317",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceSafety_NarratorVL_16.wav",
+      "CachePath": "4E/{4E270E3C-F185-28CD-65BA-7CAB4C228DA3}.wem"
+     },
+     {
+      "Id": "410581352",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SpaceSafety_NarratorVL_12.wav",
+      "CachePath": "22/{22313251-0F45-B00C-92FB-45E57DC6E545}.wem"
      },
      {
       "Id": "600307686",
@@ -204,10 +252,94 @@
         "Id": "160712797"
        }
       ]
+     },
+     {
+      "Id": "1783273340",
+      "Name": "Play_SpaceSafety_NarratorVL_10",
+      "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_10",
+      "GUID": "{D8953F3C-104F-46AD-962F-BDD18455101D}",
+      "DurationType": "OneShot",
+      "DurationMin": "21.780317",
+      "DurationMax": "21.780317",
+      "MediaRefs": [
+       {
+        "Id": "344213007"
+       }
+      ]
+     },
+     {
+      "Id": "1783273341",
+      "Name": "Play_SpaceSafety_NarratorVL_11",
+      "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_11",
+      "GUID": "{3BCB5875-3663-4406-AA1C-A8FBC88F3A8B}",
+      "DurationType": "OneShot",
+      "DurationMin": "12.155646",
+      "DurationMax": "12.155646",
+      "MediaRefs": [
+       {
+        "Id": "182985285"
+       }
+      ]
+     },
+     {
+      "Id": "1783273342",
+      "Name": "Play_SpaceSafety_NarratorVL_12",
+      "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_12",
+      "GUID": "{41C771AC-EEC2-4F3D-8A90-EACAC732F69F}",
+      "DurationType": "OneShot",
+      "DurationMin": "12.968345",
+      "DurationMax": "12.968345",
+      "MediaRefs": [
+       {
+        "Id": "410581352"
+       }
+      ]
+     },
+     {
+      "Id": "1783273338",
+      "Name": "Play_SpaceSafety_NarratorVL_16",
+      "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_16",
+      "GUID": "{D0E0A3D2-C41B-48F9-AC11-207FF17EE844}",
+      "DurationType": "OneShot",
+      "DurationMin": "21.989298",
+      "DurationMax": "21.989298",
+      "MediaRefs": [
+       {
+        "Id": "398615317"
+       }
+      ]
+     },
+     {
+      "Id": "1718342360",
+      "Name": "Play_SpaceSafety_NarratorVL_1_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_1_1",
+      "GUID": "{392364C4-9F10-4409-B52F-D3CC4C5F1025}",
+      "DurationType": "OneShot",
+      "DurationMin": "12.445896",
+      "DurationMax": "12.445896",
+      "MediaRefs": [
+       {
+        "Id": "335749660"
+       }
+      ]
+     },
+     {
+      "Id": "430557964",
+      "Name": "Play_SpaceSafety_NarratorVL_9",
+      "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_9",
+      "GUID": "{5611CE68-D98C-4054-AF77-29190F109BFD}",
+      "DurationType": "OneShot",
+      "DurationMin": "25.49551",
+      "DurationMax": "25.49551",
+      "MediaRefs": [
+       {
+        "Id": "66472356"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{1481B30F-CF1B-47E8-5F90-3A096B7526AA}"
+  "FileHash": "{680E77A2-9A96-1B3D-A4E0-D0A053E9BD53}"
  }
 }

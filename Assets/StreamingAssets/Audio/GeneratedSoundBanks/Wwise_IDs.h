@@ -22,6 +22,12 @@ namespace AK
         static const AkUniqueID PLAY_SPACEDEBRISEND1 = 3544022733U;
         static const AkUniqueID PLAY_SPACEDEBRISEND2_01 = 88024092U;
         static const AkUniqueID PLAY_SPACEDEBRISEND2_02 = 88024095U;
+        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_1_1 = 1718342360U;
+        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_9 = 430557964U;
+        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_10 = 1783273340U;
+        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_11 = 1783273341U;
+        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_12 = 1783273342U;
+        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_16 = 1783273338U;
     } // namespace EVENTS
 
     namespace BANKS

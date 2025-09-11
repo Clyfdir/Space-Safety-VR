@@ -106,6 +106,76 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="VoiceLineEvents" ID="{A4F52D2D-2547-40FB-BD5E-A46A623F1932}" ShortID="772512251">
+					<ChildrenList>
+						<Event Name="Play_SpaceSafety_NarratorVL_1_1" ID="{392364C4-9F10-4409-B52F-D3CC4C5F1025}">
+							<ChildrenList>
+								<Action Name="" ID="{EDD440D4-9980-4EB9-AD4F-4E7D0C6051C9}" ShortID="824925155">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceSafety_NarratorVL_1_1" ID="{ADCEA058-36C8-4945-8218-3D09522EAA86}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceSafety_NarratorVL_9" ID="{5611CE68-D98C-4054-AF77-29190F109BFD}">
+							<ChildrenList>
+								<Action Name="" ID="{3D9D7248-3173-40EE-851F-C316E431DAF4}" ShortID="377811795">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceSafety_NarratorVL_9" ID="{ACC86648-C934-4233-923D-BE2563A18C0E}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceSafety_NarratorVL_11" ID="{3BCB5875-3663-4406-AA1C-A8FBC88F3A8B}">
+							<ChildrenList>
+								<Action Name="" ID="{9C885403-F8B9-4EE8-B202-0E43E94BA2EA}" ShortID="872562280">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceSafety_NarratorVL_11" ID="{94F5A706-62E2-4EBE-A285-F443DB0B7A3B}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceSafety_NarratorVL_12" ID="{41C771AC-EEC2-4F3D-8A90-EACAC732F69F}">
+							<ChildrenList>
+								<Action Name="" ID="{056CB018-A380-4AC0-9519-ADC2474EBB26}" ShortID="334601186">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceSafety_NarratorVL_12" ID="{58B6BBD8-C2F2-4FEA-A9AE-7F3C930DB37B}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceSafety_NarratorVL_16" ID="{D0E0A3D2-C41B-48F9-AC11-207FF17EE844}">
+							<ChildrenList>
+								<Action Name="" ID="{F36C186A-6FEC-4D02-B80B-9332486165F5}" ShortID="305486646">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceSafety_NarratorVL_16" ID="{EB408E34-3579-43E8-9A0E-9A2FED7A966F}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SpaceSafety_NarratorVL_10" ID="{D8953F3C-104F-46AD-962F-BDD18455101D}">
+							<ChildrenList>
+								<Action Name="" ID="{47580428-6329-421D-A294-85897F7778B4}" ShortID="22074557">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpaceSafety_NarratorVL_10" ID="{2907D413-D637-4939-9F88-6977DAB62B67}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
