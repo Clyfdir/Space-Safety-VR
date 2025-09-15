@@ -1,5 +1,5 @@
 // For the wireframe: https://github.com/Firnox/URP_Wireframe_Shader/blob/main/Assets/WireframeShader.shader
-Shader "Test/Holo"
+Shader "Custom/Holo"
 {
     Properties
     {
