@@ -234,9 +234,16 @@
 												<MediaID ID="335749660"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_1_01" ID="{63B5DE5E-AA9B-4B2E-B7D2-756A61466FBB}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_1.1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="335749660"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_1_1" ID="{8BC5059A-A52B-4D9C-BE59-480E6D279E58}" Platform="Linked"/>
+										<ActiveSource Name="SpaceSafety_NarratorVL_1_01" ID="{63B5DE5E-AA9B-4B2E-B7D2-756A61466FBB}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SpaceSafety_NarratorVL_9" ID="{ACC86648-C934-4233-923D-BE2563A18C0E}" ShortID="770591308">
@@ -347,6 +354,226 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="SpaceSafety_NarratorVL_16" ID="{E7BB70AB-8E09-4EB9-9489-6C3BE059BD23}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_2_1" ID="{56877C29-664A-4293-B484-53F1A4C740E8}" ShortID="257429291">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_2_1" ID="{C9C2A775-309B-4F90-984D-437D5EC63438}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_2.1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="189504597"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_2_1" ID="{C9C2A775-309B-4F90-984D-437D5EC63438}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_3" ID="{DD9C9A14-E315-4220-89E8-6ACCDAE34782}" ShortID="1063852616">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_3" ID="{48831494-D6F6-4B33-9D43-12416CC2F1FD}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="81293508"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_3" ID="{48831494-D6F6-4B33-9D43-12416CC2F1FD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_4" ID="{98273DE8-EC01-47EC-9996-6FA70F2AA1C8}" ShortID="168806521">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_4" ID="{0E00CABA-526F-4DE7-A295-EDD15748AC19}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="923752316"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_4" ID="{0E00CABA-526F-4DE7-A295-EDD15748AC19}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_5" ID="{158D8747-C4B3-4428-9D29-CFC39F51DEBD}" ShortID="59919994">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_5" ID="{67CE7AE2-2BAD-489D-8339-3850F62A93D5}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="666816327"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_5" ID="{67CE7AE2-2BAD-489D-8339-3850F62A93D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_6" ID="{CD2C413E-D973-4254-99FB-4366F4C6C3FE}" ShortID="640326821">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_6" ID="{465951A0-D487-4194-B9CA-7B777958328C}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="170379790"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_6" ID="{465951A0-D487-4194-B9CA-7B777958328C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_7" ID="{0807CFC5-1A8E-4622-85ED-DD0855E1F1DE}" ShortID="196007819">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_7" ID="{694ACE10-F0AE-46D7-980E-82C2A75D2387}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1018392263"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_7" ID="{694ACE10-F0AE-46D7-980E-82C2A75D2387}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_8" ID="{5A4DE8C0-9D74-43C4-A6F6-6509CC764EEC}" ShortID="226211497">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_8" ID="{6057C0EB-E901-422E-B2B0-56512934FEB9}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1040047457"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_8" ID="{6057C0EB-E901-422E-B2B0-56512934FEB9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_13" ID="{531FBEE1-A36F-4B3C-A913-541406415D74}" ShortID="956183874">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_13" ID="{0F0FB5BA-9E0A-48DD-8457-F36525C78FCC}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="168924334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_13" ID="{0F0FB5BA-9E0A-48DD-8457-F36525C78FCC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_14" ID="{390FBBEC-DBAC-439A-AB6F-4CA78F4C22A7}" ShortID="293917522">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_14" ID="{9533D0B8-E823-4530-A5F7-5D5115899BD7}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="881003497"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_14" ID="{9533D0B8-E823-4530-A5F7-5D5115899BD7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SpaceSafety_NarratorVL_15" ID="{497701D7-5E05-41FC-B244-B078D09E1765}" ShortID="153286581">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpaceSafety_NarratorVL_15" ID="{1E1BC444-02DB-47EB-A0D5-0213B2F0BDA9}">
+											<Language>SFX</Language>
+											<AudioFile>SpaceSafety_NarratorVL_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="43639378"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SpaceSafety_NarratorVL_15" ID="{1E1BC444-02DB-47EB-A0D5-0213B2F0BDA9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

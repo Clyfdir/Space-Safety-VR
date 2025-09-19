@@ -2,12 +2,22 @@ Event	ID	Name			Wwise Object Path	Notes
 	88024092	Play_SpaceDebrisEnd2_01			\Default Work Unit\SFX\Play_SpaceDebrisEnd2_01	
 	88024095	Play_SpaceDebrisEnd2_02			\Default Work Unit\SFX\Play_SpaceDebrisEnd2_02	
 	281597619	Play_locked_door			\Default Work Unit\SFX\Play_locked_door	
+	430557952	Play_SpaceSafety_NarratorVL_5			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_5	
+	430557953	Play_SpaceSafety_NarratorVL_4			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_4	
+	430557954	Play_SpaceSafety_NarratorVL_7			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_7	
+	430557955	Play_SpaceSafety_NarratorVL_6			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_6	
+	430557958	Play_SpaceSafety_NarratorVL_3			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_3	
 	430557964	Play_SpaceSafety_NarratorVL_9			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_9	
+	430557965	Play_SpaceSafety_NarratorVL_8			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_8	
 	1718342360	Play_SpaceSafety_NarratorVL_1_1			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_1_1	
+	1718886815	Play_SpaceSafety_NarratorVL_2_1			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_2_1	
+	1783273336	Play_SpaceSafety_NarratorVL_14			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_14	
+	1783273337	Play_SpaceSafety_NarratorVL_15			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_15	
 	1783273338	Play_SpaceSafety_NarratorVL_16			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_16	
 	1783273340	Play_SpaceSafety_NarratorVL_10			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_10	
 	1783273341	Play_SpaceSafety_NarratorVL_11			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_11	
 	1783273342	Play_SpaceSafety_NarratorVL_12			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_12	
+	1783273343	Play_SpaceSafety_NarratorVL_13			\Default Work Unit\VoiceLineEvents\Play_SpaceSafety_NarratorVL_13	
 	2328865501	Play_SpaceDebris2			\Default Work Unit\SFX\Play_SpaceDebris2	
 	2328865502	Play_SpaceDebris1			\Default Work Unit\SFX\Play_SpaceDebris1	
 	2632830566	Play_Introduction_1			\Default Work Unit\SFX\Play_Introduction_1	
@@ -16,18 +26,28 @@ Event	ID	Name			Wwise Object Path	Notes
 	3544022733	Play_SpaceDebrisEnd1			\Default Work Unit\SFX\Play_SpaceDebrisEnd1	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	66472356	SpaceSafety_NarratorVL_9	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\D0\{D07DF666-C896-C845-1D5E-AE1B74276E93}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_9		4497504
+	43639378	SpaceSafety_NarratorVL_15	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\C5\{C5289200-53C6-EC07-3B3D-A11746814199}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_15		2201696
+	66472356	SpaceSafety_NarratorVL_9	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\8C\{8C00B915-4454-1854-9EE4-B5711B235CCC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_9		4497504
 	72172385	SpaceDebrisEnd	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\76\{76C8088D-B260-0311-D558-7AC865D9E453}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\BenTestVoiceLines\SpaceDebrisEnd		1012724
+	81293508	SpaceSafety_NarratorVL_3	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\6B\{6B76804A-4F10-64F3-7459-858500FDDCE7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_3		2189408
 	160712797	SpaceDebrisEnd2_01	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\38\{38563597-97A8-BB39-63A0-8605EC323202}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\BenTestVoiceLines\SpaceDebrisEnd2_01		543114
-	182985285	SpaceSafety_NarratorVL_11	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\52\{529FEC22-9321-6FC9-1D26-988394A2340C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_11		2144352
+	168924334	SpaceSafety_NarratorVL_13	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\3B\{3B578446-F919-93AF-5786-BD491D5CB698}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_13		2742368
+	170379790	SpaceSafety_NarratorVL_6	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\49\{49A86332-38B3-827B-AD04-64A3E7D08C06}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_6		1054816
+	182985285	SpaceSafety_NarratorVL_11	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\86\{863F428B-AAF8-B804-9A14-E206A7870764}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_11		2144352
+	189504597	SpaceSafety_NarratorVL_2_1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\B8\{B8D70E8D-538A-7EFA-BD5B-EF7BA2C107EC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_2_1		2252896
 	217830941	670700__lilmati__space-atmosphere-02-remastered	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\D5\{D5C5EE85-8DF3-81A8-7A0C-64F929EC1D84}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\670700__lilmati__space-atmosphere-02-remastered		29763504
-	335749660	SpaceSafety_NarratorVL_1_1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\5E\{5E656740-400D-B286-A58D-4B992AE47353}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_1_1		2195552
-	344213007	SpaceSafety_NarratorVL_10	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\46\{46989A47-8ADA-7B2F-46B0-6DB7C61F92AF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_10		3842144
-	398615317	SpaceSafety_NarratorVL_16	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\4E\{4E270E3C-F185-28CD-65BA-7CAB4C228DA3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_16		3879008
-	410581352	SpaceSafety_NarratorVL_12	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\22\{22313251-0F45-B00C-92FB-45E57DC6E545}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_12		2287712
+	335749660	SpaceSafety_NarratorVL_1_1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\B3\{B389EF90-82C0-1440-BC20-2E1F1774E781}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_1_1		2195552
+	344213007	SpaceSafety_NarratorVL_10	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\AA\{AAE910CB-5002-26F7-AA58-A81162D10460}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_10		3842144
+	398615317	SpaceSafety_NarratorVL_16	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\93\{93E8A729-F199-F2E2-8980-441DB94B46F7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_16		3879008
+	410581352	SpaceSafety_NarratorVL_12	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\69\{697BB043-EDCE-1D17-E83E-C5084968704A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_12		2287712
 	600307686	locked-door	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\EE\{EEF727A5-FD3C-0D50-FDBE-F00893DE2A30}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\locked-door		40488
+	666816327	SpaceSafety_NarratorVL_5	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\80\{80DA721E-5CB1-F45F-ECBE-3A7766D47ADC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_5		1425504
 	808900958	SpaceDebris1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\EF\{EF7FAD64-46E9-58D4-1C39-1A914328624A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\BenTestVoiceLines\SpaceDebris1		1071276
+	881003497	SpaceSafety_NarratorVL_14	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\7C\{7C20B9BD-5267-89E6-F7AE-703362ECA381}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_14		3332192
 	896996565	Introduction_1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\E6\{E6F72E5E-4C19-27FD-66DC-A600887E0055}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\BenTestVoiceLines\Introduction_1		682080
+	923752316	SpaceSafety_NarratorVL_4	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\6B\{6B76804A-4F10-64F3-7459-858500FDDCE7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_4		2189408
 	931036442	SpaceDebrisEnd1	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\8F\{8FC91C51-93E3-5B83-0672-3A504AB4C16A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\BenTestVoiceLines\SpaceDebrisEnd1		469706
 	988370423	SpaceDebris2	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\FA\{FA6B7A9E-182A-ED48-5B8F-39EABB88F03C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\BenTestVoiceLines\SpaceDebris2		1355796
+	1018392263	SpaceSafety_NarratorVL_7	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\42\{42CD3B78-52F8-0847-E2BA-34308C244F3D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_7		473184
+	1040047457	SpaceSafety_NarratorVL_8	E:\Git\Projects\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\E3\{E3788C8F-B1B2-01BF-8FA4-CD6E3EE21E73}.wem		\Actor-Mixer Hierarchy\Default Work Unit\AudioTest\ViolaVoiceLines\SpaceSafety_NarratorVL_8		1966176
 
