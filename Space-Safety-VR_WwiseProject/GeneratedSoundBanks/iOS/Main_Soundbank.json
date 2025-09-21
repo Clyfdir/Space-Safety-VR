@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
     "Language": "SFX",
-    "Hash": "{A763D8C5-1B9F-424C-B8E6-ABB95A7C038D}",
+    "Hash": "{332B27AE-EB1A-D2F2-B3DD-087345BD316C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SpaceSafety_NarratorVL_3.wav",
-      "CachePath": "6B/{6B76804A-4F10-64F3-7459-858500FDDCE7}.wem"
+      "CachePath": "05/{05D7788D-5850-9CFC-48BA-63A1E6601C7C}.wem"
      },
      {
       "Id": "160712797",
@@ -173,7 +173,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SpaceSafety_NarratorVL_4.wav",
-      "CachePath": "6B/{6B76804A-4F10-64F3-7459-858500FDDCE7}.wem"
+      "CachePath": "A2/{A2F8C108-BEA1-3B48-84DE-1C9C749BFAED}.wem"
      },
      {
       "Id": "931036442",
@@ -465,8 +465,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_3",
       "GUID": "{A42BDA97-C9FF-4CBF-9703-289D47262FA3}",
       "DurationType": "OneShot",
-      "DurationMin": "12.411066",
-      "DurationMax": "12.411066",
+      "DurationMin": "14.663402",
+      "DurationMax": "14.663402",
       "MediaRefs": [
        {
         "Id": "81293508"
@@ -479,8 +479,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\VoiceLineEvents\\Play_SpaceSafety_NarratorVL_4",
       "GUID": "{EB92712C-147E-42BB-86D8-4C064CD694A7}",
       "DurationType": "OneShot",
-      "DurationMin": "12.411066",
-      "DurationMax": "12.411066",
+      "DurationMin": "8.661043",
+      "DurationMax": "8.661043",
       "MediaRefs": [
        {
         "Id": "923752316"
@@ -560,6 +560,6 @@
     ]
    }
   ],
-  "FileHash": "{6992F8BA-9AFB-AE1E-561B-7D4444957641}"
+  "FileHash": "{8F966FD1-0A36-4895-F682-EB4784AC7D39}"
  }
 }
