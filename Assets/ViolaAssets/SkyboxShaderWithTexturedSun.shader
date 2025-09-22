@@ -103,53 +103,48 @@ Shader "Skybox/SpaceWithTexturedSun"
                 // Background
                 float4 spaceColor = texCUBE(_SpaceCubemap, viewDir);
 
+                // only render sun when facing it
+                if (dot(viewDir, sunDir) <= 0.0)
+                {
+                    return spaceColor;
+                }
+
                 // Local basis around sun direction
                 float3 sx, sy;
                 BuildSunBasis(sunDir, sx, sy);
 
                 // Coordinates around sun center
-                // p.x and p.y are the sine components for angular displacement from sunDir
                 float2 p;
                 p.x = dot(viewDir, sx);
                 p.y = dot(viewDir, sy);
 
-                // True angular distance uses acos(dot(viewDir, sunDir)), but for sizing the disc
-                // we can use sin(theta). The radius in this space is sin(radians(size)).
                 float sunRad = radians(_SunAngularSizeDeg);
                 float sinR   = sin(sunRad);
 
-                // Rotation around the sun axis for the texture
+                // Rotation around the sun axis
                 float rot = radians(_SunRotationDeg);
                 float s = sin(rot), c = cos(rot);
                 float2 pRot = float2(c * p.x - s * p.y, s * p.x + c * p.y);
 
-                // Normalized disc coordinates where the sun disc is unit radius
                 float2 disc = pRot / max(sinR, 1e-5);
 
-                // Disc mask with feather
                 float r = length(disc);
-                // r = 1 at the sun edge, use smoothstep for feather
-                float edge0 = 1.0;                          // start of fade
-                float edge1 = max(1.0 - _SunFeather, 0.0);  // inner value gives softness
+                float edge0 = 1.0;
+                float edge1 = max(1.0 - _SunFeather, 0.0);
                 float mask  = saturate(smoothstep(edge0, edge1, r));
 
-                // Build UV from disc coords so the sun texture fills the disc
-                // map unit disc to 0..1 with center at 0.5
                 float2 uv = disc * 0.5 + 0.5;
 
-                // Sample sun texture, clamp outside
                 float4 sunSample = tex2D(_SunTex, uv);
                 sunSample.rgb *= _SunColor.rgb * _SunIntensity;
                 sunSample.a   *= mask;
 
-                // Premultiply by alpha to avoid fringes
-                float3 sunRGB = sunSample.rgb * sunSample.a;
-
-                // Composite over space
+                float3 sunRGB   = sunSample.rgb * sunSample.a;
                 float3 finalRGB = spaceColor.rgb + sunRGB;
 
                 return float4(finalRGB, 1.0);
             }
+
 
             ENDHLSL
         }

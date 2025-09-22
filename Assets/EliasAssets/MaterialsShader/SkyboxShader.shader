@@ -57,26 +57,24 @@ ZWrite Off
             }
 
             float4 frag(Varyings i) : SV_Target
-                {
-                    float3 viewDir = normalize(i.directionWS);
+            {
+                float3 viewDir = normalize(i.directionWS);
 
-                    // Use _SunDirection or GetMainLight
-                    Light mainLight = GetMainLight();
-                    float3 sunDir = normalize(mainLight.direction);
+                Light mainLight = GetMainLight();
+                float3 sunDir = normalize(mainLight.direction);
 
-                    float4 spaceColor = texCUBE(_SpaceCubemap, viewDir);
+                float4 spaceColor = texCUBE(_SpaceCubemap, viewDir);
 
-                    float sunDot = saturate(dot(viewDir, sunDir));
+                float sunDot = max(0.0, dot(viewDir, -sunDir)); 
 
-                    float core = step(_SunSize, sunDot); // hard core
-                    float glow = exp(-pow((1.0 - sunDot) / (1.0 - _SunSize), 2.0) / (_SunFalloff * _SunFalloff));
-                    float sunIntensity = saturate(core + glow);
+                float core = step(_SunSize, sunDot);
+                float glow = exp(-pow((1.0 - sunDot) / (1.0 - _SunSize), 2.0) / (_SunFalloff * _SunFalloff));
+                float sunIntensity = saturate(core + glow);
 
+                float3 finalColor = spaceColor.rgb + _SunColor.rgb * sunIntensity;
+                return float4(finalColor, 1.0);
+            }
 
-
-                    float3 finalColor = spaceColor.rgb + _SunColor.rgb * sunIntensity;
-                    return float4(finalColor, 1.0);
-                }
 
 
             ENDHLSL
