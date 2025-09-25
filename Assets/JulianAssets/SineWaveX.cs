@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SineWaveZ : MonoBehaviour
+public class SineWaveX : MonoBehaviour
 {
     [SerializeField] private float center;
     [SerializeField] private float amplitude;
@@ -9,9 +9,9 @@ public class SineWaveZ : MonoBehaviour
     void Update()
     {
         transform.localPosition = new Vector3(
-            transform.localPosition.x,
+            center + amplitude * Mathf.Sin(Time.time * speed),
             transform.localPosition.y,
-            center + amplitude * Mathf.Sin(Time.time * speed)
+            transform.localPosition.z
         );
     }
 }
