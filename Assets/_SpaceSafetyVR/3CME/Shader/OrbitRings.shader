@@ -26,6 +26,9 @@ Shader "Custom/OrbitRings"
         _SlideSpeed ("Slide Speed", Float) = 1.0
         
 
+         [Header(InnerRings Settings)]
+        [KeywordEnum(Off, On)]
+        _Rings ("InnerRngs Mode", Float) = 0
 
         [Header(Render Settings)]
         [Enum(UnityEngine.Rendering.BlendMode)]
@@ -51,7 +54,7 @@ Shader "Custom/OrbitRings"
             #pragma vertex vert
             #pragma fragment frag
 
-            #pragma shader_feature _ROTATION_OFF _ROTATION_ON
+            #pragma shader_feature _RINGS_OFF _RINGS_ON
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
@@ -96,14 +99,22 @@ Shader "Custom/OrbitRings"
 
                 // for variable amount of rings use a sine curve that gets scaled instead of radius
                 float ring = abs(_Radius-dist);
+                #if _RINGS_ON
                 float innerRadius = _Radius/4;
                 float ring1 = abs(innerRadius-dist);
                 float ring2 = abs(innerRadius*2-dist);
                 float ring3 = abs(innerRadius*3-dist);
+                #endif
+                
 
                 float fade  = saturate((i.pos.x + _fadeOffset )*_fadeFactor);
 
-                float alpha = (( 1-smoothstep(0,_RingWidth, ring))+( 1-smoothstep(0,_RingWidth, ring1)) +( 1-smoothstep(0,_RingWidth, ring2)) +( 1-smoothstep(0,_RingWidth, ring3)) )*(1-wave)*fade;
+                float alpha = ( 1-smoothstep(0,_RingWidth, ring));
+                #if _RINGS_ON
+                alpha +=( 1-smoothstep(0,_RingWidth, ring1)) +( 1-smoothstep(0,_RingWidth, ring2)) +( 1-smoothstep(0,_RingWidth, ring3));
+                #endif
+                
+                alpha *= (1-wave)*fade;
                 
                 
                 return _Color* alpha*_BaseIntensity; 
