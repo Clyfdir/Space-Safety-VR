@@ -13,6 +13,25 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_1 = 1774091847U;
+        static const AkUniqueID PLAY_2 = 1774091844U;
+        static const AkUniqueID PLAY_3 = 1774091845U;
+        static const AkUniqueID PLAY_4_OLD = 4123078548U;
+        static const AkUniqueID PLAY_5 = 1774091843U;
+        static const AkUniqueID PLAY_6 = 1774091840U;
+        static const AkUniqueID PLAY_7 = 1774091841U;
+        static const AkUniqueID PLAY_8 = 1774091854U;
+        static const AkUniqueID PLAY_9 = 1774091855U;
+        static const AkUniqueID PLAY_10 = 3185625589U;
+        static const AkUniqueID PLAY_11 = 3185625588U;
+        static const AkUniqueID PLAY_12 = 3185625591U;
+        static const AkUniqueID PLAY_13 = 3185625590U;
+        static const AkUniqueID PLAY_14 = 3185625585U;
+        static const AkUniqueID PLAY_15 = 3185625584U;
+        static const AkUniqueID PLAY_16 = 3185625587U;
+        static const AkUniqueID PLAY_17 = 3185625586U;
+        static const AkUniqueID PLAY_18 = 3185625597U;
+        static const AkUniqueID PLAY_19 = 3185625596U;
         static const AkUniqueID PLAY_ATMO = 3133186549U;
         static const AkUniqueID PLAY_INTRODUCTION_1 = 2632830566U;
         static const AkUniqueID PLAY_LOCKED_DOOR = 281597619U;

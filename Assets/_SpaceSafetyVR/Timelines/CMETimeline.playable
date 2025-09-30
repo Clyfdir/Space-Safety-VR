@@ -15,11 +15,11 @@ MonoBehaviour:
   akEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2cae909310441c64dae48d6d7201bd41, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 7233228305bf622408d7200108dfc5af, type: 2}
   blendInCurve: 4
   blendOutCurve: 4
-  eventDurationMax: 8.080544
-  eventDurationMin: 8.080544
+  eventDurationMax: 18.38306
+  eventDurationMin: 18.38306
   retriggerEvent: 0
   UseWwiseEventDuration: 1
   PrintDebugInformation: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Start: 0.9166666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 5587381481744636704}
-    m_Duration: 14.66340160369873
+    m_Duration: 18.59745979309082
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8892259510973684558}
     m_EaseInDuration: 0
@@ -146,12 +146,12 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Play_SpaceSafety_NarratorVL_3
+    m_DisplayName: Play_3
   - m_Version: 1
-    m_Start: 25.016666666666666
+    m_Start: 30.129455248514812
     m_ClipIn: 0
     m_Asset: {fileID: -9102596389045747925}
-    m_Duration: 8.080544471740723
+    m_Duration: 18.383060455322266
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8892259510973684558}
     m_EaseInDuration: 0
@@ -179,12 +179,12 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Play_SpaceSafety_NarratorVL_5
+    m_DisplayName: Play_6
   - m_Version: 1
-    m_Start: 15.966666666666667
+    m_Start: 19.514126459757488
     m_ClipIn: 0
     m_Asset: {fileID: -5218453715080373633}
-    m_Duration: 8.661043167114258
+    m_Duration: 10.615328788757324
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8892259510973684558}
     m_EaseInDuration: 0
@@ -230,58 +230,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Play_SpaceSafety_NarratorVL_4
-  - m_Version: 1
-    m_Start: 33.45
-    m_ClipIn: 0
-    m_Asset: {fileID: 9056125152943403949}
-    m_Duration: 5.979138374328613
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -8892259510973684558}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: Play_SpaceSafety_NarratorVL_6
+    m_DisplayName: Play_5
   m_Markers:
     m_Objects: []
 --- !u!114 &-8824676343313385936
@@ -359,11 +308,11 @@ MonoBehaviour:
   akEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 063234b18b5128f48a627b9f391e1604, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b44b99652895c1748a3a29b031dcf19a, type: 2}
   blendInCurve: 4
   blendOutCurve: 4
-  eventDurationMax: 8.661043
-  eventDurationMin: 8.661043
+  eventDurationMax: 10.615329
+  eventDurationMin: 10.615329
   retriggerEvent: 0
   UseWwiseEventDuration: 1
   PrintDebugInformation: 0
@@ -468,14 +417,14 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.9666667
         value: 0.91
-        inSlope: 0.0030405405
-        outSlope: 0.0030405405
+        inSlope: 0.0024733767
+        outSlope: 0.0024733767
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 39.466667
+        time: 48.516666
         value: 0.94
         inSlope: 0
         outSlope: 0
@@ -484,7 +433,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 42.766666
+        time: 51.816666
         value: 0.13
         inSlope: 0
         outSlope: 0
@@ -523,7 +472,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 42.766666
+    m_StopTime: 51.816666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -555,14 +504,14 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.9666667
         value: 0.91
-        inSlope: 0.0030405405
-        outSlope: 0.0030405405
+        inSlope: 0.0024733767
+        outSlope: 0.0024733767
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 39.466667
+        time: 48.516666
         value: 0.94
         inSlope: 0
         outSlope: 0
@@ -571,7 +520,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 42.766666
+        time: 51.816666
         value: 0.13
         inSlope: 0
         outSlope: 0
@@ -933,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 43.93333333333333
+  m_Time: 51.81666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: dacb29298ac792f4d8e028b04a5c466c, type: 2}
@@ -962,7 +911,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 6706193274106569422}
-    m_Duration: 42.766666666666666
+    m_Duration: 51.81666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5497456532896881803}
     m_EaseInDuration: 0
@@ -1069,7 +1018,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 16
+    m_Start: 19.514126459757488
     m_ClipIn: 0
     m_Asset: {fileID: 8600225513282639287}
     m_Duration: 8.661043167114258
@@ -1155,11 +1104,11 @@ MonoBehaviour:
   akEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a5f887a5cd9f7244dab372419ba95aad, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: bd532ab9d62bfc24a98ead89b6bdce5d, type: 2}
   blendInCurve: 4
   blendOutCurve: 4
-  eventDurationMax: 14.663402
-  eventDurationMin: 14.663402
+  eventDurationMax: 18.59746
+  eventDurationMin: 18.59746
   retriggerEvent: 0
   UseWwiseEventDuration: 1
   PrintDebugInformation: 0
@@ -1186,7 +1135,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12.533333333333333
+    m_Start: 18.45
     m_ClipIn: 0
     m_Asset: {fileID: -7812412504352638324}
     m_Duration: 21.966666666666
@@ -1291,27 +1240,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset
   m_EditorClassIdentifier: 
---- !u!114 &9056125152943403949
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a29e25322fb164ca0b598a762b3672, type: 3}
-  m_Name: AkTimelineEventPlayable
-  m_EditorClassIdentifier: 
-  akEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a749051137e2eb348bd07151c71aa990, type: 2}
-  blendInCurve: 4
-  blendOutCurve: 4
-  eventDurationMax: 5.9791384
-  eventDurationMin: 5.9791384
-  retriggerEvent: 0
-  UseWwiseEventDuration: 1
-  PrintDebugInformation: 0
-  StopEventAtClipEnd: 1
