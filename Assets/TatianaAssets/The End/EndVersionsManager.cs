@@ -29,7 +29,7 @@ public class EndVersionsManager : MonoBehaviour
     [SerializeField] private List<GameObject> children = new List<GameObject>();
 
     [Header("End Text")]
-    [TextArea]
+    [TextArea(10, 999)]
     [SerializeField] private string endText = "Default end text here.";
 
     private void Awake()
