@@ -44,16 +44,27 @@ public class EmissionColorController : MonoBehaviour
         var renderers = GetComponentsInChildren<Renderer>(includeInactive: true);
         foreach (var renderer in renderers)
         {
-            foreach (var mat in renderer.materials)
-            {
-                // Create unique instance so Timeline or code changes won’t affect shared assets
-                if (Application.isPlaying)
-                    renderer.material = mat; // ensures instancing in play mode
+            Material[] mats;
 
-                _materials.Add(renderer.material);
+            if (Application.isPlaying)
+            {
+                // Runtime: use instance materials (safe)
+                mats = renderer.materials;
+            }
+            else
+            {
+                // Editor: use shared materials (no instancing)
+                mats = renderer.sharedMaterials;
+            }
+
+            foreach (var mat in mats)
+            {
+                if (mat != null)
+                    _materials.Add(mat);
             }
         }
     }
+
 
     /// <summary>
     /// Applies the emission color to all cached materials.
