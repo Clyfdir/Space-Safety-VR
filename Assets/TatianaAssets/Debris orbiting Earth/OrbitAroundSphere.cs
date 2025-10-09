@@ -4,7 +4,7 @@
 ///   Created: 08.07.2025
 ///   Last Change: 08.07.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 03.09.2025
+///   Last Change: 09.10.2025
 
 using UnityEngine;
 
@@ -12,8 +12,8 @@ using UnityEngine;
 public class OrbitAroundSphere : MonoBehaviour
 {
     public Transform sphereCenter;
-    private Vector2 speedRange = new Vector2(4f, 7f);
-    private float speedDeg;
+    private Vector2 speedRange = new Vector2(4f, 9f);
+    [SerializeField] private float speedDeg;
     private int directionDebrisOrbiting = 1;
 
     // --- cached per-instance ---
