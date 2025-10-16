@@ -3,63 +3,427 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="AudioTest" ID="{F4855379-69D1-49F5-B443-A1DD0B6B70E0}" ShortID="233149743">
+				<ActorMixer Name="Mix_SFX" ID="{72B984CD-7911-4C9A-ACD0-4BDEB40038AF}" ShortID="749308335">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="locked-door" ID="{77E7A546-F84B-42C2-BB92-0CE39F589CE9}" ShortID="319428063">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="Spaceship" ID="{F9B67ECB-EF74-4EF1-B290-C0D9B356AC75}" ShortID="207027533">
 							<ChildrenList>
-								<AudioFileSource Name="locked-door" ID="{836B096F-4725-4D3C-9C8C-9BE489692118}">
-									<Language>SFX</Language>
-									<AudioFile>locked-door.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="600307686"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="locked-door" ID="{836B096F-4725-4D3C-9C8C-9BE489692118}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="670700__lilmati__space-atmosphere-02-remastered" ID="{DE503FE7-0801-408E-B9C3-829AB5E81D4C}" ShortID="916764837">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="670700__lilmati__space-atmosphere-02-remastered" ID="{A3C9D985-8C6E-4F5B-A430-A1F380EE9601}">
+								<Sound Name="AT_Button_Press" ID="{3DAE6344-9CE2-4590-ACE3-B3B87163CB3B}" ShortID="52965867">
 									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
-										<Property Name="LoopEnd" Type="Real64" Value="155.01775"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>670700__lilmati__space-atmosphere-02-remastered.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="217830941"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_SFX_Binaural" ID="{D6EC79C5-1632-46A9-AC85-9433B39D0134}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AT_Button_Press" ID="{FC39A69C-D28D-47E9-99F9-F2BFF73B3C11}">
+											<Language>SFX</Language>
+											<AudioFile>Spaceship\AT_Button_Press.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="504052546"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AT_Button_Press" ID="{FC39A69C-D28D-47E9-99F9-F2BFF73B3C11}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Folder Name="Hologram" ID="{99E90CDA-B997-4F15-A871-653C96E0635A}" ShortID="919026222">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<ActorMixer Name="Mix_Hologram" ID="{F1E0D26E-528A-445E-87F3-6521ACA6E0D4}" ShortID="841566496">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Atten_Hologram" ID="{79F60E7B-CE2B-4189-BD72-DB7EF19225AE}" WorkUnitID="{511472A4-6274-48D5-979E-54F8751C2269}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX_Binaural" ID="{D6EC79C5-1632-46A9-AC85-9433B39D0134}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_activeHolo-loop" ID="{44FCFDAE-ECBE-4695-AB1C-80EC11769D2F}" ShortID="841532752">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_activeHolo-loop" ID="{73E0BEA9-F050-48EF-8882-3EA0A69F2124}">
+															<Language>SFX</Language>
+															<AudioFile>Spaceship\SFX_activeHolo-loop.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="816465684"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_activeHolo-loop" ID="{73E0BEA9-F050-48EF-8882-3EA0A69F2124}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_closeHolo-OS" ID="{9209B54A-2C2F-4196-9FA5-FEF0B353003F}" ShortID="977101556">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_closeHolo-OS" ID="{AC34D976-C218-4BC0-BC24-1B0241179DB5}">
+															<Language>SFX</Language>
+															<AudioFile>Spaceship\SFX_closeHolo-OS.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="525879345"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_closeHolo-OS" ID="{AC34D976-C218-4BC0-BC24-1B0241179DB5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_openHolo-OS" ID="{57F134DD-5BAE-4D72-845D-9B8A6ADBA850}" ShortID="165095624">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_openHolo-OS" ID="{7A208090-1A85-4FE5-BE7E-E38533E901BE}">
+															<Language>SFX</Language>
+															<AudioFile>Spaceship\SFX_openHolo-OS.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1064606678"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_openHolo-OS" ID="{7A208090-1A85-4FE5-BE7E-E38533E901BE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</ActorMixer>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="670700__lilmati__space-atmosphere-02-remastered" ID="{A3C9D985-8C6E-4F5B-A430-A1F380EE9601}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Folder Name="BenTestVoiceLines" ID="{5A4E889F-843D-41C7-8C10-1BEA4D34075A}" ShortID="1019367243">
+						</Folder>
+						<Folder Name="Atmo" ID="{056E5F1A-FB48-4AC4-AA41-D5D0C4453C8C}" ShortID="857793502">
 							<ChildrenList>
-								<Sound Name="Introduction_1" ID="{20A70D31-BD12-4A87-AA06-96CBF7BD3894}" ShortID="371210784">
+								<ActorMixer Name="Luefter" ID="{06A781BD-5289-4802-A72C-AD5CC1C801AC}" ShortID="457863518">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Atten_SpaceshipFans" ID="{F5D4E004-CC39-48E3-A385-93A09E39FBA7}" WorkUnitID="{511472A4-6274-48D5-979E-54F8751C2269}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_SFX_Binaural" ID="{D6EC79C5-1632-46A9-AC85-9433B39D0134}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="AT_Luefter_02" ID="{E4D635C5-60F0-44A4-8C4D-4CE38B49EAEC}" ShortID="96522959">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Luefter_02" ID="{883B460A-4CF0-47C3-8A5A-FC9295F1490C}">
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Luefter\AT_Luefter_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1060031212"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Luefter_02" ID="{883B460A-4CF0-47C3-8A5A-FC9295F1490C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AT_Luefter_05" ID="{72D2114D-6041-4A50-BDB0-DEAFF3D82B5D}" ShortID="848943618">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Luefter_05" ID="{7EF9D254-96F9-41AB-8397-9317657AEA62}">
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Luefter\AT_Luefter_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333790038"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Luefter_05" ID="{7EF9D254-96F9-41AB-8397-9317657AEA62}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AT_Luefter_03" ID="{FDD9FBB7-CE14-4909-BF4D-03E0FFF361B0}" ShortID="805165231">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Luefter_03" ID="{F881914C-6935-4740-AC0B-635FC4D27843}">
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Luefter\AT_Luefter_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="513280924"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Luefter_03" ID="{F881914C-6935-4740-AC0B-635FC4D27843}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AT_Luefter_04" ID="{E507A3EF-8A10-4F89-BAD2-87B2A6AB60E8}" ShortID="344502155">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Luefter_04" ID="{009C576D-DA17-4187-A1C0-388B459CA672}">
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Luefter\AT_Luefter_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="387468676"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Luefter_04" ID="{009C576D-DA17-4187-A1C0-388B459CA672}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AT_Luefter_01" ID="{8FC4F03E-66CB-4C6F-A795-0CF8059B1C09}" ShortID="812109199">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Luefter_01" ID="{8D6C7B16-669B-4791-9718-97ABBFDA6986}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="1946.73123486682"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.983050847457627"/>
+														<Property Name="LoopEnd" Type="Real64" Value="3.02663438256659"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Luefter\AT_Luefter_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="376189906"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Luefter_01" ID="{8D6C7B16-669B-4791-9718-97ABBFDA6986}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AT_Luefter_06" ID="{8781A50E-6104-41B0-ACFE-28732F33C848}" ShortID="314626113">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Luefter_06" ID="{A6E4555F-4FD0-4BDB-B2AA-28B3780F8270}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="2905.56900726392"/>
+														<Property Name="LoopBegin" Type="Real64" Value="1.4818401937046"/>
+														<Property Name="LoopEnd" Type="Real64" Value="4.54721549636804"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Luefter\AT_Luefter_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="911114981"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Luefter_06" ID="{A6E4555F-4FD0-4BDB-B2AA-28B3780F8270}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{A9946DF2-DF20-4481-AC05-5A5E6E06B4EE}"/>
+									</PositioningInfo>
+								</ActorMixer>
+								<BlendContainer Name="Atmo_Space" ID="{9172873B-9597-42D8-BEF3-74A59520EAB8}" ShortID="361816624">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="AT_Space-Rumble_stereo_01" ID="{510784E2-C631-443D-B509-7A6166772E08}" ShortID="53065120">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Space-Rumble_stereo_01" ID="{F7B5B1DC-B5B7-443E-82E0-5505FD5C1511}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="3690.07263922518"/>
+														<Property Name="LoopBegin" Type="Real64" Value="2"/>
+														<Property Name="LoopEnd" Type="Real64" Value="30.1549636803874"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Space\AT_Space-Rumble_stereo_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="539937300"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Space-Rumble_stereo_01" ID="{F7B5B1DC-B5B7-443E-82E0-5505FD5C1511}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AT_Space-Rumble_stereo_02" ID="{4AB78FF8-F6D3-416E-928E-7F137F6FC1FA}" ShortID="632128087">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AT_Space-Rumble_stereo_02" ID="{DCABB3FF-83E3-4AB9-9BA5-42C34E3F80A8}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="1627.1186440678"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.813559322033899"/>
+														<Property Name="LoopEnd" Type="Real64" Value="11.1573849878935"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Atmo\Space\AT_Space-Rumble_stereo_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="519703806"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AT_Space-Rumble_stereo_02" ID="{DCABB3FF-83E3-4AB9-9BA5-42C34E3F80A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Cutscene" ID="{7C2B1CD1-C9A2-4D02-A7EA-8D178AD64853}" ShortID="69848991">
+							<ChildrenList>
+								<Sound Name="AT_Fade2Blue-in" ID="{65389EA7-D7D9-4018-86DB-E4507BCB9C2A}" ShortID="197415766">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
@@ -69,19 +433,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Introduction_1" ID="{22BEE6B3-120E-4CAC-9ABF-7D360CC1870B}">
+										<AudioFileSource Name="AT_Fade2Blue-in" ID="{2F6BC9B1-0BEE-4047-BEBD-F56DA06C5BD7}">
 											<Language>SFX</Language>
-											<AudioFile>Introduction_1.wav</AudioFile>
+											<AudioFile>Cutscene\AT_Fade2Blue-in.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="896996565"/>
+												<MediaID ID="314500054"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Introduction_1" ID="{22BEE6B3-120E-4CAC-9ABF-7D360CC1870B}" Platform="Linked"/>
+										<ActiveSource Name="AT_Fade2Blue-in" ID="{2F6BC9B1-0BEE-4047-BEBD-F56DA06C5BD7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="SpaceDebris1" ID="{DB9DEDC1-9384-4765-B1C3-883FFFBA6FB4}" ShortID="996320536">
+								<Sound Name="AT_Fade2Blue-out" ID="{5344C4EF-6112-4B99-9168-61D6744F2297}" ShortID="888317696">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
@@ -91,510 +459,57 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="SpaceDebris1" ID="{CCBB4A04-7657-46A3-B2B1-1A6A940A1DE0}">
+										<AudioFileSource Name="AT_Fade2Blue-out" ID="{A55F2ED3-6BBB-40CA-86A5-9024C52903D5}">
 											<Language>SFX</Language>
-											<AudioFile>SpaceDebris1.wav</AudioFile>
+											<AudioFile>Cutscene\AT_Fade2Blue-out.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="808900958"/>
+												<MediaID ID="364649772"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="SpaceDebris1" ID="{CCBB4A04-7657-46A3-B2B1-1A6A940A1DE0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceDebris2" ID="{E431E6AA-AFF6-4F32-96FF-87CBCC3506D5}" ShortID="306302874">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceDebris2" ID="{05273BC9-F4B0-4A50-9374-9DBCCDEF5D5A}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceDebris2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="988370423"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceDebris2" ID="{05273BC9-F4B0-4A50-9374-9DBCCDEF5D5A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceDebrisEnd" ID="{9E921986-A7A0-4EB4-A48D-30902EBDF59A}" ShortID="508145538">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceDebrisEnd" ID="{9A354714-CEF1-44FA-B7D3-D8213F322D29}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceDebrisEnd.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="72172385"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceDebrisEnd" ID="{9A354714-CEF1-44FA-B7D3-D8213F322D29}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceDebrisEnd1" ID="{02264AC8-16A4-47D7-B69D-E72FF96F6711}" ShortID="319055346">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceDebrisEnd1" ID="{4B552A9C-57AF-4E34-8CC7-3D209F43EEB3}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceDebrisEnd1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="931036442"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceDebrisEnd1" ID="{4B552A9C-57AF-4E34-8CC7-3D209F43EEB3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceDebrisEnd2" ID="{98475A2D-245F-4A06-BB03-B0E964ACEA25}" ShortID="872759207">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceDebrisEnd2" ID="{F2846AF1-9139-498F-BEA4-C01240B37CEB}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceDebrisEnd2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="160712797"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceDebrisEnd2" ID="{F2846AF1-9139-498F-BEA4-C01240B37CEB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceDebrisEnd2_01" ID="{F4ED09E7-4B7E-4523-9601-7F39BC11AE18}" ShortID="1035983207">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceDebrisEnd2" ID="{7348CF10-3C14-4207-A26C-2AABA940B0DF}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceDebrisEnd2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="160712797"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceDebrisEnd2" ID="{7348CF10-3C14-4207-A26C-2AABA940B0DF}" Platform="Linked"/>
+										<ActiveSource Name="AT_Fade2Blue-out" ID="{A55F2ED3-6BBB-40CA-86A5-9024C52903D5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="ViolaVoiceLines" ID="{E57D332D-CD1C-43F9-B057-C35F5BB1B849}" ShortID="691107616">
-							<ChildrenList>
-								<Sound Name="SpaceSafety_NarratorVL_1_1" ID="{ADCEA058-36C8-4945-8218-3D09522EAA86}" ShortID="475029525">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_1_1" ID="{8BC5059A-A52B-4D9C-BE59-480E6D279E58}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_1.1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="335749660"/>
-											</MediaIDList>
-										</AudioFileSource>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_1_01" ID="{63B5DE5E-AA9B-4B2E-B7D2-756A61466FBB}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_1.1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="335749660"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_1_01" ID="{63B5DE5E-AA9B-4B2E-B7D2-756A61466FBB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_9" ID="{ACC86648-C934-4233-923D-BE2563A18C0E}" ShortID="770591308">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_9" ID="{29548982-30AC-451C-B634-E035B2697BED}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_9.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="66472356"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_9" ID="{29548982-30AC-451C-B634-E035B2697BED}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_10" ID="{2907D413-D637-4939-9F88-6977DAB62B67}" ShortID="265077442">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_10" ID="{92FE5593-8764-4877-9051-4E8AD63C0D5B}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_10.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="344213007"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_10" ID="{92FE5593-8764-4877-9051-4E8AD63C0D5B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_11" ID="{94F5A706-62E2-4EBE-A285-F443DB0B7A3B}" ShortID="330758304">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_11" ID="{99972090-1C1B-4C2A-BCF8-D2063FA32E1E}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_11.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="182985285"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_11" ID="{99972090-1C1B-4C2A-BCF8-D2063FA32E1E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_12" ID="{58B6BBD8-C2F2-4FEA-A9AE-7F3C930DB37B}" ShortID="908304868">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_12" ID="{1D8D6A4F-20DB-4C76-813C-2285DA6233FE}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_12.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="410581352"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_12" ID="{1D8D6A4F-20DB-4C76-813C-2285DA6233FE}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_16" ID="{EB408E34-3579-43E8-9A0E-9A2FED7A966F}" ShortID="597248196">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_16" ID="{E7BB70AB-8E09-4EB9-9489-6C3BE059BD23}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_16.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="398615317"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_16" ID="{E7BB70AB-8E09-4EB9-9489-6C3BE059BD23}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_2_1" ID="{56877C29-664A-4293-B484-53F1A4C740E8}" ShortID="257429291">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_2_1" ID="{C9C2A775-309B-4F90-984D-437D5EC63438}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_2.1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="189504597"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_2_1" ID="{C9C2A775-309B-4F90-984D-437D5EC63438}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_3" ID="{DD9C9A14-E315-4220-89E8-6ACCDAE34782}" ShortID="1063852616">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_3" ID="{48831494-D6F6-4B33-9D43-12416CC2F1FD}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="81293508"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_3" ID="{48831494-D6F6-4B33-9D43-12416CC2F1FD}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_4" ID="{98273DE8-EC01-47EC-9996-6FA70F2AA1C8}" ShortID="168806521">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_4" ID="{0E00CABA-526F-4DE7-A295-EDD15748AC19}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="923752316"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_4" ID="{0E00CABA-526F-4DE7-A295-EDD15748AC19}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_5" ID="{158D8747-C4B3-4428-9D29-CFC39F51DEBD}" ShortID="59919994">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_5" ID="{67CE7AE2-2BAD-489D-8339-3850F62A93D5}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_5.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="666816327"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_5" ID="{67CE7AE2-2BAD-489D-8339-3850F62A93D5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_6" ID="{CD2C413E-D973-4254-99FB-4366F4C6C3FE}" ShortID="640326821">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_6" ID="{465951A0-D487-4194-B9CA-7B777958328C}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_6.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="170379790"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_6" ID="{465951A0-D487-4194-B9CA-7B777958328C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_7" ID="{0807CFC5-1A8E-4622-85ED-DD0855E1F1DE}" ShortID="196007819">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_7" ID="{694ACE10-F0AE-46D7-980E-82C2A75D2387}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_7.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1018392263"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_7" ID="{694ACE10-F0AE-46D7-980E-82C2A75D2387}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_8" ID="{5A4DE8C0-9D74-43C4-A6F6-6509CC764EEC}" ShortID="226211497">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_8" ID="{6057C0EB-E901-422E-B2B0-56512934FEB9}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_8.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1040047457"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_8" ID="{6057C0EB-E901-422E-B2B0-56512934FEB9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_13" ID="{531FBEE1-A36F-4B3C-A913-541406415D74}" ShortID="956183874">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_13" ID="{0F0FB5BA-9E0A-48DD-8457-F36525C78FCC}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_13.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="168924334"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_13" ID="{0F0FB5BA-9E0A-48DD-8457-F36525C78FCC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_14" ID="{390FBBEC-DBAC-439A-AB6F-4CA78F4C22A7}" ShortID="293917522">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_14" ID="{9533D0B8-E823-4530-A5F7-5D5115899BD7}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_14.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="881003497"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_14" ID="{9533D0B8-E823-4530-A5F7-5D5115899BD7}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SpaceSafety_NarratorVL_15" ID="{497701D7-5E05-41FC-B244-B078D09E1765}" ShortID="153286581">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SpaceSafety_NarratorVL_15" ID="{1E1BC444-02DB-47EB-A0D5-0213B2F0BDA9}">
-											<Language>SFX</Language>
-											<AudioFile>SpaceSafety_NarratorVL_15.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="43639378"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SpaceSafety_NarratorVL_15" ID="{1E1BC444-02DB-47EB-A0D5-0213B2F0BDA9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="StuartVoiceLines" ID="{CA03307E-D7D2-4049-8DC8-4B5C105B0333}" ShortID="161309992">
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Mix_VoiceLines" ID="{F983A373-7D1A-4B97-8DDD-7772C1D640F4}" ShortID="717596947">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Bus_Voicelines" ID="{DF30B341-3C32-4D37-847D-744DD8857072}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Narrator" ID="{CA03307E-D7D2-4049-8DC8-4B5C105B0333}" ShortID="161309992">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Sound Name="1" ID="{A7F8F69E-9124-4FA7-96E8-640C5E7AF03D}" ShortID="662200894">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+											<ObjectRef Name="Bus_SFX_Binaural" ID="{D6EC79C5-1632-46A9-AC85-9433B39D0134}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="1" ID="{714ED7A5-4436-4E64-B684-902D7B655443}">
 											<Language>SFX</Language>
-											<AudioFile>1.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="827919584"/>
+												<MediaID ID="827919585"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -614,9 +529,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="2" ID="{9827EF95-A554-40E4-9F72-7D59E7F14D1D}">
 											<Language>SFX</Language>
-											<AudioFile>2.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="418204096"/>
+												<MediaID ID="418204097"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -636,9 +551,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="3" ID="{328216A0-2112-4554-9126-6C7A8352A390}">
 											<Language>SFX</Language>
-											<AudioFile>3.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\3.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="795501306"/>
+												<MediaID ID="795501307"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -658,9 +573,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="4_Old" ID="{13AC0919-4148-4346-91E7-2C01B6169917}">
 											<Language>SFX</Language>
-											<AudioFile>4_Old.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\4_Old.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="568056451"/>
+												<MediaID ID="568056452"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -680,9 +595,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="5" ID="{92401699-020E-4F16-BC90-51B92CB29CEA}">
 											<Language>SFX</Language>
-											<AudioFile>5.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\5.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="133167509"/>
+												<MediaID ID="133167510"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -702,9 +617,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="6" ID="{7B91BC28-BEED-4AEB-A0CC-D3D841D425E6}">
 											<Language>SFX</Language>
-											<AudioFile>6.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\6.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="768945645"/>
+												<MediaID ID="768945646"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -724,9 +639,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="7" ID="{3304C161-5A89-4BD4-846A-B692C1DE09F8}">
 											<Language>SFX</Language>
-											<AudioFile>7.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\7.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="845725998"/>
+												<MediaID ID="845725999"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -746,9 +661,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="8" ID="{69734BCF-BD6A-459E-945A-E301117C37EE}">
 											<Language>SFX</Language>
-											<AudioFile>8.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\8.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="102960095"/>
+												<MediaID ID="102960096"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -768,9 +683,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="9" ID="{377FBBC7-C101-411F-9A0E-67976629D211}">
 											<Language>SFX</Language>
-											<AudioFile>9.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\9.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="333446985"/>
+												<MediaID ID="333446986"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -790,9 +705,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="10" ID="{51B62897-C3C6-40EC-8BD8-3A99EB9D6E1E}">
 											<Language>SFX</Language>
-											<AudioFile>10.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\10.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="846745396"/>
+												<MediaID ID="846745397"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -812,9 +727,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="11" ID="{561D9DEF-A571-47F3-86B8-453C06C654C2}">
 											<Language>SFX</Language>
-											<AudioFile>11.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\11.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="281560172"/>
+												<MediaID ID="281560173"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -834,9 +749,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="12" ID="{27260499-510C-42C9-A7FE-1728769B1EE7}">
 											<Language>SFX</Language>
-											<AudioFile>12.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\12.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="140458569"/>
+												<MediaID ID="140458570"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -856,9 +771,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="13" ID="{31377D7D-7F34-484C-9528-8752437840FA}">
 											<Language>SFX</Language>
-											<AudioFile>13.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\13.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="501903147"/>
+												<MediaID ID="501903148"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -878,9 +793,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="14" ID="{70F65C25-1ABF-4696-A1D5-5482D1738363}">
 											<Language>SFX</Language>
-											<AudioFile>14.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\14.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="889772634"/>
+												<MediaID ID="889772635"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -900,9 +815,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="15" ID="{AE678C44-8130-45A8-9B3F-72A2C121E1A2}">
 											<Language>SFX</Language>
-											<AudioFile>15.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\15.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1056605978"/>
+												<MediaID ID="1056605979"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -922,9 +837,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="16" ID="{84A3E014-6005-4EB7-BBAC-C5AE4D7C58DC}">
 											<Language>SFX</Language>
-											<AudioFile>16.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\16.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="48792024"/>
+												<MediaID ID="48792025"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -944,9 +859,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="17" ID="{B88E7343-6CFA-4DA0-8F59-5447A20951E0}">
 											<Language>SFX</Language>
-											<AudioFile>17.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\17.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="245112983"/>
+												<MediaID ID="245112984"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -966,9 +881,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="18" ID="{E1B0BA60-9731-4B6F-83E7-0458DCB970EE}">
 											<Language>SFX</Language>
-											<AudioFile>18.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\18.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="191794494"/>
+												<MediaID ID="191794495"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -988,9 +903,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="19" ID="{F2E54149-9FCE-4181-8490-B0359871E468}">
 											<Language>SFX</Language>
-											<AudioFile>19.wav</AudioFile>
+											<AudioFile>VoiceLines\Narrator\19.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="839090493"/>
+												<MediaID ID="839090494"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -1001,7 +916,7 @@
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
-				</Folder>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

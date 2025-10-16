@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{ACA04007-445D-B7FC-CFFC-34EE412D2581}",
+    "Hash": "{60A90619-B989-4F8C-93E5-9BDC3AA73D18}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -36,14 +36,69 @@
     },
     "Busses": [
      {
+      "Id": "1162281553",
+      "Name": "Bus_Music",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bus_Music",
+      "GUID": "{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}",
+      "Color": "12"
+     },
+     {
+      "Id": "2665119595",
+      "Name": "Bus_Voicelines",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bus_Voicelines",
+      "GUID": "{DF30B341-3C32-4D37-847D-744DD8857072}",
+      "Color": "12"
+     },
+     {
+      "Id": "3493387478",
+      "Name": "Bus_SFX_Binaural",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bus_SFX_Binaural",
+      "GUID": "{D6EC79C5-1632-46A9-AC85-9433B39D0134}",
+      "Color": "12"
+     },
+     {
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "Color": "12"
+     },
+     {
+      "Id": "3895923845",
+      "Name": "Bus_SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bus_SFX",
+      "GUID": "{BED71BF8-4B06-4719-A43F-30369519DE97}",
+      "Color": "12"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1004648580",
+      "Name": "Vol_Music",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Vol_Music",
+      "GUID": "{B9B2A25B-2E32-4DEA-9577-2E26D01C878C}"
+     },
+     {
+      "Id": "3092952672",
+      "Name": "Vol_Main",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Vol_Main",
+      "GUID": "{11518BFB-A7A2-4C05-B4E6-0F3FD1E858F1}"
+     },
+     {
+      "Id": "3273090904",
+      "Name": "Vol_Voicelines",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Vol_Voicelines",
+      "GUID": "{09908430-932A-433A-B0E5-E2BD68BCF206}"
+     },
+     {
+      "Id": "3273357900",
+      "Name": "Vol_SFX",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Vol_SFX",
+      "GUID": "{2C0E1E16-7567-477B-8E50-4BA0DF931235}"
      }
     ]
    }
   ],
-  "FileHash": "{E9DE84DC-8715-1224-4859-0A84C62A62BF}"
+  "FileHash": "{1F7425A3-365B-357C-BEC7-1CCA4EA3A5CD}"
  }
 }
