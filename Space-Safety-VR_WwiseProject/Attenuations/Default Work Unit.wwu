@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Atten_SpaceshipFans" ID="{F5D4E004-CC39-48E3-A385-93A09E39FBA7}" ShortID="570930581">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="5"/>
+						<Property Name="RadiusMax" Type="Real64" Value="7"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -22,7 +22,7 @@
 											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>5</XPos>
+											<XPos>7</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -88,7 +88,7 @@
 				</Attenuation>
 				<Attenuation Name="Atten_Hologram" ID="{79F60E7B-CE2B-4189-BD72-DB7EF19225AE}" ShortID="786409862">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="5"/>
+						<Property Name="RadiusMax" Type="Real64" Value="7"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -105,7 +105,7 @@
 											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>5</XPos>
+											<XPos>7</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>

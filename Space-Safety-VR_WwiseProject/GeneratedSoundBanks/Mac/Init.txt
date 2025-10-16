@@ -1,8 +1,5 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1004648580	Vol_Music			\Default Work Unit\Vol_Music	
 	3092952672	Vol_Main			\Default Work Unit\Vol_Main	
-	3273090904	Vol_Voicelines			\Default Work Unit\Vol_Voicelines	
-	3273357900	Vol_SFX			\Default Work Unit\Vol_SFX	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	1162281553	Bus_Music			\Default Work Unit\Master Audio Bus\Bus_Music	
@@ -10,6 +7,9 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3493387478	Bus_SFX_Binaural			\Default Work Unit\Master Audio Bus\Bus_SFX_Binaural	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3895923845	Bus_SFX			\Default Work Unit\Master Audio Bus\Bus_SFX	
+
+Effect plug-ins	ID	Name	Type				Notes
+	601279106	Resonance Audio Renderer (Custom)	Resonance Audio Renderer			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

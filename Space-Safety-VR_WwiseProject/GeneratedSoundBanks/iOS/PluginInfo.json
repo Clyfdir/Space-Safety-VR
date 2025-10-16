@@ -4,6 +4,20 @@
   "BasePlatform": "iOS",
   "PluginLibs": [
    {
+    "LibName": "Resonance Audio Renderer",
+    "LibId": "6557955",
+    "Type": "Effect",
+    "DLL": "ResonanceAudio",
+    "StaticLib": "ResonanceAudioFX"
+   },
+   {
+    "LibName": "Wwise Parametric EQ",
+    "LibId": "6881283",
+    "Type": "Effect",
+    "DLL": "AkParametricEQ",
+    "StaticLib": "AkParametricEQFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -14,6 +28,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{3F2836D5-3C44-7855-E283-99F2C513D071}"
+  "FileHash": "{1C7AF448-963C-B193-6F26-4654D6D6B351}"
  }
 }
