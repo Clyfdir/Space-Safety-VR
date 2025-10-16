@@ -4,13 +4,6 @@
   "BasePlatform": "Android",
   "PluginLibs": [
    {
-    "LibName": "Resonance Audio Renderer",
-    "LibId": "6557955",
-    "Type": "Effect",
-    "DLL": "ResonanceAudio",
-    "StaticLib": "ResonanceAudioFX"
-   },
-   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -21,6 +14,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{28A4746C-A6EA-364D-94BD-051F3B7102DE}"
+  "FileHash": "{18CD9949-654D-326A-2A68-3AA18E1D7FC0}"
  }
 }

@@ -10,21 +10,11 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2374799C-154D-572F-EFE2-34622BCDD984}",
+    "Hash": "{194BCEB6-7CB4-DDB9-9C57-0525C854ABF3}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
-     "Custom": [
-      {
-       "Id": "955663669",
-       "Name": "Resonance Audio Renderer (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bus_SFX_Binaural\\[Effect Slot [0]: (Resonance Audio Renderer)]\\Resonance Audio Renderer (Custom)",
-       "GUID": "{4668AE43-07D1-42EF-BA4B-4B57292EEE81}",
-       "LibName": "Resonance Audio Renderer",
-       "LibId": "6557955"
-      }
-     ],
      "AudioDevices": [
       {
        "Id": "2317455096",
@@ -64,14 +54,7 @@
       "Name": "Bus_SFX_Binaural",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bus_SFX_Binaural",
       "GUID": "{D6EC79C5-1632-46A9-AC85-9433B39D0134}",
-      "Color": "12",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "955663669"
-        }
-       ]
-      }
+      "Color": "12"
      },
      {
       "Id": "3803692087",
@@ -116,6 +99,6 @@
     ]
    }
   ],
-  "FileHash": "{4DC83AA8-FA0D-A549-C148-611851150CEE}"
+  "FileHash": "{9180AE4F-FAA4-A5DC-E350-AC76CC4699EB}"
  }
 }
