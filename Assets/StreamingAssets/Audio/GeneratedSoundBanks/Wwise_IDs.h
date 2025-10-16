@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AT_BUTTON_PRESS = 2680470148U;
+        static const AkUniqueID PLAY_AT_FADE2BLUE_IN = 2268872622U;
+        static const AkUniqueID PLAY_AT_FADE2BLUE_OUT = 2632407729U;
         static const AkUniqueID PLAY_AT_LUEFTER_01 = 460429285U;
         static const AkUniqueID PLAY_AT_LUEFTER_02 = 460429286U;
         static const AkUniqueID PLAY_AT_LUEFTER_03 = 460429287U;

@@ -286,6 +286,32 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Transition" ID="{8A9A0AE3-7791-42B8-B9A2-224A469FF884}" ShortID="813677407">
+							<ChildrenList>
+								<Event Name="Play_AT_Fade2Blue_in" ID="{9F953B39-7935-40C8-83DB-C9EF0CA51BE3}">
+									<ChildrenList>
+										<Action Name="" ID="{ABE87F3E-00A7-4378-BCFD-5DD95663D593}" ShortID="160795021">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AT_Fade2Blue-in" ID="{65389EA7-D7D9-4018-86DB-E4507BCB9C2A}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_AT_Fade2Blue_out" ID="{F360245A-77F1-4263-A8A3-1BE6B3B37B40}">
+									<ChildrenList>
+										<Action Name="" ID="{9EDEF986-AD1E-4518-97F0-76D1A1A219AB}" ShortID="853811488">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AT_Fade2Blue-out" ID="{5344C4EF-6112-4B99-9168-61D6744F2297}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="VoiceLines" ID="{A4F52D2D-2547-40FB-BD5E-A46A623F1932}" ShortID="772512251">

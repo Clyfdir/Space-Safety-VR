@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
     "Language": "SFX",
-    "Hash": "{EC4734F5-91E6-42A7-6D7E-C89A5B680044}",
+    "Hash": "{EB309FAC-CF14-7659-40B8-897BC3DEEB9B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
@@ -88,6 +88,14 @@
       "CachePath": "BD/{BD74E8B6-D62B-E14D-0C36-977DDD5AE289}.wem"
      },
      {
+      "Id": "314500054",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cutscene\\AT_Fade2Blue-in.wav",
+      "CachePath": "93/{93F5D86C-F453-763F-DF92-4521F5ADF20D}.wem"
+     },
+     {
       "Id": "333446986",
       "Language": "SFX",
       "Streaming": "false",
@@ -110,6 +118,14 @@
       "Location": "Memory",
       "ShortName": "Music\\MU_03_CME-Earth.wav",
       "CachePath": "47/{477D2D27-FCC0-EA44-6564-CE3587ABA5B5}.wem"
+     },
+     {
+      "Id": "364649772",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cutscene\\AT_Fade2Blue-out.wav",
+      "CachePath": "A4/{A47739B7-2611-3BBB-2D68-87F6133765E5}.wem"
      },
      {
       "Id": "376189906",
@@ -324,6 +340,34 @@
       "MediaRefs": [
        {
         "Id": "504052546"
+       }
+      ]
+     },
+     {
+      "Id": "2268872622",
+      "Name": "Play_AT_Fade2Blue_in",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Transition\\Play_AT_Fade2Blue_in",
+      "GUID": "{9F953B39-7935-40C8-83DB-C9EF0CA51BE3}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.25",
+      "DurationMax": "2.25",
+      "MediaRefs": [
+       {
+        "Id": "314500054"
+       }
+      ]
+     },
+     {
+      "Id": "2632407729",
+      "Name": "Play_AT_Fade2Blue_out",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Transition\\Play_AT_Fade2Blue_out",
+      "GUID": "{F360245A-77F1-4263-A8A3-1BE6B3B37B40}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.75",
+      "DurationMax": "2.75",
+      "MediaRefs": [
+       {
+        "Id": "364649772"
        }
       ]
      },
@@ -775,6 +819,7 @@
       "Name": "Play_SFX_activeHolo_loop",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_activeHolo_loop",
       "GUID": "{8B2908E8-81C2-4C07-A838-7274AC3E783A}",
+      "MaxAttenuation": "5",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -787,6 +832,7 @@
       "Name": "Play_SFX_closeHolo_OS",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_closeHolo_OS",
       "GUID": "{F44C9688-446E-40D3-991B-0634715C6CC1}",
+      "MaxAttenuation": "5",
       "DurationType": "OneShot",
       "DurationMin": "0.125",
       "DurationMax": "0.125",
@@ -801,6 +847,7 @@
       "Name": "Play_SFX_openHolo_OS",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_openHolo_OS",
       "GUID": "{B14EE1A4-92B9-4609-8ECC-F54ED1FF484F}",
+      "MaxAttenuation": "5",
       "DurationType": "OneShot",
       "DurationMin": "0.125",
       "DurationMax": "0.125",
@@ -913,6 +960,6 @@
     ]
    }
   ],
-  "FileHash": "{8C2CE247-2BAF-1311-2319-2E9FA93B24BC}"
+  "FileHash": "{0FDFDB49-C0C7-6169-C18F-5DE84132040D}"
  }
 }

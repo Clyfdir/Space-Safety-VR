@@ -36,7 +36,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	1836245538	Play_Atmo_Space			\Default Work Unit\SFX\Atmo\Space\Play_Atmo_Space	
 	1894740627	Stop_SFX_activeHolo_loop			\Default Work Unit\SFX\Spaceship\Hologram\Stop_SFX_activeHolo_loop	
 	1897246560	Stop_Atmo_Space			\Default Work Unit\SFX\Atmo\Space\Stop_Atmo_Space	
+	2268872622	Play_AT_Fade2Blue_in			\Default Work Unit\SFX\Transition\Play_AT_Fade2Blue_in	
 	2495160835	Play_SFX_closeHolo_OS			\Default Work Unit\SFX\Spaceship\Hologram\Play_SFX_closeHolo_OS	
+	2632407729	Play_AT_Fade2Blue_out			\Default Work Unit\SFX\Transition\Play_AT_Fade2Blue_out	
 	2680470148	Play_AT_Button_Press			\Default Work Unit\SFX\Spaceship\Play_AT_Button_Press	
 	2745349203	Play_Music_02_CME_Sun			\Default Work Unit\Music\Play_Music_02_CME_Sun	
 	2837854693	Stop_SFX_closeHolo_OS			\Default Work Unit\SFX\Spaceship\Hologram\Stop_SFX_closeHolo_OS	
@@ -56,9 +58,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	210923283	MU_04_Debris	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\B0\{B0F87E40-A76B-B2D5-C650-429C054E862E}.wem		\Interactive Music Hierarchy\Default Work Unit\MU_04_Debris\MU_04_Debris		8160096
 	245112984	17	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\A7\{A7EC45AA-4DE2-07A3-163E-E00BD0D361BB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\17		1936400
 	281560173	11	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\BD\{BD74E8B6-D62B-E14D-0C36-977DDD5AE289}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\11		6715004
+	314500054	AT_Fade2Blue-in	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\93\{93F5D86C-F453-763F-DF92-4521F5ADF20D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Cutscene\AT_Fade2Blue-in		432096
 	333446986	9	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\51\{51992BC9-6C7D-99B8-830A-A326F078F657}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\9		935804
 	333790038	AT_Luefter_05	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\9D\{9D35EE15-9A17-EDB2-8A33-9F7FEB873530}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_05		768096
 	337285085	MU_03_CME-Earth	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\47\{477D2D27-FCC0-EA44-6564-CE3587ABA5B5}.wem		\Interactive Music Hierarchy\Default Work Unit\MU_03_CME_Earth\MU_03_CME-Earth		2688096
+	364649772	AT_Fade2Blue-out	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\A4\{A47739B7-2611-3BBB-2D68-87F6133765E5}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Cutscene\AT_Fade2Blue-out		528096
 	376189906	AT_Luefter_01	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\24\{24144FD2-8CF4-DB64-80A7-52E182573E45}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_01		384144
 	387468676	AT_Luefter_04	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\62\{62F558CD-D9F0-0487-98B4-06BF1725F373}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_04		576096
 	418204097	2	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\5F\{5F176AFF-8721-95BB-1E82-DB717355A8FA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\2		2583220

@@ -57,6 +57,9 @@
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Atten_Hologram" ID="{79F60E7B-CE2B-4189-BD72-DB7EF19225AE}" WorkUnitID="{511472A4-6274-48D5-979E-54F8751C2269}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 												</Reference>
