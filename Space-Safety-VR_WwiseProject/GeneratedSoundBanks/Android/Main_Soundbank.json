@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
     "Language": "SFX",
-    "Hash": "{FB8AA977-8D4B-341C-C3DF-8121E6016FC6}",
+    "Hash": "{EC4734F5-91E6-42A7-6D7E-C89A5B680044}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
@@ -144,6 +144,14 @@
       "CachePath": "4C/{4C66DC76-A219-667A-B4E0-9997AB0ACAF4}.wem"
      },
      {
+      "Id": "504052546",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaceship\\AT_Button_Press.wav",
+      "CachePath": "03/{03265137-610A-C52F-6F1B-D7991D80F2BC}.wem"
+     },
+     {
       "Id": "513280924",
       "Language": "SFX",
       "Streaming": "false",
@@ -158,6 +166,14 @@
       "Location": "Memory",
       "ShortName": "Atmo\\Space\\AT_Space-Rumble_stereo_02.wav",
       "CachePath": "34/{3440D658-0CFF-3134-E9AA-C8102F07C597}.wem"
+     },
+     {
+      "Id": "525879345",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaceship\\SFX_closeHolo-OS.wav",
+      "CachePath": "1C/{1C30B986-B77C-F496-25AD-39F8630A725F}.wem"
      },
      {
       "Id": "539937300",
@@ -206,6 +222,14 @@
       "Location": "Memory",
       "ShortName": "VoiceLines\\Narrator\\3.wav",
       "CachePath": "D0/{D00CEDA4-35A6-0584-B5FA-BA61B285B902}.wem"
+     },
+     {
+      "Id": "816465684",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaceship\\SFX_activeHolo-loop.wav",
+      "CachePath": "4D/{4D0A6ACF-C43F-8F49-26C1-94F8772D3088}.wem"
      },
      {
       "Id": "827919585",
@@ -278,9 +302,31 @@
       "Location": "Memory",
       "ShortName": "Atmo\\Luefter\\AT_Luefter_02.wav",
       "CachePath": "2B/{2BA87E29-0BAE-4D10-2E49-5E4F16BAF84A}.wem"
+     },
+     {
+      "Id": "1064606678",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Spaceship\\SFX_openHolo-OS.wav",
+      "CachePath": "29/{2987A996-1D9D-49B5-2067-731D4A11C6FE}.wem"
      }
     ],
     "Events": [
+     {
+      "Id": "2680470148",
+      "Name": "Play_AT_Button_Press",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Play_AT_Button_Press",
+      "GUID": "{51CC10E0-7C48-4944-8974-0E1C29A1B1B0}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.25",
+      "DurationMax": "0.25",
+      "MediaRefs": [
+       {
+        "Id": "504052546"
+       }
+      ]
+     },
      {
       "Id": "460429285",
       "Name": "Play_AT_Luefter_01",
@@ -725,6 +771,46 @@
       ]
      },
      {
+      "Id": "3008664889",
+      "Name": "Play_SFX_activeHolo_loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_activeHolo_loop",
+      "GUID": "{8B2908E8-81C2-4C07-A838-7274AC3E783A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "816465684"
+       }
+      ]
+     },
+     {
+      "Id": "2495160835",
+      "Name": "Play_SFX_closeHolo_OS",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_closeHolo_OS",
+      "GUID": "{F44C9688-446E-40D3-991B-0634715C6CC1}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.125",
+      "DurationMax": "0.125",
+      "MediaRefs": [
+       {
+        "Id": "525879345"
+       }
+      ]
+     },
+     {
+      "Id": "1271691319",
+      "Name": "Play_SFX_openHolo_OS",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_openHolo_OS",
+      "GUID": "{B14EE1A4-92B9-4609-8ECC-F54ED1FF484F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.125",
+      "DurationMax": "0.125",
+      "MediaRefs": [
+       {
+        "Id": "1064606678"
+       }
+      ]
+     },
+     {
       "Id": "1573963143",
       "Name": "Stop_AT_Luefter_01",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Stop_AT_Luefter_01",
@@ -793,10 +879,40 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
+     },
+     {
+      "Id": "1894740627",
+      "Name": "Stop_SFX_activeHolo_loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Stop_SFX_activeHolo_loop",
+      "GUID": "{173CEA53-65D0-494E-9FD3-21F62AD967BE}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2837854693",
+      "Name": "Stop_SFX_closeHolo_OS",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Stop_SFX_closeHolo_OS",
+      "GUID": "{1176DC13-1174-42D1-A973-029B387D7B81}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3713391489",
+      "Name": "Stop_SFX_openHolo_OS",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Stop_SFX_openHolo_OS",
+      "GUID": "{7F943FF7-E148-443D-AE91-305E4431290D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{40FE1CF8-411C-1838-27BD-0C1EAD53BCBB}"
+  "FileHash": "{E3995FB9-EB40-CB9A-B565-7F28ED0A6575}"
  }
 }

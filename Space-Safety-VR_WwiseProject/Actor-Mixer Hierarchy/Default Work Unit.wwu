@@ -44,6 +44,100 @@
 										<ActiveSource Name="AT_Button_Press" ID="{FC39A69C-D28D-47E9-99F9-F2BFF73B3C11}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Folder Name="Hologram" ID="{99E90CDA-B997-4F15-A871-653C96E0635A}" ShortID="919026222">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<ActorMixer Name="Mix_Hologram" ID="{F1E0D26E-528A-445E-87F3-6521ACA6E0D4}" ShortID="841566496">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Bus_SFX_Binaural" ID="{D6EC79C5-1632-46A9-AC85-9433B39D0134}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_activeHolo-loop" ID="{44FCFDAE-ECBE-4695-AB1C-80EC11769D2F}" ShortID="841532752">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_activeHolo-loop" ID="{73E0BEA9-F050-48EF-8882-3EA0A69F2124}">
+															<Language>SFX</Language>
+															<AudioFile>Spaceship\SFX_activeHolo-loop.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="816465684"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_activeHolo-loop" ID="{73E0BEA9-F050-48EF-8882-3EA0A69F2124}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_closeHolo-OS" ID="{9209B54A-2C2F-4196-9FA5-FEF0B353003F}" ShortID="977101556">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_closeHolo-OS" ID="{AC34D976-C218-4BC0-BC24-1B0241179DB5}">
+															<Language>SFX</Language>
+															<AudioFile>Spaceship\SFX_closeHolo-OS.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="525879345"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_closeHolo-OS" ID="{AC34D976-C218-4BC0-BC24-1B0241179DB5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_openHolo-OS" ID="{57F134DD-5BAE-4D72-845D-9B8A6ADBA850}" ShortID="165095624">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Bus_SFX" ID="{BED71BF8-4B06-4719-A43F-30369519DE97}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="SFX_openHolo-OS" ID="{7A208090-1A85-4FE5-BE7E-E38533E901BE}">
+															<Language>SFX</Language>
+															<AudioFile>Spaceship\SFX_openHolo-OS.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1064606678"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="SFX_openHolo-OS" ID="{7A208090-1A85-4FE5-BE7E-E38533E901BE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</ActorMixer>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Atmo" ID="{056E5F1A-FB48-4AC4-AA41-D5D0C4453C8C}" ShortID="857793502">
@@ -58,7 +152,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="SpaceshipFans" ID="{F5D4E004-CC39-48E3-A385-93A09E39FBA7}" WorkUnitID="{511472A4-6274-48D5-979E-54F8751C2269}"/>
+											<ObjectRef Name="Atten_SpaceshipFans" ID="{F5D4E004-CC39-48E3-A385-93A09E39FBA7}" WorkUnitID="{511472A4-6274-48D5-979E-54F8751C2269}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>

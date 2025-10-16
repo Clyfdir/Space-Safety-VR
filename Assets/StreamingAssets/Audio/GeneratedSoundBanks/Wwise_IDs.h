@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AT_BUTTON_PRESS = 2680470148U;
         static const AkUniqueID PLAY_AT_LUEFTER_01 = 460429285U;
         static const AkUniqueID PLAY_AT_LUEFTER_02 = 460429286U;
         static const AkUniqueID PLAY_AT_LUEFTER_03 = 460429287U;
@@ -45,6 +46,9 @@ namespace AK
         static const AkUniqueID PLAY_NARRATOR_17 = 215527720U;
         static const AkUniqueID PLAY_NARRATOR_18 = 215527719U;
         static const AkUniqueID PLAY_NARRATOR_19 = 215527718U;
+        static const AkUniqueID PLAY_SFX_ACTIVEHOLO_LOOP = 3008664889U;
+        static const AkUniqueID PLAY_SFX_CLOSEHOLO_OS = 2495160835U;
+        static const AkUniqueID PLAY_SFX_OPENHOLO_OS = 1271691319U;
         static const AkUniqueID STOP_AT_LUEFTER_01 = 1573963143U;
         static const AkUniqueID STOP_AT_LUEFTER_02 = 1573963140U;
         static const AkUniqueID STOP_AT_LUEFTER_03 = 1573963141U;
@@ -52,6 +56,9 @@ namespace AK
         static const AkUniqueID STOP_AT_LUEFTER_05 = 1573963139U;
         static const AkUniqueID STOP_AT_LUEFTER_06 = 1573963136U;
         static const AkUniqueID STOP_ATMO_SPACE = 1897246560U;
+        static const AkUniqueID STOP_SFX_ACTIVEHOLO_LOOP = 1894740627U;
+        static const AkUniqueID STOP_SFX_CLOSEHOLO_OS = 2837854693U;
+        static const AkUniqueID STOP_SFX_OPENHOLO_OS = 3713391489U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

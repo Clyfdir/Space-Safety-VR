@@ -25,6 +25,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	460429286	Play_AT_Luefter_02			\Default Work Unit\SFX\Atmo\ShipIndoorFans\Play_AT_Luefter_02	
 	460429287	Play_AT_Luefter_03			\Default Work Unit\SFX\Atmo\ShipIndoorFans\Play_AT_Luefter_03	
 	461914884	Play_Music_03_CME_Earth			\Default Work Unit\Music\Play_Music_03_CME_Earth	
+	1271691319	Play_SFX_openHolo_OS			\Default Work Unit\SFX\Spaceship\Hologram\Play_SFX_openHolo_OS	
 	1402393954	Play_Music_01_Opening			\Default Work Unit\Music\Play_Music_01_Opening	
 	1573963136	Stop_AT_Luefter_06			\Default Work Unit\SFX\Atmo\ShipIndoorFans\Stop_AT_Luefter_06	
 	1573963138	Stop_AT_Luefter_04			\Default Work Unit\SFX\Atmo\ShipIndoorFans\Stop_AT_Luefter_04	
@@ -33,9 +34,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	1573963141	Stop_AT_Luefter_03			\Default Work Unit\SFX\Atmo\ShipIndoorFans\Stop_AT_Luefter_03	
 	1573963143	Stop_AT_Luefter_01			\Default Work Unit\SFX\Atmo\ShipIndoorFans\Stop_AT_Luefter_01	
 	1836245538	Play_Atmo_Space			\Default Work Unit\SFX\Atmo\Space\Play_Atmo_Space	
+	1894740627	Stop_SFX_activeHolo_loop			\Default Work Unit\SFX\Spaceship\Hologram\Stop_SFX_activeHolo_loop	
 	1897246560	Stop_Atmo_Space			\Default Work Unit\SFX\Atmo\Space\Stop_Atmo_Space	
+	2495160835	Play_SFX_closeHolo_OS			\Default Work Unit\SFX\Spaceship\Hologram\Play_SFX_closeHolo_OS	
+	2680470148	Play_AT_Button_Press			\Default Work Unit\SFX\Spaceship\Play_AT_Button_Press	
 	2745349203	Play_Music_02_CME_Sun			\Default Work Unit\Music\Play_Music_02_CME_Sun	
+	2837854693	Stop_SFX_closeHolo_OS			\Default Work Unit\SFX\Spaceship\Hologram\Stop_SFX_closeHolo_OS	
+	3008664889	Play_SFX_activeHolo_loop			\Default Work Unit\SFX\Spaceship\Hologram\Play_SFX_activeHolo_loop	
 	3108169232	Play_Music_05_Squid			\Default Work Unit\Music\Play_Music_05_Squid	
+	3713391489	Stop_SFX_openHolo_OS			\Default Work Unit\SFX\Spaceship\Hologram\Stop_SFX_openHolo_OS	
 	4069861496	Play_Music_04_Debris			\Default Work Unit\Music\Play_Music_04_Debris	
 	4214002556	Play_Music_06_Asteroid			\Default Work Unit\Music\Play_Music_06_Asteroid	
 
@@ -56,14 +63,17 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	387468676	AT_Luefter_04	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\62\{62F558CD-D9F0-0487-98B4-06BF1725F373}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_04		576096
 	418204097	2	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\5F\{5F176AFF-8721-95BB-1E82-DB717355A8FA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\2		2583220
 	501903148	13	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\4C\{4C66DC76-A219-667A-B4E0-9997AB0ACAF4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\13		3942476
+	504052546	AT_Button_Press	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\03\{03265137-610A-C52F-6F1B-D7991D80F2BC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Spaceship\AT_Button_Press		24096
 	513280924	AT_Luefter_03	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\21\{21BCAC84-04D0-CD7D-1BE1-7E80651AC267}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_03		576096
 	519703806	AT_Space-Rumble_stereo_02	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\34\{3440D658-0CFF-3134-E9AA-C8102F07C597}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Atmo_Space\AT_Space-Rumble_stereo_02		2304144
+	525879345	SFX_closeHolo-OS	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\1C\{1C30B986-B77C-F496-25AD-39F8630A725F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Spaceship\Hologram\Mix_Hologram\SFX_closeHolo-OS		12096
 	539937300	AT_Space-Rumble_stereo_01	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\C2\{C2F8437B-8CCC-2519-4F66-BEB54F1EB84D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Atmo_Space\AT_Space-Rumble_stereo_01		6144144
 	568056452	4_Old	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\AB\{AB91EBAF-8D35-8157-B236-79A8501DBD96}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\4_Old		1788608
 	575138169	MU_06_Asteroid	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\DE\{DEC66D53-421F-53B5-A00C-FD210A0BE556}.wem		\Interactive Music Hierarchy\Default Work Unit\MU_06_Asteroid\MU_06_Asteroid		7104096
 	640717629	MU_05_Squid	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\A8\{A85E6218-C4E8-6FC6-9445-B981C5397A5E}.wem		\Interactive Music Hierarchy\Default Work Unit\MU_05_Squid\MU_05_Squid		3744096
 	768945646	6	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\C5\{C54C86EB-E2B1-0F98-D0D9-E5F6E0796835}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\6		3242868
 	795501307	3	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\D0\{D00CEDA4-35A6-0584-B5FA-BA61B285B902}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\3		3280688
+	816465684	SFX_activeHolo-loop	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\4D\{4D0A6ACF-C43F-8F49-26C1-94F8772D3088}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Spaceship\Hologram\Mix_Hologram\SFX_activeHolo-loop		187462
 	827919585	1	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\6F\{6FB6763B-E429-942C-A9AF-D7EDC3007614}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\1		3104696
 	839090494	19	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\AE\{AE366688-9339-39F7-9CB6-64221A4952AD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\19		1118012
 	845725999	7	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\62\{62DB7C86-877C-1C0D-B2EB-1CC728CA4222}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\7		829188
@@ -73,4 +83,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	911114981	AT_Luefter_06	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\24\{240A02B1-8EB1-8394-07D0-D0893708171A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_06		576144
 	1056605979	15	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\95\{9550AC4F-5FE3-DF0F-F282-2F930E9C84A2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\15		2199144
 	1060031212	AT_Luefter_02	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\2B\{2BA87E29-0BAE-4D10-2E49-5E4F16BAF84A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Atmo\Luefter\AT_Luefter_02		576096
+	1064606678	SFX_openHolo-OS	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\29\{2987A996-1D9D-49B5-2067-731D4A11C6FE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_SFX\Spaceship\Hologram\Mix_Hologram\SFX_openHolo-OS		12096
 

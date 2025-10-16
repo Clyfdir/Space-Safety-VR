@@ -192,6 +192,100 @@
 								</Folder>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Spaceship" ID="{A05536E0-DE1F-44C9-B374-E900C80A4523}" ShortID="1014605900">
+							<ChildrenList>
+								<Folder Name="Hologram" ID="{7D4C9B62-77AD-4020-B296-8EC9949437A9}" ShortID="1015165323">
+									<ChildrenList>
+										<Event Name="Play_SFX_activeHolo_loop" ID="{8B2908E8-81C2-4C07-A838-7274AC3E783A}">
+											<ChildrenList>
+												<Action Name="" ID="{9FBF548F-C0E2-4886-BDB6-E958A49209CC}" ShortID="1033289993">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="SFX_activeHolo-loop" ID="{44FCFDAE-ECBE-4695-AB1C-80EC11769D2F}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_SFX_closeHolo_OS" ID="{F44C9688-446E-40D3-991B-0634715C6CC1}">
+											<ChildrenList>
+												<Action Name="" ID="{8E699B8F-CA4F-46D5-A229-90AF9A3C11D8}" ShortID="123313701">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="SFX_closeHolo-OS" ID="{9209B54A-2C2F-4196-9FA5-FEF0B353003F}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Play_SFX_openHolo_OS" ID="{B14EE1A4-92B9-4609-8ECC-F54ED1FF484F}">
+											<ChildrenList>
+												<Action Name="" ID="{91BB1E15-D35C-4AB5-9CF5-50C68B356A29}" ShortID="465886977">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="SFX_openHolo-OS" ID="{57F134DD-5BAE-4D72-845D-9B8A6ADBA850}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Stop_SFX_activeHolo_loop" ID="{173CEA53-65D0-494E-9FD3-21F62AD967BE}">
+											<ChildrenList>
+												<Action Name="" ID="{4ECC805D-7711-4BA1-84FB-B4F5BF4B19B3}" ShortID="1033583293">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="SFX_activeHolo-loop" ID="{44FCFDAE-ECBE-4695-AB1C-80EC11769D2F}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Stop_SFX_closeHolo_OS" ID="{1176DC13-1174-42D1-A973-029B387D7B81}">
+											<ChildrenList>
+												<Action Name="" ID="{47BCDF8A-F486-4F8E-8264-640228E344E6}" ShortID="754638463">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="SFX_closeHolo-OS" ID="{9209B54A-2C2F-4196-9FA5-FEF0B353003F}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Stop_SFX_openHolo_OS" ID="{7F943FF7-E148-443D-AE91-305E4431290D}">
+											<ChildrenList>
+												<Action Name="" ID="{0AFD4049-F41C-47BE-BD67-41409E86482C}" ShortID="339217813">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="SFX_openHolo-OS" ID="{57F134DD-5BAE-4D72-845D-9B8A6ADBA850}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Event Name="Play_AT_Button_Press" ID="{51CC10E0-7C48-4944-8974-0E1C29A1B1B0}">
+									<ChildrenList>
+										<Action Name="" ID="{34F7426E-064B-414C-930F-F8E406C0F688}" ShortID="746105943">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AT_Button_Press" ID="{3DAE6344-9CE2-4590-ACE3-B3B87163CB3B}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="VoiceLines" ID="{A4F52D2D-2547-40FB-BD5E-A46A623F1932}" ShortID="772512251">
