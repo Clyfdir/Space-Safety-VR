@@ -4,6 +4,13 @@
   "BasePlatform": "Mac",
   "PluginLibs": [
    {
+    "LibName": "Resonance Audio Renderer",
+    "LibId": "6557955",
+    "Type": "Effect",
+    "DLL": "ResonanceAudio",
+    "StaticLib": "ResonanceAudioFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -14,6 +21,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{FBB1DD20-2267-5DFC-9D4C-1103B4D6B869}"
+  "FileHash": "{33FA5817-7E06-E532-20A0-BEB0318F9F3E}"
  }
 }

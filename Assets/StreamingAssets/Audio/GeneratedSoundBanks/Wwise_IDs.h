@@ -13,51 +13,54 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_1 = 1774091847U;
-        static const AkUniqueID PLAY_2 = 1774091844U;
-        static const AkUniqueID PLAY_3 = 1774091845U;
-        static const AkUniqueID PLAY_4_OLD = 4123078548U;
-        static const AkUniqueID PLAY_5 = 1774091843U;
-        static const AkUniqueID PLAY_6 = 1774091840U;
-        static const AkUniqueID PLAY_7 = 1774091841U;
-        static const AkUniqueID PLAY_8 = 1774091854U;
-        static const AkUniqueID PLAY_9 = 1774091855U;
-        static const AkUniqueID PLAY_10 = 3185625589U;
-        static const AkUniqueID PLAY_11 = 3185625588U;
-        static const AkUniqueID PLAY_12 = 3185625591U;
-        static const AkUniqueID PLAY_13 = 3185625590U;
-        static const AkUniqueID PLAY_14 = 3185625585U;
-        static const AkUniqueID PLAY_15 = 3185625584U;
-        static const AkUniqueID PLAY_16 = 3185625587U;
-        static const AkUniqueID PLAY_17 = 3185625586U;
-        static const AkUniqueID PLAY_18 = 3185625597U;
-        static const AkUniqueID PLAY_19 = 3185625596U;
-        static const AkUniqueID PLAY_ATMO = 3133186549U;
-        static const AkUniqueID PLAY_INTRODUCTION_1 = 2632830566U;
-        static const AkUniqueID PLAY_LOCKED_DOOR = 281597619U;
-        static const AkUniqueID PLAY_SPACEDEBRIS1 = 2328865502U;
-        static const AkUniqueID PLAY_SPACEDEBRIS2 = 2328865501U;
-        static const AkUniqueID PLAY_SPACEDEBRISEND = 3381056148U;
-        static const AkUniqueID PLAY_SPACEDEBRISEND1 = 3544022733U;
-        static const AkUniqueID PLAY_SPACEDEBRISEND2_01 = 88024092U;
-        static const AkUniqueID PLAY_SPACEDEBRISEND2_02 = 88024095U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_1_1 = 1718342360U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_2_1 = 1718886815U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_3 = 430557958U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_4 = 430557953U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_5 = 430557952U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_6 = 430557955U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_7 = 430557954U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_8 = 430557965U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_9 = 430557964U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_10 = 1783273340U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_11 = 1783273341U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_12 = 1783273342U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_13 = 1783273343U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_14 = 1783273336U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_15 = 1783273337U;
-        static const AkUniqueID PLAY_SPACESAFETY_NARRATORVL_16 = 1783273338U;
+        static const AkUniqueID PLAY_AT_LUEFTER_01 = 460429285U;
+        static const AkUniqueID PLAY_AT_LUEFTER_02 = 460429286U;
+        static const AkUniqueID PLAY_AT_LUEFTER_03 = 460429287U;
+        static const AkUniqueID PLAY_AT_LUEFTER_04 = 460429280U;
+        static const AkUniqueID PLAY_AT_LUEFTER_05 = 460429281U;
+        static const AkUniqueID PLAY_AT_LUEFTER_06 = 460429282U;
+        static const AkUniqueID PLAY_ATMO_SPACE = 1836245538U;
+        static const AkUniqueID PLAY_MUSIC_01_OPENING = 1402393954U;
+        static const AkUniqueID PLAY_MUSIC_02_CME_SUN = 2745349203U;
+        static const AkUniqueID PLAY_MUSIC_03_CME_EARTH = 461914884U;
+        static const AkUniqueID PLAY_MUSIC_04_DEBRIS = 4069861496U;
+        static const AkUniqueID PLAY_MUSIC_05_SQUID = 3108169232U;
+        static const AkUniqueID PLAY_MUSIC_06_ASTEROID = 4214002556U;
+        static const AkUniqueID PLAY_NARRATOR_01 = 198750141U;
+        static const AkUniqueID PLAY_NARRATOR_02 = 198750142U;
+        static const AkUniqueID PLAY_NARRATOR_03 = 198750143U;
+        static const AkUniqueID PLAY_NARRATOR_04 = 198750136U;
+        static const AkUniqueID PLAY_NARRATOR_05 = 198750137U;
+        static const AkUniqueID PLAY_NARRATOR_06 = 198750138U;
+        static const AkUniqueID PLAY_NARRATOR_07 = 198750139U;
+        static const AkUniqueID PLAY_NARRATOR_08 = 198750132U;
+        static const AkUniqueID PLAY_NARRATOR_09 = 198750133U;
+        static const AkUniqueID PLAY_NARRATOR_10 = 215527727U;
+        static const AkUniqueID PLAY_NARRATOR_11 = 215527726U;
+        static const AkUniqueID PLAY_NARRATOR_12 = 215527725U;
+        static const AkUniqueID PLAY_NARRATOR_13 = 215527724U;
+        static const AkUniqueID PLAY_NARRATOR_14 = 215527723U;
+        static const AkUniqueID PLAY_NARRATOR_15 = 215527722U;
+        static const AkUniqueID PLAY_NARRATOR_16 = 215527721U;
+        static const AkUniqueID PLAY_NARRATOR_17 = 215527720U;
+        static const AkUniqueID PLAY_NARRATOR_18 = 215527719U;
+        static const AkUniqueID PLAY_NARRATOR_19 = 215527718U;
+        static const AkUniqueID STOP_AT_LUEFTER_01 = 1573963143U;
+        static const AkUniqueID STOP_AT_LUEFTER_02 = 1573963140U;
+        static const AkUniqueID STOP_AT_LUEFTER_03 = 1573963141U;
+        static const AkUniqueID STOP_AT_LUEFTER_04 = 1573963138U;
+        static const AkUniqueID STOP_AT_LUEFTER_05 = 1573963139U;
+        static const AkUniqueID STOP_AT_LUEFTER_06 = 1573963136U;
+        static const AkUniqueID STOP_ATMO_SPACE = 1897246560U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID VOL_MAIN = 3092952672U;
+        static const AkUniqueID VOL_MUSIC = 1004648580U;
+        static const AkUniqueID VOL_SFX = 3273357900U;
+        static const AkUniqueID VOL_VOICELINES = 3273090904U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
@@ -67,6 +70,10 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BUS_MUSIC = 1162281553U;
+        static const AkUniqueID BUS_SFX = 3895923845U;
+        static const AkUniqueID BUS_SFX_BINAURAL = 3493387478U;
+        static const AkUniqueID BUS_VOICELINES = 2665119595U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
 

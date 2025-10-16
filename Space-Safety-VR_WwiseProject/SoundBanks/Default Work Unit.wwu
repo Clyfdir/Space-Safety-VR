@@ -5,67 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="Main_Soundbank" ID="{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_9" ID="{5611CE68-D98C-4054-AF77-29190F109BFD}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_2" ID="{40C83A08-BCB2-40E0-A919-9BBDDDB522C1}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_6" ID="{46D57E02-9A4C-40E7-978E-4F3135F30CE4}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="VoiceLineEvents" ID="{A4F52D2D-2547-40FB-BD5E-A46A623F1932}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_13" ID="{CA70C400-DA95-4149-A7BA-CE0561212AB0}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_15" ID="{497701D7-5E05-41FC-B244-B078D09E1765}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="VoiceLines" ID="{A4F52D2D-2547-40FB-BD5E-A46A623F1932}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX" ID="{B28D194B-A1F0-420D-9F9C-C1B1F021CB56}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_3" ID="{DD9C9A14-E315-4220-89E8-6ACCDAE34782}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_15" ID="{07C0698D-9F15-4221-AAAE-360E439EA85B}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_9" ID="{ACC86648-C934-4233-923D-BE2563A18C0E}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_6" ID="{CD2C413E-D973-4254-99FB-4366F4C6C3FE}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_2_1" ID="{56877C29-664A-4293-B484-53F1A4C740E8}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_4" ID="{EB92712C-147E-42BB-86D8-4C064CD694A7}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_9" ID="{8A3BA929-EB44-4381-9037-2320CFB2BBE2}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_14" ID="{390FBBEC-DBAC-439A-AB6F-4CA78F4C22A7}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_16" ID="{7C72E365-5D5C-43A8-9F6A-CADEC14D2CE9}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_8" ID="{5A4DE8C0-9D74-43C4-A6F6-6509CC764EEC}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_5" ID="{37C8C762-4EA6-43E5-A97B-7BA1E247869B}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_16" ID="{EB408E34-3579-43E8-9A0E-9A2FED7A966F}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="ViolaVoiceLines" ID="{E57D332D-CD1C-43F9-B057-C35F5BB1B849}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_11" ID="{3BCB5875-3663-4406-AA1C-A8FBC88F3A8B}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_1_1" ID="{392364C4-9F10-4409-B52F-D3CC4C5F1025}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_10" ID="{25327F23-275C-4420-B553-42CFE833870F}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_5" ID="{158D8747-C4B3-4428-9D29-CFC39F51DEBD}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_19" ID="{74969849-EE94-4455-9A73-757B8965ED6E}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_12" ID="{79D6FC2C-318B-44B7-9E0C-DEF9EBDFF101}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceDebrisEnd2_01" ID="{F4ED09E7-4B7E-4523-9601-7F39BC11AE18}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_7" ID="{0807CFC5-1A8E-4622-85ED-DD0855E1F1DE}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_3" ID="{E47C2242-BB22-4692-AE1A-3E604C366509}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_15" ID="{C850D044-1761-46AA-8DF1-D9DECE74DA06}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_10" ID="{D8953F3C-104F-46AD-962F-BDD18455101D}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_7" ID="{92E6F4D4-896F-4714-8A0A-2CEE2B321F5D}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceDebris1" ID="{DB9DEDC1-9384-4765-B1C3-883FFFBA6FB4}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceDebrisEnd1" ID="{02264AC8-16A4-47D7-B69D-E72FF96F6711}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_14" ID="{03BCC372-6921-47E3-B836-CAB2900CE9A9}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_4" ID="{98273DE8-EC01-47EC-9996-6FA70F2AA1C8}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_5" ID="{F930E376-77BC-4849-88D7-DF234DF309FC}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_16" ID="{D0E0A3D2-C41B-48F9-AC11-207FF17EE844}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_10" ID="{2907D413-D637-4939-9F88-6977DAB62B67}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_1_1" ID="{ADCEA058-36C8-4945-8218-3D09522EAA86}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_7" ID="{5E11CA57-E0A7-49C9-ACC0-CC720C23ECDA}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceDebrisEnd2" ID="{98475A2D-245F-4A06-BB03-B0E964ACEA25}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_8" ID="{2E1183AD-CD0A-4A4C-8148-A63F80B4D453}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_4_Old" ID="{3601AF31-26A1-4A55-B002-16D293C7DE8A}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_1" ID="{33978AEB-C365-4AAE-909E-5D3183DE4B8B}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_11" ID="{B5A1E999-AD23-4AB5-BF74-E08FD6D02407}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_13" ID="{531FBEE1-A36F-4B3C-A913-541406415D74}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_8" ID="{0D186E69-7787-4B6E-8618-F03DAEBD4FA5}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_6" ID="{137D4C14-89D7-4BFB-A9EB-E04827C97697}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_3" ID="{A42BDA97-C9FF-4CBF-9703-289D47262FA3}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_17" ID="{7FFA2E7C-BD19-4CEB-BDF5-029E6E5C21FB}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_18" ID="{9347D14B-766B-4E23-9ABE-CA1DF6952840}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_atmo" ID="{E4A80A09-06B6-4E4F-A42F-BCC086C4F749}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_13" ID="{9AAC728B-29C1-4E79-B648-0729D6BD845B}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_14" ID="{278999D4-3B71-4E9D-AD8B-1A0E3F67F10C}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceDebrisEnd" ID="{9E921986-A7A0-4EB4-A48D-30902EBDF59A}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_11" ID="{94F5A706-62E2-4EBE-A285-F443DB0B7A3B}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_2_1" ID="{7ECB406A-B732-4EBE-BC17-B9208A23A201}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceDebris2" ID="{E431E6AA-AFF6-4F32-96FF-87CBCC3506D5}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_SpaceSafety_NarratorVL_12" ID="{41C771AC-EEC2-4F3D-8A90-EACAC732F69F}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="SpaceSafety_NarratorVL_12" ID="{58B6BBD8-C2F2-4FEA-A9AE-7F3C930DB37B}" WorkUnitID="{883ADA0C-0F17-4937-BDC9-958414D5AB49}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{8AB35C82-6035-48FE-A9E7-7F4C94E9E5C8}" WorkUnitID="{B84DEE44-42BC-4568-AF94-DDD09F8E171C}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

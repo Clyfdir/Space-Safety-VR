@@ -4,6 +4,13 @@
   "BasePlatform": "Windows",
   "PluginLibs": [
    {
+    "LibName": "Resonance Audio Renderer",
+    "LibId": "6557955",
+    "Type": "Effect",
+    "DLL": "ResonanceAudio",
+    "StaticLib": "ResonanceAudioFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -14,6 +21,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{71F42CD2-2880-BF0B-D154-F41540A353AF}"
+  "FileHash": "{0707CFB0-98FC-BA18-1E7B-93F74EA9D8EF}"
  }
 }
