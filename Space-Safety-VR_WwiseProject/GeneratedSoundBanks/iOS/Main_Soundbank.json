@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{80574FF0-B05D-43A7-931F-9E6D3EDA2F63}",
     "Language": "SFX",
-    "Hash": "{EB309FAC-CF14-7659-40B8-897BC3DEEB9B}",
+    "Hash": "{8186A4D3-296E-BC5A-FB69-BC3BF20AF241}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
@@ -328,6 +328,34 @@
       "CachePath": "29/{2987A996-1D9D-49B5-2067-731D4A11C6FE}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "73334703",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Mix_SFX\\Atmo\\Luefter\\AT_Luefter_06\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{BE22446A-04FB-4C6F-AB36-D3880DA892F3}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "819663650",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Mix_SFX\\Atmo\\Luefter\\AT_Luefter_01\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{9D9540B0-809C-464A-99BE-F99154DFA2E1}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "910422413",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Mix_VoiceLines\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{5A79855D-FF3C-497F-A6ED-7501C2F80E24}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2680470148",
@@ -376,20 +404,27 @@
       "Name": "Play_AT_Luefter_01",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Play_AT_Luefter_01",
       "GUID": "{F6A3CE4C-AF9E-44FB-AFB2-5CC4046043B1}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "376189906"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "819663650"
+        }
+       ]
+      }
      },
      {
       "Id": "460429286",
       "Name": "Play_AT_Luefter_02",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Play_AT_Luefter_02",
       "GUID": "{AE3CCE9B-FBDF-41F1-8DC7-DB607A01E758}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -402,7 +437,7 @@
       "Name": "Play_AT_Luefter_03",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Play_AT_Luefter_03",
       "GUID": "{6137C32B-FDB0-4533-A090-1983A3DD4233}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -415,7 +450,7 @@
       "Name": "Play_AT_Luefter_04",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Play_AT_Luefter_04",
       "GUID": "{C9488B58-1414-473E-8CCF-988E9094AF66}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -428,7 +463,7 @@
       "Name": "Play_AT_Luefter_05",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Play_AT_Luefter_05",
       "GUID": "{3E4BFE84-BEA2-468A-B9DC-C582EEE918AE}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -441,13 +476,20 @@
       "Name": "Play_AT_Luefter_06",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Atmo\\ShipIndoorFans\\Play_AT_Luefter_06",
       "GUID": "{80251C02-302B-4769-B263-3929CF9A110E}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "911114981"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "73334703"
+        }
+       ]
+      }
      },
      {
       "Id": "1836245538",
@@ -560,7 +602,14 @@
        {
         "Id": "827919585"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750142",
@@ -574,7 +623,14 @@
        {
         "Id": "418204097"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750143",
@@ -588,7 +644,14 @@
        {
         "Id": "795501307"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750136",
@@ -602,7 +665,14 @@
        {
         "Id": "568056452"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750137",
@@ -616,7 +686,14 @@
        {
         "Id": "133167510"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750138",
@@ -630,7 +707,14 @@
        {
         "Id": "768945646"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750139",
@@ -644,7 +728,14 @@
        {
         "Id": "845725999"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750132",
@@ -658,7 +749,14 @@
        {
         "Id": "102960096"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "198750133",
@@ -672,7 +770,14 @@
        {
         "Id": "333446986"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527727",
@@ -686,7 +791,14 @@
        {
         "Id": "846745397"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527726",
@@ -700,7 +812,14 @@
        {
         "Id": "281560173"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527725",
@@ -714,7 +833,14 @@
        {
         "Id": "140458570"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527724",
@@ -728,7 +854,14 @@
        {
         "Id": "501903148"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527723",
@@ -742,7 +875,14 @@
        {
         "Id": "889772635"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527722",
@@ -756,7 +896,14 @@
        {
         "Id": "1056605979"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527721",
@@ -770,7 +917,14 @@
        {
         "Id": "48792025"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527720",
@@ -784,7 +938,14 @@
        {
         "Id": "245112984"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527719",
@@ -798,7 +959,14 @@
        {
         "Id": "191794495"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "215527718",
@@ -812,14 +980,21 @@
        {
         "Id": "839090494"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "910422413"
+        }
+       ]
+      }
      },
      {
       "Id": "3008664889",
       "Name": "Play_SFX_activeHolo_loop",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_activeHolo_loop",
       "GUID": "{8B2908E8-81C2-4C07-A838-7274AC3E783A}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -832,7 +1007,7 @@
       "Name": "Play_SFX_closeHolo_OS",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_closeHolo_OS",
       "GUID": "{F44C9688-446E-40D3-991B-0634715C6CC1}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "OneShot",
       "DurationMin": "0.125",
       "DurationMax": "0.125",
@@ -847,7 +1022,7 @@
       "Name": "Play_SFX_openHolo_OS",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Spaceship\\Hologram\\Play_SFX_openHolo_OS",
       "GUID": "{B14EE1A4-92B9-4609-8ECC-F54ED1FF484F}",
-      "MaxAttenuation": "5",
+      "MaxAttenuation": "7",
       "DurationType": "OneShot",
       "DurationMin": "0.125",
       "DurationMax": "0.125",
@@ -960,6 +1135,6 @@
     ]
    }
   ],
-  "FileHash": "{2E80F57C-A4C5-F131-52E4-4AF7E103D251}"
+  "FileHash": "{FEF95454-4594-8101-FAF8-3B64149EB9B6}"
  }
 }

@@ -8,13 +8,18 @@
 						<Property Name="Color" Type="int16" Value="7"/>
 						<Property Name="EndPosition" Type="Real64" Value="64500"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+							<ObjectRef Name="Bus_Music" ID="{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -96,13 +101,18 @@
 						<Property Name="Color" Type="int16" Value="7"/>
 						<Property Name="EndPosition" Type="Real64" Value="20125"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+							<ObjectRef Name="Bus_Music" ID="{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -184,13 +194,18 @@
 						<Property Name="Color" Type="int16" Value="7"/>
 						<Property Name="EndPosition" Type="Real64" Value="44500"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+							<ObjectRef Name="Bus_Music" ID="{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -272,13 +287,18 @@
 						<Property Name="Color" Type="int16" Value="7"/>
 						<Property Name="EndPosition" Type="Real64" Value="21818.9415041783"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+							<ObjectRef Name="Bus_Music" ID="{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -360,13 +380,18 @@
 						<Property Name="Color" Type="int16" Value="7"/>
 						<Property Name="EndPosition" Type="Real64" Value="38750"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+							<ObjectRef Name="Bus_Music" ID="{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -448,13 +473,18 @@
 						<Property Name="Color" Type="int16" Value="7"/>
 						<Property Name="EndPosition" Type="Real64" Value="38378.8300835655"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-11</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1A043181-685C-43DC-AC8A-2A232AC7C77B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
+							<ObjectRef Name="Bus_Music" ID="{76A5BAF3-CAC2-4DE3-9F3A-32990E6C8BF0}" WorkUnitID="{231B50A1-25D8-4C3E-A113-7143EB0E27B4}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

@@ -48,6 +48,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	4069861496	Play_Music_04_Debris			\Default Work Unit\Music\Play_Music_04_Debris	
 	4214002556	Play_Music_06_Asteroid			\Default Work Unit\Music\Play_Music_06_Asteroid	
 
+Effect plug-ins	ID	Name	Type				Notes
+	73334703	Parametric EQ (Custom)	Wwise Parametric EQ			
+	819663650	Parametric EQ (Custom)	Wwise Parametric EQ			
+	910422413	Parametric EQ (Custom)	Wwise Parametric EQ			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48792025	16	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\7F\{7F5635D2-E595-F969-3BCB-FEC692AB53B9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\16		2738712
 	102960096	8	E:\Game Projekte\Space-Safety-VR\Space-Safety-VR_WwiseProject\.cache\26\{265EA124-5023-25B0-3F64-F2CC0BCA8C19}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mix_VoiceLines\Narrator\8		3180908
