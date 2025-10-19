@@ -62,7 +62,7 @@
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-9</Value>
+														<Value>-14</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
