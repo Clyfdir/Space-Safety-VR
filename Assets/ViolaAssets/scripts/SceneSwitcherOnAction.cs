@@ -52,7 +52,7 @@ public class SceneSwitcherOnAction : MonoBehaviour
         _lastLoadTime = Time.unscaledTime;
         
         // Stop all audio before changing scenes
-        AudioManager.StopAllEvents();
+        //AudioManager.StopAllEvents();
 
         // Find which mapping fired
         foreach (var m in mappings)
