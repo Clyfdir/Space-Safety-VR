@@ -1,0 +1,118 @@
+{
+    "name": "SceneShortcuts",
+    "maps": [
+        {
+            "name": "LoadScene_Intro",
+            "id": "7ba27027-6d5e-4756-84c2-ce56134cadda",
+            "actions": [
+                {
+                    "name": "Left_PrimaryButton",
+                    "type": "Button",
+                    "id": "e8cd53b0-b9d5-4c2f-a87f-2c823a02c74a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "871a197a-9a82-4a14-ba65-26cef1fbbf51",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left_PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LoadScene_CME",
+            "id": "e6e33cd1-e2da-43c9-98e3-91c0f1e69b66",
+            "actions": [
+                {
+                    "name": "Left_SceondaryButton",
+                    "type": "Button",
+                    "id": "f947050c-13c8-4439-8fa1-7d6d331e575e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d723bd12-e343-4663-8c32-0f425395bdc8",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left_SceondaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LoadScene_SpaceDebris",
+            "id": "fde483fd-df57-4778-9cda-833dff86a01b",
+            "actions": [
+                {
+                    "name": "Right_PrimaryButton",
+                    "type": "Button",
+                    "id": "76268587-c391-46b1-a4bf-694e9b07ddc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2f2eb708-3e95-40d9-a5fa-90a9afdd2552",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LoadScene_Asteroid",
+            "id": "3a70ae43-aaf9-4eba-94e6-0bb072710462",
+            "actions": [
+                {
+                    "name": "Right_SecondaryButton",
+                    "type": "Button",
+                    "id": "fdcfd877-0638-4c52-b802-8ca9f65b22c2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5fbffa09-28fa-42e8-ae61-8d169c8faaba",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right_SecondaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
