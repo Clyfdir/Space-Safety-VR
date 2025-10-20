@@ -2,7 +2,7 @@
 ///   AI was used: GPT
 ///   ESA PROJECT STAGE:
 ///   Last Change: 18.10.2025
-///   Created: 19.10.2025
+///   Created: 19.10.2025 // 
 
 ///   microgravity movement in predefined paths
 
@@ -46,6 +46,16 @@ public class MicrogravityPathMover : MonoBehaviour
     [SerializeField, Tooltip("Maximum push speed of object.")]
     private float maxPushSpeed = 1.0f;
 
+    [Header("Collision Settings")]
+    [SerializeField, Tooltip("Tag of colliders that should stop this object when touched.")]
+    private string stopTag = "StoppingFloatingObject";
+
+    [SerializeField, Tooltip("How far to slightly move back on collision.")]
+    private float collisionBackDistance = 0.1f; // ... m back
+
+    [SerializeField, Tooltip("Enable or disable collision checking.")]
+    public bool isCheckingCollisions = true;
+
     private List<Collider> childColliders = new();
     private int currentTargetIndex = 0;
     private float referenceSize = 0.1f;
@@ -64,13 +74,23 @@ public class MicrogravityPathMover : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private Dictionary<XRBaseInteractor, Vector3> lastHandPositions = new();
 
+    private bool isBlocked = false;
+    private bool collisionActive = false; // NEW — to delay trigger reaction until startup settles
+
+    private bool isBacking = false;
+    private Vector3 backVelocity = Vector3.zero;
+    [SerializeField] private float backSpeed = 0.1f; // initial speed of backward movement
+    [SerializeField] private float backDecay = 0.9f; // how fast the back movement slows down
+
+    private bool ignorePushThisFrame = false;
+
     private void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
 
         childColliders.AddRange(GetComponentsInChildren<Collider>());
         if (TryGetComponent(out Collider parentCol))
-            childColliders.Remove(parentCol);
+            childColliders.Remove(parentCol); // don't count main trigger collider
 
         if (childColliders.Count > 0)
         {
@@ -94,10 +114,30 @@ public class MicrogravityPathMover : MonoBehaviour
 
         initialPosition.position = transform.position;
         lastPosition = transform.position;
+
+        // Delay enabling trigger blocking to avoid startup overlap false positives
+        Invoke(nameof(EnableCollisionDetection), 0.5f);
     }
+
+    private void EnableCollisionDetection() => collisionActive = true;
 
     private void FixedUpdate()
     {
+        if (isBacking)
+        {
+            transform.position += backVelocity * Time.fixedDeltaTime;
+            backVelocity *= backDecay;
+
+            if (backVelocity.magnitude < 0.001f)
+            {
+                backVelocity = Vector3.zero;
+                isBacking = false;
+            }
+        }
+
+        if (isBlocked)
+            return;
+
         currentVelocity = (transform.position - lastPosition) / Time.fixedDeltaTime;
         lastPosition = transform.position;
 
@@ -122,6 +162,7 @@ public class MicrogravityPathMover : MonoBehaviour
             RotateObject();
     }
 
+
     private void MoveAlongPath()
     {
         if (targetPositions == null || targetPositions.Length == 0)
@@ -135,14 +176,13 @@ public class MicrogravityPathMover : MonoBehaviour
 
         if (distance < arriveThreshold)
         {
-            currentTargetIndex++;
-            if (currentTargetIndex >= targetPositions.Length)
-                currentTargetIndex = 0;
+            currentTargetIndex = (currentTargetIndex + 1) % targetPositions.Length;
 
             if (randomizeRotation)
             {
                 rotationAxis = UnityEngine.Random.onUnitSphere;
-                currentRotationSpeed = rotationSpeed * UnityEngine.Random.Range(1f - randomRotationVariance, 1f + randomRotationVariance);
+                currentRotationSpeed = rotationSpeed *
+                    UnityEngine.Random.Range(1f - randomRotationVariance, 1f + randomRotationVariance);
             }
             return;
         }
@@ -160,9 +200,6 @@ public class MicrogravityPathMover : MonoBehaviour
         transform.Rotate(rotationAxis, currentRotationSpeed * Time.fixedDeltaTime, Space.Self);
     }
 
-    public void PauseMoving() => isMovingFloating = false;
-    public void ReviseMoving() { RotateObject(); ThrowObject(); }
-
     public void ThrowObject()
     {
         if (currentVelocity.sqrMagnitude < 0.0001f)
@@ -171,6 +208,8 @@ public class MicrogravityPathMover : MonoBehaviour
         isThrown = true;
         isMovingFloating = false;
         throwVelocity = currentVelocity * throwSpeedCoefficient;
+
+        StartCheckingCollisions();
     }
 
     private void ApplyThrowMotion()
@@ -190,6 +229,12 @@ public class MicrogravityPathMover : MonoBehaviour
 
     private void UpdateHandPush()
     {
+        if (ignorePushThisFrame)
+        {
+            ignorePushThisFrame = false; // skip this frame only
+            return;
+        }
+
         if (grabInteractable != null)
         {
             if (grabInteractable.isSelected) return;
@@ -208,34 +253,31 @@ public class MicrogravityPathMover : MonoBehaviour
             Vector3 handVelocity = Vector3.zero;
 
             if (lastHandPositions.TryGetValue(interactor, out Vector3 lastPos))
-            {
                 handVelocity = (handPos - lastPos) / Time.fixedDeltaTime;
-            }
+
             lastHandPositions[interactor] = handPos;
 
-            // --- NEW COLLIDER-BASED DISTANCE CALCULATION ---
             float distance = float.MaxValue;
             foreach (var col in childColliders)
             {
                 if (col == null) continue;
                 Vector3 closest = col.ClosestPoint(handPos);
                 float d = Vector3.Distance(handPos, closest);
-                if (d < distance)
-                    distance = d;
+                if (d < distance) distance = d;
             }
 
-            // --- Push logic using collider distance ---
             if (distance < pushRange && handVelocity.sqrMagnitude > 0.0001f)
             {
                 float distanceFactor = 1f - Mathf.Clamp01(distance / pushRange);
                 pushVelocity = handVelocity * pushForce * distanceFactor;
 
-                // Clamp maximum push speed
                 if (pushVelocity.magnitude > maxPushSpeed)
                     pushVelocity = pushVelocity.normalized * maxPushSpeed;
 
                 isPushed = true;
                 anyPush = true;
+
+                StartCheckingCollisions();
             }
         }
 
@@ -261,31 +303,104 @@ public class MicrogravityPathMover : MonoBehaviour
             RotateObject();
     }
 
+    // ===== COLLISION DETECTION (TAG FILTER + DELAY) =====
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!isCheckingCollisions) return; // NEW
+        if (!collisionActive) return;
+        if (other.isTrigger) return;
+        if (!other.CompareTag(stopTag)) return;
+        if (other.transform.IsChildOf(transform)) return;
+        StopMotion();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!isCheckingCollisions) return; // NEW
+        if (!collisionActive) return;
+        if (other.isTrigger) return;
+        if (!other.CompareTag(stopTag)) return;
+        if (other.transform.IsChildOf(transform)) return;
+        StopMotion();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!isCheckingCollisions) return; // NEW
+        if (!collisionActive) return;
+        if (other.isTrigger) return;
+        if (!other.CompareTag(stopTag)) return;
+        isBlocked = false;
+    }
+
+    private void StopMotion()
+    {
+        // Instead of instant move, start backing
+        if (currentVelocity.sqrMagnitude > 0.0001f)
+        {
+            backVelocity = -currentVelocity.normalized * backSpeed;
+            isBacking = true;
+        }
+
+        // Stop all other motions
+        isThrown = false;
+        isPushed = false;
+        throwVelocity = Vector3.zero;
+        pushVelocity = Vector3.zero;
+        isBlocked = true;
+    }
+
+
+    public void WhenSelectedStopMovingAlongPath() // call it in inspector in grab interactanle events, when selected
+    {
+        isMovingFloating = false;
+        isRotatingFloating = false;
+    }
+
+    public void WhenUnselected() // call it in inspector in grab interactanle events, when exited
+    {
+        isRotatingFloating = true;
+
+        // Clear hand positions to prevent accidental push
+        lastHandPositions.Clear();
+
+        // Prevent push from applying this frame
+        ignorePushThisFrame = true;
+
+        // Update lastPosition to make velocity calculation correct
+        lastPosition = transform.position;
+
+        // Optional: delay collision detection briefly to avoid StopMotion interference
+        collisionActive = false;
+        Invoke(nameof(EnableCollisionDetection), 0.01f);
+
+        // Call ThrowObject immediately
+        ThrowObject();
+    }
+
+    public void StartCheckingCollisions() 
+    {
+        if (!isCheckingCollisions)
+        {
+            isCheckingCollisions = true;
+        }
+        if (isMovingFloating)
+        {
+            isMovingFloating = false;
+        }
+    }
+
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
-        if (targetPositions != null && targetPositions.Length > 0)
-        {
-            Gizmos.color = Color.cyan;
-            Vector3 prev = initialPosition != null ? initialPosition.position : transform.position;
-
-            foreach (var t in targetPositions)
-            {
-                if (t == null) continue;
-                Gizmos.DrawLine(prev, t.position);
-                Gizmos.DrawSphere(t.position, 0.02f);
-                prev = t.position;
-            }
-
-            if (initialPosition != null && targetPositions.Length > 0 && targetPositions[^1] != null)
-                Gizmos.DrawLine(targetPositions[^1].position, targetPositions[0].position);
-        }
-
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, pushRange);
     }
 #endif
 }
+
+
+
 
 
 
