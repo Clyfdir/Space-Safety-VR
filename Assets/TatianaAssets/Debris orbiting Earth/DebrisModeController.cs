@@ -4,7 +4,7 @@
 ///   Created: 11.06.2025
 ///   Last Change: 22.06.2025
 ///   ESA PROJECT STAGE:
-///   Last Change: 03.09.2025
+///   Last Change: 20.10.2025
 
 ///   This script controls modes of debris (from #SpawnDebrisFromPool)
 
@@ -38,8 +38,8 @@ public class DebrisModeController : MonoBehaviour
     public void SetMode03()
     {
         SetMode(SpawnDebrisFromPool.Mode.Mode03);
-        Invoke("SetMode02", 35);//temporal solution, this function "SetMode02()" should be called from timeline
-        Invoke("SetMode01CleanSpace", 50);//temporal solution, this function "SetMode01CleanSpace()" should be called from timeline
+        Invoke("SetMode02", 62);//temporal solution, this function "SetMode02()" should be called from timeline
+        Invoke("SetMode01CleanSpace", 95);//temporal solution, this function "SetMode01CleanSpace()" should be called from timeline
     }
     
     public void SetMode04CleanAllAtOnce()
