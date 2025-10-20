@@ -50,6 +50,9 @@ public class SceneSwitcherOnAction : MonoBehaviour
     {
         if (Time.unscaledTime - _lastLoadTime < cooldown) return;
         _lastLoadTime = Time.unscaledTime;
+        
+        // Stop all audio before changing scenes
+        AudioManager.StopAllEvents();
 
         // Find which mapping fired
         foreach (var m in mappings)
