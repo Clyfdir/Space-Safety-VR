@@ -2,7 +2,7 @@
 ///   AI was used: GPT
 ///   ESA PROJECT STAGE:
 ///   Last Change: 18.10.2025
-///   Created: 19.10.2025 // 
+///   Created: 20.10.2025 // 
 
 ///   microgravity movement in predefined paths
 
@@ -238,7 +238,7 @@ public class MicrogravityPathMover : MonoBehaviour
         if (grabInteractable != null)
         {
             if (grabInteractable.isSelected) return;
-            if (grabInteractable.isHovered) return;
+            //if (grabInteractable.isHovered) return;//
         }
 
         XRBaseInteractor[] interactors = FindObjectsByType<XRBaseInteractor>(FindObjectsSortMode.None);
